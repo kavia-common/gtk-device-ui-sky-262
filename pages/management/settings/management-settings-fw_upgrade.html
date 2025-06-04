@@ -1,0 +1,53 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['FwControl']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var process_bar_content = '<tr id="fw_updating_msg_zone" style=""><td><div style="font-style: italic;font-weight: bold;color:#818181;"><span class="" id="lang_updating_msg"></span></div></td></tr><tr id="fw_updating_bar_zone" style=""><td><table class="normal" style="margin:0;width:100%;"><tbody><tr><td id="fw_upgrade_percent_td" style="width:90%; border: none; padding:0;"><div style="background-color: #DDDDDD; padding: 0;"><div id="fw_upgrade_percent_bar" style="background-color: #9dca6e; width: 0%; height: 28px;"></div></div></td><td class="v-middle" style="width:10%;text-align: center; padding:0;"><div id="fw_upgrade_percent_msg">0%</div></td></tr></tbody></table></td></tr><tr id="auto_upgrading_msg2" style=""><td><div style="color:#FF0000;"><span class="multi_lang" id="lang_updating_tips"></span></div></td></tr><tr id="paddingBlankLine1" style="height: 57px;"><td></td></tr>'
+</script>
+
+<script src="js/ajaxfileupload.js"></script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div class="subheader ng-scope">
+			<p class=''><b><span class="multi_lang" id="lang_manual_update_title">Manual update</span></b></p>
+			<p><span class="multi_lang" id="lang_content1">Step 1: Obtain an updated software image file from your ISP.</span></p>
+			<p><span class="multi_lang" id="lang_content2">Step 2: Enter the path to the image file location in the box below or click the 'Browse' button to locate the image file.</span></p>
+			<p><span class="multi_lang" id="lang_content3">Step 3: Click the 'Update Software' button once to upload the new image file</span></p>
+
+			<p class="notice-color-blue"><span class="multi_lang" id="lang_content4">Note: The update process takes about 2 minutes to complete, and your Broadband Router will reboot.</span></p>
+			
+		</div>
+		<div class="backuprestore ng-scope">
+			<div class="panel">
+				<div class="upgrade-panel">
+					<div class="upgrade-panel-body">
+						<div class="border-b" style="padding: 10px 0 20px 0; margin-bottom: 20px">
+							<div class="col-sm-6 col-xs-6">
+								<h6 class="ver_class gemtek-text-color ng-binding multi_lang id="lang_current_version_title">Current Version</h6>
+								<p class="ng-binding" id="current_fw_version"</p>
+							</div>
+							<div>
+								<h6 class="ver_class gemtek-text-color ng-binding">Last FW Image Upgrade</h6>
+								<p class="gemtek-font-family-medium black_color" id="last_fw_version"></p>
+							</div>
+						</div>
+						<p class="ng-binding">Select files from your computer</p>
+						<form class="ng-pristine ng-valid" enctype="multipart/form-data" id="upgradefirmwareform" method="post" name="upgradefirmwareform" onsubmit="return false">
+							<div class="form-inline">
+								<div class="form-group">
+									<label class="gemtek-btn-primary" for="filename" style="padding: 13px 14px !important;">Choose File <span class="ng-binding" id="manual_fw_filename">No file selected</span></label> <input id="filename" name="filename" type="file" onchange="check_upload_file();">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button style="float:right" class="gemtek-btn-primary waves-effect waves-light" id="Modify" name="Firmwareupgrade" title="Firmware upgrade" value="Firmwareupgrade" onclick="upload_fw_file()"><span class="ng-binding multi_lang" id="lang_manual_update_btn">Firmware Upgrade</span></button>
+	</div>
+</div>
+
+
+<!-- include(management-settings-fw_upgrade.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/settings/management-settings-fw_upgrade.js"></script>
+<!-- endinclude -->

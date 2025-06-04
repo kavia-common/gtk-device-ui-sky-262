@@ -1,0 +1,37 @@
+<script type="text/javascript">
+	var INFO_LIST = ['LanStatus']
+	var INFO_DATA = {}
+	var STATUS_LAN_HOST_COLUMNS_LIST_STR=['lang_ipv4_address','lang_ipv4_netmask','lang_ipv4_gateway','lang_ipv6_address','lang_mac_address']
+	var STATUS_LAN_HOST_COLUMNS_LIST_VALUE=['Ipv4Address','Ipv4Netmask','Ipv4Gateway','Ipv6Address','MacAddress']
+	var STATUS_LAN_COLUMNS_LIST_STR=['lang_lan_title','lang_status_title','lang_speed_title','lang_duplex_title']
+	var STATUS_LAN_COLUMNS_LIST_VALUE=['Interface','Status','Speed','Duplex']
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-heading ng-binding">
+		<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_lan_host_title">LAN Host</span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_status_lan_host_table">
+			<script>
+			 //
+			 draw_table('status_lan_host_table',STATUS_LAN_HOST_COLUMNS_LIST_STR)
+			</script>
+		  </div>
+	</div>
+	<div class="panel-heading ng-binding">
+		<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_lan_ethernet_title">LAN Ethernet</span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_status_lan_table">
+			<script>
+			 //
+			 draw_table('status_lan_table',STATUS_LAN_COLUMNS_LIST_STR)
+			</script>
+		  </div>
+	</div>
+</div>
+
+<!-- include(status-lan.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-lan.js"></script>
+<!-- endinclude -->

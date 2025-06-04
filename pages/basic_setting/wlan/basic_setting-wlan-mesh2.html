@@ -1,0 +1,49 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+    var OBJ_LIST = ['Mesh']
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+</script>
+
+<h4 class='title-topic'><span id='rightContentTitle'></span></h4>
+
+<div>
+    <form class="el-form fhv-form el-form--label-left">
+        <div class="fhv-centent">
+            <div class="el-form-item el-form-item--mini">
+                <label class="el-form-item__label" style="width: 180px;">EasyMesh:</label>
+                <div class="el-form-item__content" style="margin-left: 180px;">
+                    <div role="switch" aria-checked="true" class="el-switch" aria-describedby="el-tooltip-7731"
+                        tabindex="0">
+                        <input type="checkbox" name="" true-value="true" class="el-switch__input"><span
+                            class="el-switch__core" id="enable_btn" onclick="switch_toggle(this)"
+                            style="width: 40px;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="el-form-item el-form-item--mini">
+                <div class="el-form-item__content" style="margin-left: 180px;">
+                    <button type="button" class="el-button el-button--primary el-button--mini"
+                        onclick="page_save()"><span><span class="multi_lang"
+                                id="lang_apply_btn_title">Apply</span></span></button>
+                    <button type="button" class="el-button el-button--primary el-button--mini"
+                        onclick="page_initial()"><span><span class="multi_lang"
+                                id="lang_refresh_btn_title">Refresh</span></span></button>
+                </div>
+            </div>
+            <div class="el-loading-mask" style="display: none;">
+                <div class="el-loading-spinner">
+                    <svg viewBox="25 25 50 50" class="circular">
+                        <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- include(basic_setting-wlan-mesh2.jsx) -->
+<script language="javascript" type="text/javascript"
+    src="pages/basic_setting/wlan/basic_setting-wlan-mesh2.js"></script>
+<!-- endinclude -->

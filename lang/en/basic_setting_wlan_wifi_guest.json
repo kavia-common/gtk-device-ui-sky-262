@@ -1,0 +1,12 @@
+{
+    "basic_setting_wlan_wifi_guest": {
+        "lang_guest_title_desc": "Guest Access provides visitors to your home with Internet access without giving them access to your computers or personal data.",
+        "lang_guest_enabled": "Allow Guest Access",
+        "lang_guest_ssid": "Guest Network Name",
+        "lang_guest_password": "Guest Password",
+        "lang_guest_change_password": "Change",
+        "lang_guest_max_allowed": "Total Guests Allowed",
+        "lang_guest_ssid_broadcast": "SSID Broadcast",
+        "lang_guest_sub_desc": "Your guests should connect to your wireless network listed above by opening a Web browser and entering the guest password."
+    }
+}

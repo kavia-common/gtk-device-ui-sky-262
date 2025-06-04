@@ -1,0 +1,128 @@
+<div id="select_qos_bw" class="form-group no-padding-hr col-xs-12 col-sm-12">
+    <script>
+        draw_select('qos_bw', qos_bw_str_list, qos_bw_val_list,'qos_bw_changed(this.value);', 'a', 'lang_qos_bandwidth_title');
+    </script>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12">
+    <div id="input_qos_uplink" class="form-group no-padding-hr col-xs-12 col-sm-6">
+        <script>
+            draw_input('qos_uplink','lang_qos_uplink_title','>= 4096', '', '', 10)
+        </script>
+    </div>
+    <div id="input_qos_downlink" class="form-group no-padding-hr col-xs-12 col-sm-6">
+        <script>
+            draw_input('qos_downlink','lang_qos_downlink_title','>= 4096', '', '', 10)
+        </script>
+    </div>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12">
+    <div id="select_qos_category" class="form-group no-padding-hr col-xs-12 col-sm-6">
+        <script>
+            draw_select('qos_category', qos_cat_str_list, qos_cat_val_list,'qos_cat_changed(this.value,true)', 'a', 'lang_qos_category_title', 10);
+        </script>
+    </div>
+    <div id="div_qos_my_mac" class="form-group no-padding-hr col-xs-12 col-sm-6"  style="display: none;">
+        <label class="form-group no-padding-hr" id="qos_my_mac">
+            <span class="multi_lang" id="lang_qos_my_mac_msg"></span>
+        </label>
+    </div>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12"><hr></div>
+
+<div id="input_qos_name" class="form-group no-padding-hr col-xs-12 col-sm-12">
+    <script>
+        draw_input('qos_name','lang_qos_enter_name_title','Please Enter the value')
+    </script>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12 multi_port_zone">
+    <div class="form-group no-padding-hr col-xs-12 col-sm-12 panel">
+        <div class="panel-heading gemtek-portMap-panel-title">
+            <span class="multi_lang" id="lang_qos_port_range_title">Port Range</span>
+        </div>
+        <div class="panel-body">
+            <div id="input_qos_port_start_1" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_start_1','lang_qos_port_from_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="input_qos_port_end_1" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_end_1','lang_qos_port_to_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="select_qos_protocol_1" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_select('qos_protocol_1', qos_proto_str_list, qos_proto_val_list,'', 'a', 'lang_qos_protocol_title', 12);
+                </script>
+            </div>
+        </div>
+
+        <div class="panel-heading gemtek-portMap-panel-title">
+            <span class="multi_lang" id="lang_qos_optional_title">Optional</span>
+        </div>
+        <div class="panel-body">
+            <div id="input_qos_port_start_2" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_start_2','lang_qos_port_from_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="input_qos_port_end_2" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_end_2','lang_qos_port_to_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="select_qos_protocol_2" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_select('qos_protocol_2', qos_proto_str_list, qos_proto_val_list,'', 'a', 'lang_qos_protocol_title', 12);
+                </script>
+            </div>
+        </div>
+        
+        <div class="panel-heading gemtek-portMap-panel-title">
+            <span class="multi_lang" id="lang_qos_optional_title">Optional</span>
+        </div>
+        <div class="panel-body">
+            <div id="input_qos_port_start_3" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_start_3','lang_qos_port_from_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="input_qos_port_end_3" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_input('qos_port_end_3','lang_qos_port_to_title','Please Enter the value', '', '', 12)
+                </script>
+            </div>
+            <div id="select_qos_protocol_3" class="form-group no-padding-hr col-xs-12 col-sm-4">
+                <script>
+                    draw_select('qos_protocol_3', qos_proto_str_list, qos_proto_val_list,'', 'a', 'lang_qos_protocol_title', 12);
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="input_qos_mac" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none;">
+    <script>
+        draw_input('qos_mac', 'lang_qos_macaddr_title', '')
+    </script>
+</div>
+
+<div id="select_qos_ifac" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none;">
+    <script>
+        draw_select('qos_ifac', qos_ifac_str_list, qos_ifac_val_list,'', 'a', 'lang_qos_interface_title');
+    </script>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12"><hr></div>
+
+<div id="select_qos_prio" class="form-group no-padding-hr col-xs-12 col-sm-12">
+    <script>
+        draw_select('qos_prio', qos_prio_str_list, qos_prio_val_list,'', 'a', 'lang_qos_priority_title');
+    </script>
+</div>
+
+

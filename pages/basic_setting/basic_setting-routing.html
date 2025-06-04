@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['StaticRoute','Wan']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var STROUTE_COLUMNS_LIST_STR=['lang_rt_item_route_name','lang_rt_item_dest_ip','lang_rt_item_mask','lang_rt_item_gw','lang_rt_item_metric','lang_rt_item_iface','lang_rt_item_select']
+	var STROUTE_COLUMNS_LIST_VALUE=['name','DstIp','DstNetmask','Gateway','Metric','Ifname','TB_ACTION']
+</script>
+
+<div class="panel-heading gemtek-portMap-panel-title">
+	<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_rt_table_title">Static Route Table</span><a class="gemtek-btn-normal pull-right gemtek-btn-addplus" id="" onclick="update_str_item('new')"><i class="fa fa-plus icontxtgap"></i><span class="multi_lang" style="font-weight: normal;" id="lang_rt_add_btn">Add</span></a>
+</div>
+<div class="panel-body">
+	<!--TABLE ELEMENT START-->
+	<div class="table-responsive table-scroll-vr" id="tb_staticroute_table">
+		<script>
+			draw_table('staticroute_table',STROUTE_COLUMNS_LIST_STR)
+	   	</script>
+	</div>
+	<!--TABLE ELEMENT STOP-->
+</div>
+
+<!-- include(basic_setting-routing.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/basic_setting-routing.js"></script>
+<!-- endinclude -->

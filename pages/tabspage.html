@@ -1,0 +1,28 @@
+<script type="text/javascript">
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="panel panel-default panel-bg1 ng-scope" >
+	<ul class="nav nav-tabs gemtek-tab" id="tabspage_tabs_zone"></ul>
+	<div class="panel-body no-padding" id="leaf_page_zone"  style="display: none;">
+		<div class="alert alert-danger ng-hide" id="leaf_page_warning_msg_zone" style="display: none;">
+			<a aria-label="close" class="close" onclick="warning_control('off','page')">✖</a>
+			<p class="ng-binding" id="leaf_page_warning_msg" ></p>
+		</div>
+		<div class="panel-body" id="leaf_page_content"></div>
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;" id="leaf_page_footer" ></div>
+	</div>
+	<div class="panel-body no-padding" id="tabspage_page_zone">
+		<div class="alert alert-danger ng-hide" id="page_warning_msg_zone" style="display: none;">
+			<a aria-label="close" class="close" onclick="warning_control('off','page')">✖</a>
+			<p class="ng-binding" id="page_warning_msg" ></p>
+		</div>
+		<div id="tab-content"><!--open_tab_url()-->></div>
+	</div>
+</div>
+
+<!-- include(tabspage.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/tabspage.js"></script>
+<!-- endinclude -->
+
+

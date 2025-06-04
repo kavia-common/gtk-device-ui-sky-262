@@ -1,0 +1,71 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan']
+	var OBJ_DATA = {}
+
+	var INFO_LIST = ['PingTest']
+	var INFO_DATA = {}
+
+	var LAN_NAME = "lan";
+
+	var PING_CMD = {"PingTest":{"IpUrl":"","PkgSize":"32","Count":"3","IpProtocolType":"ipv4","Interface":LAN_NAME}}
+
+	var ping_iface_str_list = [LAN_NAME]
+	var ping_iface_val_list = [LAN_NAME]
+
+	var ping_proto_str_list = ["IPv4","IPv6"]
+	var ping_proto_val_list = ["IPv4","IPv6"]
+
+	var is_summary = false;
+	var timer_flag = false;
+	var timer_id;
+	var empty_data_count;
+
+	var SHORT_INTERVAL = 100;
+	var NORMAL_INTERVAL = 1000;
+	var LONG_INTERVAL = 5000;
+	var TIMER_INTERVAL;
+</script>
+
+<div class="wrapperdiv">
+    <div class="panel-body">
+		<div id="select_ping_iface" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('ping_iface', ping_iface_str_list, ping_iface_val_list,'', 'a', 'lang_ping_interface_title');
+            </script>
+        </div>
+		<div id="select_ping_proto" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('ping_proto', ping_proto_str_list, ping_proto_val_list,'', 'a', 'lang_ping_proto_title');
+            </script>
+        </div>
+		<div id="" class="form-group no-padding-hr col-xs-12 col-md-12">
+			<div id="input_ping_times">
+				<script>
+					draw_input('ping_times','lang_ping_times_title','(1~3)Time','valid_ping_times(this,true)')
+				</script>
+			</div>
+			<div style="display: none;" id="ping_times_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_ping_times_error">Repeat time Error!must rang</span> [1~3]</div>
+		</div>
+		<div class="no-padding form-group no-padding-hr col-xs-12 col-md-12">
+			<div class="diagnose_tblcell">
+				<div style="display: inline-block;">
+					<label class="diagnose_titles active gemtek-text-color gemtek-font-family-medium gemtek-text-size-sm ng-binding" style="font-weight:normal"><span id="lang_ping_ipurl_title" class="multi_lang"></span></label> 
+					<input class="" id="ping_ipurl" name="ipping" onblur="valid_ping_ipurl(this,true)" placeholder="Please enter IP/Host address" style="width: 360px;" type="text" value="">
+				</div>
+				<div style="display: inline-block;margin-left: 15px;">
+					<button class="gemtek-btn-primary ng-binding" id="ping_btn" value="Apply" onclick="start_ping()" ><span class="multi_lang" id="lang_ping_start_title"></span></button>
+				</div>
+			</div>
+			<div style="display: none;" id="ping_ipurl_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_ping_ipurl_error">Target Address Error!e.g. 192.168.1.100</span></div>
+        	<div style="display: none;" id="ping_ipurl6_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_ping_ipurl6_error">Target Address Error!e.g. 2001:1234:abcd::1</span></div>
+		</div>
+		<div class="panel panel-default" style=" display: none;" id="ping_result_panel">
+			<div class="panel-heading"><span class="multi_lang" id="lang_ping_result_title">Ping Test Results</span></div>
+			<div class="textb" id="ping_result" style="padding: 15px"></div>
+		</div>
+	</div>
+</div>
+
+<!-- include(management-tools-ping.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/tools/management-tools-ping.js"></script>
+<!-- endinclude -->

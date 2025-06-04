@@ -1,0 +1,79 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+    var OBJ_LIST = ['WifiZone','WlanDeviceSsid']
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+</script>
+
+<div class="panel-heading ng-binding">
+	<span class="multi_lang" id="lang_guest_zone_title">Guest Zone</span>
+</div>
+
+<div class="wrapperdiv">
+    <div class="panel-body">
+        <div id="switch_guest_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('guest_enable','lang_guest_enable','guest_zone_enable_handler()')
+            </script>
+        </div>
+        <div id="switch_guest_captive_enable" class="form-group no-padding-hr col-xs-12 col-sm-12 guest_enabled_show">
+            <script>
+                draw_switch('guest_captive_enable','lang_guest_captive_enable','guest_captive_enable_handler()')
+            </script>
+        </div>
+        <div id="input_guest_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12 guest_enabled_show">
+            <script>
+                draw_input('guest_ssid','lang_guest_ssid','Please Enter the value')
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="panel-heading ng-binding">
+	<span class="multi_lang" id="lang_employee_zone_title">Employee Zone</span>
+</div>
+
+<div class="wrapperdiv">
+    <div class="panel-body">
+        <div id="switch_employee_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('employee_enable','lang_employee_enable','employee_zone_enable_handler()')
+            </script>
+        </div>
+        <div id="switch_employee_captive_enable" class="form-group no-padding-hr col-xs-12 col-sm-12 employee_enabled_show">
+            <script>
+                draw_switch('employee_captive_enable','lang_employee_captive_enable','employee_captive_enable_handler()')
+            </script>
+        </div>
+        <div id="input_employee_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12 employee_enabled_show">
+            <script>
+                draw_input('employee_ssid','lang_employee_ssid','Please Enter the value')
+            </script>
+        </div>
+        <div class="row">
+            <div id="pwinput_employee_wpa_key" class="form-group no-padding-hr pwdblock col-xs-6 col-sm-6 employee_enabled_show">
+                <script>
+                    draw_password('employee_wpa_key','lang_employee_wpa_key','Please Enter the value','',63)
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+        <script>
+                draw_btn('cancel','cancel','page_initial()')
+        </script>
+        </div>
+        <div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+
+</div>
+<!-- include(basic_setting-wlan-wifi_zone.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_zone.js"></script>
+<!-- endinclude -->

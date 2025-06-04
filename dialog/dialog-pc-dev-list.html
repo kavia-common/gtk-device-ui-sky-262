@@ -1,0 +1,30 @@
+<!-- <form class="el-form dig">
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<span class="multi_lang" id="lang_pc_dev_list_info_title">Set up parental controls for</span>:
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<select name="dev_list" id="dev_list" size="7" style="width:100%;"></select>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+                <div class="el-form-item__error" style="display: none;" id="dev_list_error">
+                        <span class="multi_lang" id="lang_pc_dev_select_empty_title">Please select a device first!</span>
+                </div>
+        </div>
+</div>
+<form>
+-->
+<div class="row">
+	<div id="select_dev_list" class="form-group no-padding-hr col-xs-12 col-sm-12">
+		<script>
+			draw_select('dev_list', '', '', '', '', 'lang_pc_dev_list_info_title');
+		</script>
+	</div>
+</div>
+<div class="row">
+	<div class="error" style="display: none;" id="dev_list_error">
+		<span class="multi_lang" id="lang_pc_dev_select_empty_title">Please select a device first!</span>
+	</div>
+</div>

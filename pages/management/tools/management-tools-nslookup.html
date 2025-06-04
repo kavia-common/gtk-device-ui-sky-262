@@ -1,0 +1,60 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan']
+        var OBJ_DATA = {}
+
+	var INFO_LIST = ['Nslookup']
+	var INFO_DATA = {}
+
+	var LAN_NAME = "lan"
+	var NSLOOKUP_CMD = {"Nslookup":{"IpUrl":"","IpProtocolType":"ipv4","Interface":LAN_NAME}}
+
+	var nslookup_iface_str_list = [LAN_NAME]
+	var nslookup_iface_val_list = [LAN_NAME]
+
+	var nslookup_proto_str_list = ["IPv4","IPv6"]
+	var nslookup_proto_val_list = ["IPv4","IPv6"]
+
+	var timer_flag = false;
+	var timer_id;
+	var empty_data_count;
+
+	var SHORT_INTERVAL = 100;
+	var NORMAL_INTERVAL = 1000;
+	var LONG_INTERVAL = 5000;
+	var TIMER_INTERVAL;
+</script>
+<div class="wrapperdiv">
+    <div class="panel-body">
+        <div id="select_nslookup_iface" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('nslookup_iface', nslookup_iface_str_list, nslookup_iface_val_list,'', 'a', 'lang_nslookup_interface_title');
+            </script>
+        </div>
+        <div id="select_nslookup_proto" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('nslookup_proto', nslookup_proto_str_list, nslookup_proto_val_list,'', 'a', 'lang_nslookup_proto_title');
+            </script>
+        </div>
+        <div class="no-padding form-group no-padding-hr col-xs-12 col-md-12">
+			<div class="diagnose_tblcell">
+				<div style="display: inline-block;">
+					<label class="diagnose_titles active gemtek-text-color gemtek-font-family-medium gemtek-text-size-sm" style="font-weight:normal"><span id="lang_nslookup_ipurl_title" class="multi_lang"></span></label> 
+					<input class="" id="nslookup_ipurl" name="ipping" onblur="valid_nslookup_ipurl(this,true)" placeholder="Please enter IP/Host address" style="width: 360px;" type="text" value="">
+				</div>
+				<div style="display: inline-block;margin-left: 15px;">
+					<button class="gemtek-btn-primary" id="nslookup_btn" value="Apply" onclick="start_nslookup()" ><span class="multi_lang" id="lang_nslookup_start_title"></span></button>
+				</div>
+			</div>
+			<div style="display: none;" id="nslookup_ipurl_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_nslookup_ipurl_error">Target Address Error!e.g. 192.168.1.100</span></div>
+        	<div style="display: none;" id="nslookup_ipurl6_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_nslookup_ipurl6_error">Target Address Error!e.g. 2001:1234:abcd::1</span></div>
+		</div>
+        <div class="panel panel-default" style=" display: none;" id="nslookup_result_panel">
+			<div class="panel-heading"><span class="multi_lang" id="lang_nslookup_result_title">DNS Test Results</span></div>
+			<div class="textb" id="nslookup_result" style="padding: 15px"></div>
+		</div>
+    </div>
+</div>
+
+<!-- include(management-tools-nslookup.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/tools/management-tools-nslookup.js"></script>
+<!-- endinclude -->

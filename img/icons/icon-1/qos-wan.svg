@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke-linejoin="square">
+            <circle stroke="#FFF" stroke-width="4" fill="#0072BC" cx="24" cy="24" r="22"/>
+            <circle stroke="#DEE5EC" cx="24" cy="24" r="23.5"/>
+        </g>
+        <g transform="rotate(45 3.621 32.642)">
+            <path d="M18.462 4.615c-7.647 0-13.847 6.2-13.847 13.847" stroke="#FFF" stroke-width="1.5"/>
+            <path d="M18.462 0C8.266 0 0 8.266 0 18.462M18.462 9.23a9.23 9.23 0 0 0-9.231 9.232M18.462 13.846a4.615 4.615 0 0 0-4.616 4.616" stroke="#FFF" stroke-width="1.5"/>
+            <circle fill="#FFF" cx="18.462" cy="18.462" r="1.538"/>
+        </g>
+    </g>
+</svg>

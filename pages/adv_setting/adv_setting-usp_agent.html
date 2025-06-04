@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Tr369']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var USPAGENT_COLUMNS_LIST_STR=['lang_agent_connection','lang_agent_endpoint_id_title','lang_protocol_mode','lang_usp_enable','lang_agent_item_select']
+	var USPAGENT_COLUMNS_LIST_VALUE=['ConnectionName','ControllerEndpointId','ControllerProtocol','Enabled','TB_ACTION']
+</script>
+
+<div class="panel-heading gemtek-portMap-panel-title">
+	<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_usp_agent_table_title">Connection List</span><!-- a class="gemtek-btn-normal pull-right gemtek-btn-addplus" id="" onclick="update_str_item('new')"><i class="fa fa-plus icontxtgap"></i><span class="multi_lang" style="font-weight: normal;" id="lang_rt_add_btn">Add</span></a-->
+</div>
+<div class="panel-body">
+	<!--TABLE ELEMENT START-->
+	<div class="table-responsive table-scroll-vr" id="tb_usp_agent_table">
+		<script>
+			draw_table('usp_agent_table',USPAGENT_COLUMNS_LIST_STR)
+	   	</script>
+	</div>
+	<!--TABLE ELEMENT STOP-->
+</div>
+<!-- include(adv_setting-usp_agent.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-usp_agent.js"></script>
+<!-- endinclude -->

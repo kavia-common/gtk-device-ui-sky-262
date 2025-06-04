@@ -1,0 +1,31 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Ssh']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var SAVE_SSH_WAITING_TIME = 5000;
+</script>
+
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_ssh_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('ssh_enabled','lang_ssh_enabled_title','ssh_enabled_switched(true)')
+			</script>
+		</div>
+	</div>
+	<p id="help_msg" style="display: none;"><span class="multi_lang" id="lang_ssh_help_msg">Please also go to "Service Ctrl" page to enable ACL rule for SSH service.</span></p>
+
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div class="btn-align" id="btn_apply">
+			<script>
+				draw_btn('apply', 'apply', 'applied()')
+			</script>
+		</div>	
+	</div>
+</div>
+
+<!-- include(adv_setting-ssh.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-ssh.js"></script>
+<!-- endinclude -->

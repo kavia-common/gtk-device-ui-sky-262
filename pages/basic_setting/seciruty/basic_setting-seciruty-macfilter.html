@@ -1,0 +1,68 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['MacFilter','MacFilterBlack','MacFilterWhite']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var FILTER_COLUMNS_LIST_STR=['lang_macfilter_item_number','lang_macfilter_item_smac_addr','lang_macfilter_item_comment','lang_macfilter_item_active']
+	var FILTER_COLUMNS_LIST_VALUE=['Number','Mac','Comment','TB_ACTION']
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_macfilter_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('macfilter_enable','lang_macfilter_enable','macfilter_enable_handler()')
+            </script>
+		</div>
+		<!--INPUT ELEMENT RADIO START-->
+        <div id="radio_filter_mode" class="form-group no-padding-hr col-xs-12 col-sm-12 macfilter_emabled_show">
+            <script>
+				var option_list=[
+					{"id":"mode_blacklist","label":"Blacklist","cb":"macfilter_mode_selector('b')"},
+					{"id":"mode_whitelist","label":"Whitelist","cb":"macfilter_mode_selector('w')"}
+				]
+                draw_radio('filter_mode','lang_macfilter_mode',option_list)
+            </script>
+		</div>
+		<!--INPUT ELEMENT RADIO STOP-->
+		<div id="input_macfilter_smac" class="form-group no-padding-hr col-xs-12 col-sm-12 macfilter_emabled_show">
+            <script>
+                draw_input('macfilter_smac','lang_macfilter_smac_addr','Please Enter the value')
+            </script>
+        </div>
+		<div id="input_macfilter_comment" class="form-group no-padding-hr col-xs-12 col-sm-12 macfilter_emabled_show">
+            <script>
+                draw_input('macfilter_comment','lang_macfilter_comment','Please Enter the value','',32,6)
+            </script>
+        </div>
+		<div id="btn_add_filter" class="ip-panel-heading macfilter_emabled_show" style="border-bottom:0px;border-top:0px;">
+			<script>
+                draw_button('add_filter','lang_macfilter_add_btn','add_macfilter_item()')
+            </script>
+		</div>
+	</div>
+	<div class="panel-heading ng-binding macfilter_emabled_show" style="display:none">
+		<span class="multi_lang" id="macfilter_mode_title"></span>
+	</div>
+	<div class="panel-body macfilter_emabled_show">
+		<div class="table-responsive table-scroll-vr" id="tb_macfilter_table">
+			<script>
+				draw_table('macfilter_table',FILTER_COLUMNS_LIST_STR)
+			   </script>
+		</div>
+	</div>
+	<div class="text-center macfilter_emabled_show" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+			<script>
+				 draw_btn('cancel','cancel','page_initial()')
+			</script>
+		 </div>
+		<div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+</div>
+
+<!-- include(basic_setting-seciruty-macfilter.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/seciruty/basic_setting-seciruty-macfilter.js"></script>
+<!-- endinclude -->

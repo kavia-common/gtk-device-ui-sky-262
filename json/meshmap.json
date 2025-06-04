@@ -1,0 +1,70 @@
+{
+	"nodes": [
+		{
+			"hostname": "E5750-566",
+			"macaddr":"11:22:33:44:55:66",
+			"type": "controller",
+			"status":"1",
+			"info":{
+				"netstatus":"online"
+			}
+		},{
+			"hostname": "E5750-567",
+			"macaddr":"11:22:33:44:55:67",
+			"type": "agent",
+			"status":"1",
+			"info":{
+				"netstatus":"online"
+			}
+		},{
+			"hostname": "E5750-568",
+			"macaddr":"11:22:33:44:55:68",
+			"type": "agent",
+			"status":"0",
+			"info":{
+				"netstatus":"offline"
+			}
+		},{
+			"hostname": "EJ-PC1",
+			"macaddr":"F1:1F:F1:00:00:01",
+			"type": "client",
+			"status":"1",
+			"info":{
+				"netstatus":"online"
+			}
+		},{
+			"hostname": "EJ-PC2",
+			"macaddr":"F1:1F:F1:00:00:02",
+			"type": "client",
+			"status":"1",
+			"info":{
+				"netstatus":"online"
+			}
+		}
+	],
+	"lines": [{
+			"source": 0,
+			"target": 1,
+			"active": true,
+			"status":1,
+			"netspeed":"1024MB/s"
+		}, {
+			"source": 0,
+			"target": 2,
+			"active": true,
+			"status":1,
+			"netspeed":"1024MB/s"
+		},{
+			"source": 1,
+			"target": 3,
+			"active": true,
+			"status":1,
+			"netspeed":"1024MB/s"
+		},{
+			"source": 1,
+			"target": 4,
+			"active": true,
+			"status":1,
+			"netspeed":"1024MB/s"
+		}]
+}

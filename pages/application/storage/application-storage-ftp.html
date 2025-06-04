@@ -1,0 +1,64 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Ftp']
+	var INFO_LIST = ['StorageInfo']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_ftp_enable">Enable FTP Service</span>:</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="ftp_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('ftp_enable','','')"></span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_ftp_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('ftp_enable', 'lang_ftp_enable', '')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_ftp_dir">FTP Direatory</span> :</span>
+			</div>
+			<div id="select_div_ftp_folder" class="col-md-6 col-offset-md-2 col-xs-8"></div>
+		</div> -->
+		<div id="select_ftp_folder" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('ftp_folder', [], [],'', '', 'lang_ftp_dir');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group" class='folder_not_empty'>
+			<div class="col-xs-4">	
+			</div>
+			<div class="col-md-8 col-offset-md-2 col-xs-8">
+				<button onclick="page_save()" type="button" class="el-button el-button--primary el-button--small">
+					<span>
+						<span class="multi_lang" id="lang_ftp_apply_btn">Apply</span>
+					</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center folder_not_empty" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','page_save()')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+</div>
+<!-- include(application-storage-ftp.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/storage/application-storage-ftp.js"></script>
+<!-- endinclude -->

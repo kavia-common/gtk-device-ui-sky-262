@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Mpt']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var mpt_select_str = ['Thailand','United States'];
+	var mpt_select_val = ['TH','US'];
+	
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+<div>
+   <form class="el-form fhv-form el-form--label-left">
+      <div class="fhv-centent">
+            <div id="div_mpt_select" class="el-form-item el-form-item--mini">
+               <label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_mpt">MPT :</span></label>
+               <div class="el-form-item__content" style="margin-left: 180px;">
+                  <div class="el-select el-select--mini" style="width: 100%;">
+                     <div id="select_div_mpt_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+			<script>(function(){draw_select('mpt_select', mpt_select_str, mpt_select_val,'select_mpt_select()', '');})();</script>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         <div class="el-form-item el-form-item--mini">
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <button type="button" class="el-button el-button--primary el-button--mini" onclick="page_save()"><span><span class="multi_lang" id="lang_apply_btn_title">Apply</span></span></button>
+               <button type="button" class="el-button el-button--primary el-button--mini" onclick="page_initial()"><span><span class="multi_lang" id="lang_refresh_btn_title">Refresh</span></span></button>
+            </div>
+         </div>
+         <div class="el-loading-mask" style="display: none;">
+            <div class="el-loading-spinner">
+               <svg viewBox="25 25 50 50" class="circular">
+                  <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+               </svg>
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+<!-- include(basic_setting-wlan-mpt.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-mpt.js"></script>
+<!-- endinclude -->

@@ -1,0 +1,37 @@
+<tr class="extra-row">
+	<td class="no-padding-hr ng-scope ssid_control_zone" colspan="4" id="">
+		<div class="panel-grey">
+            <div class="panel-body">
+                <div class="alert alert-danger ng-hide" style="display: none;">
+                    <a class="close" aria-label="close">✖</a>
+                    <p class="ng-binding"></p>
+                </div>
+                <div>
+                    <div class="wrapperdiv">
+                        <div class="panel-body">
+                            <div id="input_ssid_key" class="form-group no-padding-hr col-xs-12 col-sm-6">
+                                <script>
+                                    draw_input('ssid_key','lang_pwd','Please Enter the value','',63,10)
+                                </script>
+                            </div>
+                            <div id="switch_ssid_hide" class="form-group no-padding-hr col-xs-12 col-sm-6" >
+                                <script>
+                                    draw_switch('ssid_hide','lang_hide','hide_handler()')
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapperdiv">
+                        <div class="panel-body">
+                            <div class="form-group no-padding-hr"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+	</td>
+</tr>
+<script type="text/javascript" language="javascript">
+	$.lang_load("basic_setting_wlan_wifi_basic2")
+</script>

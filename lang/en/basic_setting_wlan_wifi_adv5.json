@@ -1,0 +1,13 @@
+{
+    "basic_setting_wlan_wifi_adv5": {
+        "lang_mode": "Mode",
+        "lang_bandwidth": "Bandwidth",
+        "lang_channel": "Channel",
+        "lang_max": "Maxinum Clients",
+        "lang_gi": "Short GI",
+        "lang_wmm": "WMM",
+        "lang_txbf": "TXBF Enable",
+        "lang_Mixed": "Mixed",
+        "lang_Auto": "Auto"
+    }
+}

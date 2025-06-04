@@ -1,0 +1,57 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanChSelect']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+<div>
+	<div data-v-111e589b="" class="fhv-centent">
+	<!--h4 data-v-111e589b="" class="title-topic">Auto Channel 2.4GHz</h4-->
+		<form data-v-111e589b="" class="el-form el-form--label-left">
+			<div data-v-111e589b="" class="el-form-item el-form-item--mini">
+				<div class="el-form-item__content" style="margin-left: 50px;">
+				<label data-v-111e589b="" role="radio" tabindex="0" class="el-radio">
+					<span class="el-radio__input">
+						<span class="el-radio__inner" id="auto_btn" name="auto_btn" onclick="radio_toggle(this)"></span>
+						<input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="0">
+					</span>
+					<span class="el-radio__label"><span class="multi_lang" id="lang_info_string"></span></span>
+				</label>
+				</div>
+			</div>
+			<div data-v-111e589b="" class="el-form-item el-form-item--mini">
+				<div class="el-form-item__content" style="margin-left: 50px;">
+				<label data-v-111e589b="" role="radio" tabindex="0" class="el-radio" aria-checked="true">
+					<span class="el-radio__input">
+						<span class="el-radio__inner" id="customize_btn" name="customize_btn" onclick="radio_toggle(this)"></span>
+						<input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="1">
+					</span>
+					<span class="el-radio__label"><span class="multi_lang" id="lang_customize"></span></span>
+				</label>
+				</div>
+			</div>
+			<div id="customize_list" data-v-111e589b="" class="el-form-item el-form-item--mini">
+				<div class="el-form-item__content" style="margin-left: 50px;">
+					<div id="inn" data-v-111e589b="" role="group" aria-label="checkbox-group" class="el-checkbox-group fh-channel-group">
+					</div>
+				</div>
+			</div>
+			<div data-v-111e589b="" class="el-form-item el-form-item--mini">
+				<div class="el-form-item__content" style="margin-left: 50px;">
+					<button data-v-111e589b="" type="button" class="el-button el-button--primary el-button--mini" onclick="page_save()"><span><span class="multi_lang" id="lang_apply_btn_title"></span></span></button>
+					<button data-v-111e589b="" type="button" class="el-button el-button--primary el-button--mini" onclick="page_initial()"><span><span class="multi_lang" id="lang_refresh_btn_title"></span></span></button>
+				</div>
+			</div>
+			<div class="el-loading-mask" style="display: none;">
+				<div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular">
+					<circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+					</svg>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- include(basic_setting-wlan-wifi_chs2.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_chs2.js"></script>
+<!-- endinclude -->

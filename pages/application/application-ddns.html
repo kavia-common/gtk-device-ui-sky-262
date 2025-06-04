@@ -1,0 +1,209 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Ddns']
+	var INFO_LIST = ['DdnsStatus']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var APPLICATION_DDNS_COLUMNS_LIST_STR = ['lang_ddns_item_domainname', 'lang_ddns_item_usermail', 'lang_ddns_item_ipaddr', 'lang_ddns_item_status']
+	var APPLICATION_DDNS_COLUMNS_LIST_VALUE=['Hostname','Username','IP','Status']
+
+	var service_str = ['DynDNS','No-IP'];
+	var service_val = ['DynDNS.org','no-ip.com'];
+	
+	var system_str = ['Custom','Static','Dynamic'];
+	var system_val = ['0','1','2'];
+	
+	var enbaled_str = ['Disabled','Enabled'];
+	var enbaled_val = ['0','1'];
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_enabled">Enable DDNS</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="ddns_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('ddns_enable','','ddns_enable_handler()')"></span>
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_ddns_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('ddns_enable', 'lang_ddns_enabled', 'ddns_enable_handler()')
+			</script>
+		</div>
+		<!--  -->
+		<div class="ddns_emabled_show">
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_provider">Service Provider</span> :</span>
+				</div>
+				<div id="select_div_ddns_service" class="col-md-6 col-offset-md-2 col-xs-8">
+					<script>(function(){draw_select('ddns_service', service_str, service_val,'ddns_service_handler(this.id)', '');})();</script>
+				</div>
+			</div> -->
+			<div id="select_ddns_service" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_select('ddns_service', service_str, service_val, 'ddns_service_handler(this.id)', '', 'lang_ddns_provider');
+				</script>
+			</div>
+			<!-- 
+			<div class="row form-group">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_domainname">Domain Name</span> :</span>
+				</div>
+				<div class="col-md-6 col-offset-md-2 col-xs-8">
+					<input id="ddns_domainname" type="text" class="ais-fiber-input">
+				</div>
+			</div> -->
+			<div id="input_ddns_domainname" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_input('ddns_domainname', 'lang_ddns_domainname', 'Please Enter the value', '', '')
+				</script>
+			</div>
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_user">User Name/Email</span> :</span>
+				</div>
+				<div class="col-md-6 col-offset-md-2 col-xs-8">
+					<input id="ddns_username" type="text" class="ais-fiber-input">
+				</div>
+			</div> -->
+			<div id="input_ddns_username" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_input('ddns_username', 'lang_ddns_user', 'Please Enter the value', '', '')
+				</script>
+			</div>
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_pw">Password/Key</span> :</span>
+				</div>
+				<div class="col-md-6 col-offset-md-2 col-xs-8">
+					<input id="ddns_password" type="password" class="ais-fiber-input">
+				</div>
+			</div> -->
+			<div id="pwinput_ddns_password" class="form-group no-padding-hr pwdblock col-xs-6 col-sm-6">
+				<script>
+					draw_password('ddns_password', 'lang_ddns_pw', 'Please Enter the value', '', '')
+				</script>
+			</div>
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_system">System</span> :</span>
+				</div>
+				<div id="select_div_ddns_system" class="col-md-6 col-offset-md-2 col-xs-8">
+					<script>(function(){draw_select('ddns_system', system_str, system_val,'', '');})();</script>
+				</div>
+			</div> -->
+			<div id="select_ddns_system" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_select('ddns_system', system_str, system_val, '', '', 'lang_ddns_system');
+				</script>
+			</div>
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_exchange">Mail Exchange (Optional)</span> :</span>
+				</div>
+				<div class="col-md-6 col-offset-md-2 col-xs-8">
+					<input id="ddns_mailex" type="text" class="ais-fiber-input">
+				</div>
+			</div> -->
+			<div id="input_ddns_mailex" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_input('ddns_mailex', 'lang_ddns_exchange', 'Please Enter the value', '', '')
+				</script>
+			</div>
+			<!--  -->
+
+			<!--
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_backupmx">Backup MX</span> :</span>
+				</div>
+				<div id="select_div_ddns_backupmx" class="col-md-6 col-offset-md-2 col-xs-8">
+					<script>(function(){draw_select('ddns_backupmx', enbaled_str, enbaled_val,'', '');})();</script>
+				</div>
+			</div>
+
+			<div class="row form-group ">
+				<div class="col-xs-4">
+					<span class="ais-fiber-label"><span class="multi_lang" id="lang_ddns_wildcard">Wildcard</span> :</span>
+				</div>
+				<div id="select_div_ddns_wildcard" class="col-md-6 col-offset-md-2 col-xs-8">
+					<script>(function(){draw_select('ddns_wildcard', enbaled_str, enbaled_val,'', '');})();</script>
+				</div>
+			</div>
+			-->
+
+			<!-- 
+			<div class="row form-group ">
+				<div class="col-xs-4">
+				</div>
+				<div class="col-md-8 col-offset-md-2 col-xs-8">
+					<button onclick="ddns_apply()" type="button" class="el-button el-button--primary el-button--small">
+						<span>
+							<span class="multi_lang" id="lang_ddns_apply">Apply</span>
+						</span>
+					</button>
+					<button onclick="ddns_refresh()" type="button" class="el-button el-button--primary el-button--small">
+						<span>
+							<span class="multi_lang" id="lang_ddns_refresh">Refresh</span>
+						</span>
+					</button>
+				</div>
+			</div> -->
+			<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+				<div class="btn-align" id="btn_cancel">
+					<script>
+						draw_btn('cancel', 'cancel', 'ddns_refresh()')
+					</script>
+				</div>
+				<div class="btn-align" id="btn_apply">
+					<script>
+						draw_btn('apply', 'apply', 'ddns_apply()')
+					</script>
+				</div>
+			</div>
+			<!--  -->
+
+			<!-- 
+			<div class="ddns_emabled_show">
+				<P>
+					<span class="multi_lang" id="lang_ddns_status">DDNS Status</span>:
+				</P>
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th class="col-xs-4"><span class="multi_lang" id="lang_ddns_item_domainname">Domain Name</span></th>
+								<th class="col-xs-4"><span class="multi_lang" id="lang_ddns_item_usermail">User Name/Email</span></th>
+								<th class="col-xs-2"><span class="multi_lang" id="lang_ddns_item_ipaddr">Internet IP Address</span></th>
+								<th class="col-xs-2"><span class="multi_lang" id="lang_ddns_item_status">DDNS Status</span></th>
+								<//!-- th class="col-xs-2"><span class="multi_lang" id="lang_ddns_test">DDNS Test</span></th --//>		
+							</tr>
+						</thead>
+						<tbody id="ddns_table">
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>
+			</div> -->
+			<div class="table-responsive table-scroll-vr" id="tb_ddns_table">
+				<script>
+					draw_table('ddns_table', APPLICATION_DDNS_COLUMNS_LIST_STR)
+				</script>
+			</div>
+			<!--  -->
+		</div>
+	</div>
+</div>
+<!-- include(application-ddns.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/application-ddns.js"></script>
+<!-- endinclude -->

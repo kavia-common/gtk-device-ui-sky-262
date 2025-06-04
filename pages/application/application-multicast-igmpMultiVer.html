@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Multicast']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_igmp_sp_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   draw_switch('igmp_sp_enabled','lang_multicast_igmp_enable','')
+			 </script>
+		</div>
+		<div id="switch_igmp_pc_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   draw_switch('igmp_pc_enabled','lang_multicast_igmp_proxy','igmp_pc_enable_switched()')
+			 </script>
+		</div>
+		<div id="radio_igmp_version" class="form-group no-padding-hr col-xs-12 col-sm-12 igmp_version_emabled_show">
+			<script>
+			  var option_list = [
+				{ "id": "IGMPv2", "label": "V2", "cb": "switch_version(this.id)" },
+				{ "id": "IGMPv3", "label": "V3", "cb": "switch_version(this.id)" }
+			  ]
+			  draw_radio('igmp_version', 'lang_igmp_version', option_list)
+			</script>
+		</div>
+		<div id="switch_mld_sp_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   draw_switch('mld_sp_enabled','lang_multicast_mld_enable','')
+			 </script>
+		</div>
+		<div id="switch_mld_pc_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   draw_switch('mld_pc_enabled','lang_multicast_mld_proxy','')
+			 </script>
+		</div>
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','page_save()')
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(application-multicast-igmpMultiVer.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/multicast/application-multicast-igmpMultiVer.js"></script>
+<!-- endinclude -->

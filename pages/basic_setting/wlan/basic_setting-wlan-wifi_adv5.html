@@ -1,0 +1,230 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanDeviceRadio']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+<div>
+<div class="fhv-centent">
+	<!--h4 class="title-topic"> WIFI Advanced Settings 5 GHz </h4-->
+	<form class="el-form fhv-form el-form--label-left">
+		<div id="div_wifi_mode_select" class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;">Mode :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-tooltip el-select--mini" aria-describedby="el-tooltip-6730" tabindex="0" style="width: 100%;">
+					<!--div class="el-input el-input--mini el-input--suffix">
+						<input type="text" autocomplete="off" placeholder="Please select Mode" readonly="readonly" class="el-input__inner">
+						<span class="el-input__suffix">
+							<span class="el-input__suffix-inner">
+							<i class="el-select__caret el-input__icon el-icon-arrow-up"></i>
+							</span>
+						</span>
+					</div-->
+					<div id="select_div_wifi_mode_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+							<script>(function(){draw_select('wifi_mode_select', wifi_mode_select_str_5, wifi_mode_select_val_5,'select_wifi_mode_select()', '');})();</script>
+						</div>
+					</div>
+			</div>
+		</div>
+			<div id="div_wifi_bw_select" class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">Bandwidth :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-tooltip el-select--mini" aria-describedby="el-tooltip-7547" tabindex="0" style="width: 100%;">
+					<!--div class="el-input el-input--mini el-input--suffix">
+						<input type="text" autocomplete="off" placeholder="Please select Bandwidth" readonly="readonly" class="el-input__inner">
+						<span class="el-input__suffix">
+							<span class="el-input__suffix-inner">
+							<i class="el-select__caret el-input__icon el-icon-arrow-up"></i>
+							</span>
+						</span>
+					</div-->
+					<div id="select_div_wifi_bw_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+							<script>(function(){draw_select('wifi_bw_select', wifi_bw_select_str_5, wifi_bw_select_val_5,'select_wifi_bw_select()', '');})();</script>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+		<div id="div_wifi_channel_select" class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 180px;">Channel :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-tooltip el-select--mini" aria-describedby="el-tooltip-9915" tabindex="0" style="width: 100%;">
+					<!--div class="el-input el-input--mini el-input--suffix">
+						<input type="text" autocomplete="off" placeholder="Please select Transmit Power" readonly="readonly" class="el-input__inner">
+						<span class="el-input__suffix">
+							<span class="el-input__suffix-inner">
+							<i class="el-select__caret el-input__icon el-icon-arrow-up"></i>
+							</span>
+						</span>
+					</div-->
+					<div id="select_div_wifi_channel_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+							<script>(function(){draw_select('wifi_channel_select', wifi_channel_select_str_5, wifi_channel_select_val_5,'select_wifi_channel_select()', '');})();</script>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--div class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">Transmit Power :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-select--mini" style="width: 100%;">
+					<div class="el-input el-input--mini el-input--suffix">
+						<input type="text" autocomplete="off" placeholder="Please select Transmit Power" readonly="readonly" class="el-input__inner">
+						<span class="el-input__suffix">
+							<span class="el-input__suffix-inner">
+							<i class="el-select__caret el-input__icon el-icon-arrow-up"></i>
+							</span>
+						</span>
+						
+					</div>
+					<div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+						<div class="el-scrollbar" style="">
+							<div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+								<ul class="el-scrollbar__view el-select-dropdown__list">
+									<li class="el-select-dropdown__item selected"><span> Optimized(default) </span></li>
+									<li class="el-select-dropdown__item"><span> Medium </span></li>
+									<li class="el-select-dropdown__item"><span> High </span></li>
+								</ul>
+							</div>
+							<div class="el-scrollbar__bar is-horizontal">
+								<div class="el-scrollbar__thumb" style="transform: translateX(0%);">
+								</div>
+							</div>
+							<div class="el-scrollbar__bar is-vertical">
+								<div class="el-scrollbar__thumb" style="transform: translateY(0%);">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		<div class="el-form-item is-required el-form-item--mini"><label for="beaconInterval" class="el-form-item__label" style="width: 180px;">Beacon Interval :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">
+				<input type="text" autocomplete="off" class="el-input__inner">
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item is-required el-form-item--mini"><label for="rtsThreshold" class="el-form-item__label" style="width: 180px;">RTS Threshold :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">
+				
+				<input type="text" autocomplete="off" class="el-input__inner">
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item is-required el-form-item--mini"><label for="fragThreshold" class="el-form-item__label" style="width: 180px;">Fragment Threshold :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">
+				
+				<input type="text" autocomplete="off" class="el-input__inner">
+				</div>
+			</div>
+		</div-->
+		<div class="el-form-item is-required el-form-item--mini"><label for="maxinumClients" class="el-form-item__label" style="width: 180px;">Maxinum Clients :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">				
+						<input id="id_maxclients" maxlength="2" type="text" autocomplete="off" class="el-input__inner">
+				</div>			
+			</div>
+		</div>
+		<!--div class="el-form-item is-required el-form-item--mini"><label for="dtimPeriod" class="el-form-item__label" style="width: 180px;">DTIM Interval :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">
+					
+					<input type="text" autocomplete="off" class="el-input__inner">
+					
+					
+					
+				</div>
+				
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">Roaming Enable :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" aria - checked="true" class="el-switch is-checked">
+					<input type="checkbox" name="" true - value="true" class="el-switch__input">
+					
+					<span class="el-switch__core" style="width: 40px;">
+					</span>
+					
+				</div>
+				
+			</div>
+		</div-->
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"> Short GI: </label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+					<div role="switch" aria-checked="true" class="el-switch">
+					<input type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span id="short_gi_btn" onclick="switch_toggle(this)" class="el-switch__core" style="width: 40px;"></span>
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">WMM :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			<div role="switch" aria - checked="true" class="el-switch">
+					<input type="checkbox" name="" true - value="true" class="el-switch__input">
+					<span id="wmm_btn" onclick="switch_toggle(this)" class="el-switch__core" style="width: 40px;">
+					</span>
+				</div>
+			</div>
+		</div>
+		<!--div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"> WMM APSD: </label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;"></span>
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">Adaptivity Enable :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" class="el-switch">
+					<input type="checkbox" name="" true - value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;">
+					</span>
+				</div>
+			</div>
+		</div-->
+		<!--div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"> ATF Enable: </label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+					<div role="switch" class="el-switch">
+						<input type="checkbox" name="" true-value="true" class="el-switch__input">
+						<span id="atf_btn" onclick="switch_toggle(this)" class="el-switch__core" style="width: 40px;"></span>
+				</div>
+			</div>
+		</div-->
+		<div class="el-form-item el-form-item--mini"><label class="el-form-item__label" style="width: 180px;">TXBF Enable :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" class="el-switch is-checked" aria - checked="true">
+					<input type="checkbox" name="" true - value="true" class="el-switch__input">
+						<span id="txbf_btn" onclick="switch_toggle(this)" class="el-switch__core" style="width: 40px;">
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+					<button type="button" class="el-button el-button--primary el-button--mini" onclick="page_save()"><span><span class="multi_lang" id="lang_apply_btn_title"></span></span></button>
+					<button type="button" class="el-button el-button--primary el-button--mini" onclick="page_initial()"><span><span class="multi_lang" id="lang_refresh_btn_title"></span></span></button>
+			</div>
+		</div>
+		<div class="el-loading-mask" style="display: none;">
+			<div class="el-loading-spinner">
+				<svg viewBox="25 25 50 50" class="circular">
+				<circle cx="50" cy="50" r="20" fill="none" class="path">
+				</circle></svg>
+				
+			</div>
+		</div>
+	</form>
+</div>
+
+</div>
+<!-- include(basic_setting-wlan-wifi_adv5.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_adv5.js"></script>
+<!-- endinclude -->

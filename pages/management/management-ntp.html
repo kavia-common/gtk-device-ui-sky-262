@@ -1,0 +1,85 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Ntp']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	// Format: {UTC|GMT}_{[m/p]}_{dif}_{support_dls}_{dls_enable}_{name}
+	//var timezone_str_list = ['lang_ntp_kwajalein','lang_ntp_midway','lang_ntp_hawaii','lang_ntp_alaska','lang_ntp_pacific','lang_ntp_arizona','lang_ntp_mountain','lang_ntp_mexico','lang_ntp_central','lang_ntp_indiana','lang_ntp_eastern','lang_ntp_bolivia','lang_ntp_atlantic','lang_ntp_guyana','lang_ntp_newfoundland','lang_ntp_brazil','lang_ntp_mid','lang_ntp_azores','lang_ntp_gambia','lang_ntp_england','lang_ntp_tunisia','lang_ntp_france','lang_ntp_south','lang_ntp_greece','lang_ntp_iraq','lang_ntp_armenia','lang_ntp_pakistan','lang_ntp_india','lang_ntp_bangladesh','lang_ntp_thailand','lang_ntp_china','lang_ntp_singapore','lang_ntp_japan','lang_ntp_guam','lang_ntp_australia','lang_ntp_solomon','lang_ntp_fiji','lang_ntp_new_zealand']
+	var timezone_str_list = ['ntp_kwajalein','ntp_midway','ntp_hawaii','ntp_alaska','ntp_pacific','ntp_arizona','ntp_mountain','ntp_mexico','ntp_central','ntp_indiana','ntp_eastern','ntp_bolivia','ntp_atlantic','ntp_guyana','ntp_newfoundland','ntp_brazil','ntp_mid','ntp_azores','ntp_gambia','ntp_england','ntp_tunisia','ntp_france','ntp_south','ntp_greece','ntp_iraq','ntp_armenia','ntp_pakistan','ntp_india','ntp_bangladesh','ntp_thailand','ntp_china','ntp_singapore','ntp_japan','ntp_guam','ntp_australia','ntp_solomon','ntp_fiji','ntp_new_zealand']
+	var timezone_val_list = ['utc_m_12-0_0_0_kwajalein','utc_m_11-0_0_0_midwayisland','utc_m_10-0_0_0_hawaii','utc_m_9-0_1_1_alaska','utc_m_8-0_1_1_pacific','utc_m_7-0_0_0_arizona','utc_m_7-0_1_1_mountain','utc_m_6-0_1_1_mexico','utc_m_6-0_1_1_central','utc_m_5-0_0_0_indiana','utc_m_5-0_1_1_eastern','utc_m_4-0_0_0_bolivia','utc_m_4-0_1_1_atlantic','utc_m_4-0_0_0_guyana','utc_m_3-5_1_1_newfoundland','utc_m_3-0_1_1_brazil','utc_m_2-0_1_1_midatlantic','utc_m_1-0_1_1_azores','gmt_m_0-0_0_0_gambia','gmt_p_0-0_1_1_england','utc_p_1-0_0_0_tunisia','utc_p_1-0_1_1_france','utc_p_2-0_0_0_southafrica','utc_p_2-0_1_1_greece','utc_p_3-0_0_0_iraq','utc_p_4-0_0_0_armenia','utc_p_5-0_0_0_pakistan','utc_p_5-5_0_0_india','utc_p_6-0_0_0_bangladesh','utc_p_7-0_0_0_thailand','utc_p_8-0_0_0_china','utc_p_8-0_0_0_taiwan','utc_p_9-0_0_0_japan','utc_p_10-0_0_0_guam','utc_p_10-0_1_1_australia','utc_p_11-0_0_0_solomon','utc_p_12-0_0_0_fiji','utc_p_12-0_1_1_newzealand']
+
+	var SAVE_NTP_WAITING_TIME = 5000;
+</script>
+
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="input_ntp_current_time" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none;">
+			<script>
+			  draw_input('ntp_current_time', 'lang_ntp_current_time_title', 'Select date time')
+			</script>
+		</div>
+		<div id="select_timezone" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('timezone', timezone_str_list, timezone_val_list, '', 'a', 'lang_ntp_timezone_title');
+			</script>
+		</div>
+		<div id="switch_auto_dst" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   	draw_switch('auto_dst','lang_lang_ntp_dst_title','')
+			 </script>
+		</div>
+		<div id="switch_client_update" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   	draw_switch('client_update','lang_ntp_enable_client_update_title','set_ntp_server_status()')
+			 </script>
+		</div>
+		<div id="input_ntp_server1" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server1', 'lang_ntp_server_title', 'Please Enter the value')
+			</script>
+		</div>
+		<div id="input_ntp_server2" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server2', 'lang_ntp_server_title_2', 'Please Enter the value')
+			</script>
+		</div>
+		<div id="input_ntp_server3" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server3', 'lang_ntp_server_title_3', 'Please Enter the value')
+			</script>
+		</div>
+		<div id="input_ntp_server4" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server4', 'lang_ntp_server_title_4', 'Please Enter the value')
+			</script>
+		</div>
+		<div id="input_ntp_server5" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server5', 'lang_ntp_server_title_5', 'Please Enter the value')
+			</script>
+		</div>
+		<div id="input_ntp_server_interval" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			  draw_input('ntp_server_interval', 'lang_ntp_interval_title', 'Please Enter the value')
+			</script>
+		</div>
+		<div class="text-center " style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_cancel">
+				<script>
+					 draw_btn('cancel','cancel','ntp_refresh()')
+				</script>
+			</div>
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','ntp_applied()')
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="calendar_content" style="display: none;"></div>
+
+<!-- include(management-ntp.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/management-ntp.js"></script>
+<!-- endinclude -->

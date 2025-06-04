@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://192.168.11.1/#/ -->
+<html class="" data-ng-app="routerapp">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<title>CPE Router</title>
+	<meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+
+	<!-- build:css -->
+	<link href="css/Bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/Custom/fonticons.css" rel="stylesheet" type="text/css">
+	<link href="css/materialize/materialize.css" rel="stylesheet" type="text/css">
+	<link href="css/Custom/lantiq_custom-1.css" rel="stylesheet" type="text/css">
+	<link href="css/Custom/animate.css" rel="stylesheet" type="text/css">
+	<link href="css/Custom/gemtek.css" rel="stylesheet" type="text/css">
+	<link href="css/Custom/angular-ui-switch.min.css" rel="stylesheet" type="text/css">
+	<link href="css/ngDialog.min.css" rel="stylesheet" type="text/css">
+	<link href="css/ngDialog-theme-default.min.css" rel="stylesheet" type="text/css">
+	<!-- endbuild -->
+	
+	<script language="javascript" type="text/javascript" src="js/env.js"></script>
+	<!-- build:js -->
+	<script language="javascript" type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/lottie.js"></script>
+	<script language="javascript" type="text/javascript" src="js/common.js"></script>
+	<script language="javascript" type="text/javascript" src="js/menu.js"></script>
+	<script language="javascript" type="text/javascript" src="js/view.js"></script>
+	<script language="javascript" type="text/javascript" src="js/wapi-min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/elem-control.js"></script>
+	<script language="javascript" type="text/javascript" src="js/validation.js"></script>
+	<script language="javascript" type="text/javascript" src="js/lang.js"></script>
+	<script language="javascript" type="text/javascript" src="js/aes.js"></script>
+	<!-- endbuild -->
+
+</head>
+<body class="theme-default animate">
+	<noscript>
+	<div class="panel-heading mantis" style="background-color: red;text-align: center;font-size: 18px">
+		Please enable Javascript in your browser.
+	</div></noscript>
+	<div id="ajaxLoaderSection" style="display: none;">
+		<div id="ajaxLoaderIcon">
+			<svg height="120" preserveaspectratio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);" viewbox="0 0 120 120" width="120" xmlns="http://www.w3.org/2000/svg">
+			</svg>
+		</div><span id="loading_message">Please wait...</span>
+	</div>
+	<div class="ngdialog ngdialog-theme-default dialogwidth800 " id="confirm_dialog_zone" role="alertdialog" style="display: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+		<div class="ngdialog-overlay"></div>
+		<div class="ngdialog-content" role="document">
+			<div class="ngdialog-message">
+				<h4 class="ng-binding" id="confirm_dialog_msg"></h4>
+			</div>
+			<div class="ngdialog-buttons">
+				<button class="ngdialog-button gemtek-btn-normal ng-binding" id="confirm_dialog_cancel" type="button" onclick="close_confirm()">Cancel</button> <button class="ngdialog-button gemtek-btn-primary ng-binding" id="confirm_dialog_confirmed" type="button">Ok</button>
+			</div>
+		</div>
+	</div>
+	<div class="" id="main-wrapper">
+		<div class="navbar navbar-inverse" id="main-navbar" role="navigation">
+			<button id="main-menu-toggle" type="button"><i class="navbar-icon fa fa-bars icon"></i></button>
+			<div class="navbar-inner">
+				<div class="navbar-header">
+					<a href="https://www.gemteks.com/en" target="_blank"><button class="navbar-brand"><img src="img/logo.svg" style="width: 100%;"></button></a> <button class="navbar-toggle collapsed" data-target="#main-navbar-collapse" data-toggle="collapse" type="button"><i class="navbar-icon fa fa-bars"></i></button>
+				</div>
+				<div class="collapse navbar-collapse main-navbar-collapse" id="main-navbar-collapse">
+					<div class="right clearfix theme-2-menu1 hide">
+						<ul class="nav nav-tabs mainmenu" id="mainmenu">
+							
+						</ul>
+					</div>
+					<div class="right clearfix">
+						<ul class="nav navbar-nav headersec">
+							<li>
+								<a id="switchwidget"><img src="img/icons/icon-1/system-white.svg"><span>Quick Set</span><span class="fa fa-angle-down" style="margin-left: 3px;"></span></a> <!-- ngIf: showMenu -->
+							</li>
+							<li>
+								<div class="no-padding-vr">
+									<img src="img/icons/icon-1/language.svg"><span id="header_home" style="padding-right: 15px; padding-left: 3px;">English</span>
+								</div><!-- ng-click="langclick()" -->
+								<!-- <span class="fa fa-angle-down" style="margin-left: 3px;"></span> -->
+								<div class="language">
+									<div>
+										<ul class="notification_ul">
+											<li class="lang-active" style="cursor: pointer" value="en">
+												<img class="icon-visible" src="img/icons/icon-1/checked.svg">
+												<p>English</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="no-padding-vr">
+									<img src="img/icons/icon-1/user.svg"> <span class="ng-binding" style="padding-right:15px;" id="login_account_user">admin</span>
+								</div>
+							</li>
+							<li>
+								<a title="Logout" href="javascript:logout()"><img src="img/icons/icon-1/logout.svg" style="cursor: pointer;"> <span class="multi_lang" id="lang_logout">Logout</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main-menu" role="navigation">
+			<div id="main-menu-inner">
+				<ul class="nav nav-tabs theme-1-menu1 mainmenu mainmenu_zone" id="mainmenu"><!--menu_handler()-->></ul>
+			</div>
+		</div>
+		<div id="content-wrapper" style="min-height: 1218px;">
+			<!-- ngView: true -->
+			<div class="" data-ng-view="true" id="dataView">
+				<!-- main page start -->
+				<div class="container-fluid no-padding-hr" id="homepage">
+					<h4 class="ng-binding" id="homepage_tile"></h4>
+					<div>
+						<a class="gemtek-home-breadcrumbs" id="homepage_quick_link" href="/main.html?"></a>
+					</div><!-- pop message -->
+					<div class="row no-margin-hr" id="global_warning_msg_zone" style="display: none;">
+						<div class="alert alert-danger">
+							<a aria-label="close" class="close" for="global_warning_msg_zone" onclick="warning_control('off','global')" >×</a><strong class="ng-binding">Warning!</strong> 
+                            <span class="ng-binding" id="global_warning_msg"></span>
+						</div>
+					</div><br>
+					<br>
+                    <div id="main-content" class=""><!--open_main_url()-->></div>
+				</div>
+			</div><!-- main page end -->
+			<!-- Footer section-->
+			<footer class="footer">
+			</footer>
+		</div>
+		<div id="main-menu-bg"></div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="myModalHorizontal" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div><!-- Modal Body -->
+				<div class="modal-body">
+					<form class="form-horizontal ng-pristine ng-valid" role="form">
+						<div class="form-group">
+							<label class="col-sm-12 col-lg-3 col-md-3 col-xs-12 control-label" for="Status">Progress:</label>
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+								<div class="progress-striped active progress">
+									<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="" aria-valuetext="%" class="progress-bar" role="progressbar" style="width: 100%;">
+										<span class="ng-binding"></span><i class=" ng-hide">!!! Watch out !!!</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-12 col-lg-3 col-md-3 col-xs-12 control-label" for="Status">Status</label>
+							<div class="col-sm-12 col-md-6 col-lg-6 col-xs-12">
+								<input class="form-control" id="Status" placeholder="WPS Session Start" type="text">
+							</div>
+						</div>
+					</form>
+				</div><!-- Modal Footer -->
+				<div class="modal-footer">
+					<button class="btn btn-info" data-dismiss="modal" data-ng-click="cancelInterval()" type="button">Abort WPS</button>
+				</div>
+			</div>
+		</div>
+	</div><!--Modal End-->
+	<!--        <script src="js/Jquery/jquery1.9.1.min.js"></script>-->
+	<!--[if !IE]> -->
+	<!-- <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>");</script>-->
+	<script type="text/javascript">
+	window.jQuery || document.write('<script src="js/Jquery/jquery1.9.1.min.js">' + "<" + "/script>");
+	</script> <!-- <![endif]-->
+	 <!--[if lte IE 9]>
+        <script type="text/javascript"> window.jQuery || document.write('<script src="js/Jquery/jquery1.9.1.min.js">' + "<" + "/script>");</script>
+        <![endif]-->
+	 
+	<script type="text/javascript">
+	           $(document).ready(function () {
+	               	TARGET_PAGE_DATA=get_target_page()
+	               	if (TARGET_PAGE_DATA == "")
+	                   TARGET_PAGE_DATA="dashboard"
+	               
+					VIEW_HANDLER(TARGET_PAGE_DATA)
+	           });
+	</script>
+	<div class="hiddendiv common"></div>
+</body>
+</html>

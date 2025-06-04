@@ -1,0 +1,97 @@
+
+<script type="text/javascript">
+	var mqtt_proto_str = ["TCP/IP"];
+    var mqtt_proto_val = ["TCP/IP"];
+	var mqtt_version_str = ['3.1','3.1.1','5.0'];
+    var mqtt_version_val = ['3.1','3.1.1','5.0'];
+</script>
+<div class="row">
+    <div id="switch_usp_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+        <script>
+            draw_switch('usp_enable','lang_usp_enable_title','')
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div id="input_connectio_name" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+        <script>
+            draw_input('connectio_name','lang_agent_connection','Please Enter the value','','',32)
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div id="input_agent_endpoint_id" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+        <script>
+            draw_input('agent_endpoint_id','lang_agent_endpoint_id_title','Please Enter the value','','',32)
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div id="input_controller_endpoint_id" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+        <script>
+            draw_input('controller_endpoint_id','lang_controller_endpoint_id_title','Please Enter the value','','',32)
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div id="input_controller_parameter_name" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+        <script>
+            draw_input('controller_parameter_name','lang_controller_parameter_name_title','Please Enter the value','','',32)
+        </script>
+    </div>
+	<div id="input_controller_noti_interval" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+        <script>
+            draw_input('controller_noti_interval','lang_controller_noti_interval_title','Please Enter the value','','',32)
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div id="radio_controller_protocol_mode" class="form-group no-padding-hr col-xs-12 col-sm-12 ">
+        <script>
+            var option_list=[
+                {"id":"protocol_mode_mqtt","label":"MQTT","cb":"protocol_mode_selector('m')"}
+            ]
+            draw_radio('controller_protocol_mode','lang_protocol_mode',option_list)
+        </script>
+    </div>
+</div>
+<div id="input_controller_topic" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('controller_topic','lang_controller_topic_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="input_response_topic" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('response_topic','lang_response_topic_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="input_mqtt_broker_ip" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('mqtt_broker_ip','lang_mqtt_broker_ip_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="input_mqtt_broker_port" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('mqtt_broker_port','lang_mqtt_broker_port_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="input_mqtt_broker_username" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('mqtt_broker_username','lang_mqtt_broker_username_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="input_mqtt_broker_password" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+	<script>
+		draw_input('mqtt_broker_password','lang_mqtt_broker_password_title','Please Enter the value','','',32)
+	</script>
+</div>
+<div id="select_mqtt_broker_proto" class="form-group no-padding-hr col-xs-12 col-sm-6">
+    <script>
+        draw_select('mqtt_broker_proto', mqtt_proto_str, mqtt_proto_val,'', '', 'lang_mqtt_proto', 12);
+    </script>
+</div>
+<div id="select_mqtt_broker_version" class="form-group no-padding-hr col-xs-12 col-sm-6">
+    <script>
+        draw_select('mqtt_broker_version', mqtt_version_str, mqtt_version_val,'', '', 'lang_mqtt_version', 12);
+    </script>
+</div>

@@ -1,0 +1,29 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan','Upnp']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_upnp_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('upnp_enable', 'lang_upnp_enable', 'upnp_enable_handler()')
+			</script>
+		</div>
+		<div id="select_upnp_wan" class="form-group no-padding-hr col-xs-12 col-sm-5 upnp_emabled_show">
+			<script>
+				draw_select('upnp_wan', [], [],'', '', 'lang_upnp_iface');
+			</script>
+		</div>
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','page_save()')
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(application-upnp.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/application-upnp.js"></script>
+<!-- endinclude -->

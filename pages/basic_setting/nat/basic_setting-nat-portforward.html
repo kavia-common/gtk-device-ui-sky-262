@@ -1,0 +1,64 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['PortForward','Wan','Lan','WlanGlobal']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var BASIC_SETTING_NAT_PORT_FORWARDING_COLUMNS_LIST_STR=['lang_pfr_number','lang_pfr_enabled','lang_pfr_desc','lang_pfr_proto','lang_pfr_remote_port_range','lang_pfr_local_port_range','lang_pfr_local_ip','lang_pfr_active']
+	var BASIC_SETTING_NAT_PORT_FORWARDING_COLUMNS_LIST_VALUE=['Number','Enable','Comment','Protocol','RemotePort','LocalPort','LocalIp','TB_ACTION']
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-2">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_pfr_wan_title">WAN Connection</span> :</span>
+			</div>
+			<div id="select_div_new_item_wan" class="col-md-4 col-offset-md-2 col-xs-4"></div>
+			<div class="col-xs-6">
+				<button class="btn-gray btn-delete" onclick="update_pfr_item('new')"><span class="multi_lang" id="lang_pfr_add">Add</span></button>
+			</div>
+		</div> -->
+		<div id="select_new_item_wan" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('new_item_wan', [], [],'', '', 'lang_pfr_wan_title');
+			</script>
+		</div>
+		<div class="text-center"   style="padding:30px 0; width: calc(100% - 40px);margin: 0 auto;">
+			<div id="btn_add_btn" class="btn-align">
+				<script>
+					draw_custom_button('add_btn', 'lang_pfr_add', 'update_pfr_item(\'new\')', 'add')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+		<hr>
+		<!-- 
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_number">Number</span></th>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_enabled">Enable</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_pfr_desc">Description</span></th>
+						<//!--th class="col-xs-2"><span class="multi_lang" id="lang_pfr_remote_ip">Remote IP Address</span></th--//>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_proto">Protocal</span></th>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_remote_port_range">Remote Port Range</span></th>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_local_port_range">Internal Port Range</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_pfr_local_ip">Internal IP Address</span></th>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_pfr_active">Active</span></th>
+					</tr>
+				</thead>
+				<tbody id="pfr_table"></tbody>
+			</table>
+		</div> -->
+		<div class="table-responsive table-scroll-vr" id="tb_pfr_table">
+			<script>
+				draw_table('pfr_table', BASIC_SETTING_NAT_PORT_FORWARDING_COLUMNS_LIST_STR)
+			</script>
+		</div>
+		<!--  -->
+	</div>
+</div>
+<!-- include(basic_setting-nat-portforward.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/nat/basic_setting-nat-portforward.js"></script>
+<!-- endinclude -->

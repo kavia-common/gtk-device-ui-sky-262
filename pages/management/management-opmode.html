@@ -1,0 +1,50 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['OpMode']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var CURRENT_MODE = "";
+	var SAVE_OPMODE_WAITING_TIME = 140000;
+</script>
+<div class="fhv-centent">
+	<h4 class="title-topic"><span class="multi_lang" id="lang_opmode_title">Operation Mode</span></h4>
+	<form class="el-form fhv-form el-form--label-left">
+		<div class="el-form-item el-form-item--small sa-only" style="display:none">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_opmode_mode_title">Change Mode</span>:</label>
+			<div id="radio_auto_mode" class="el-form-item__content" style="margin-left: 180px;">
+				<script>(function(){draw_radio_btn("auto_mode","opmode","opmode_auto_mode_title","opmode_selected('auto')");})();</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--small">
+			<div id="radio_mrt_tag_mode" class="el-form-item__content" style="margin-left: 180px;">
+				<script>(function(){draw_radio_btn("mrt_tag_mode","opmode","opmode_main_router_tagged_mode_title","opmode_selected('mrt_tag')");})();</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--small">
+			<div id="radio_mrt_untag_mode" class="el-form-item__content" style="margin-left: 180px;">
+				<script>(function(){draw_radio_btn("mrt_untag_mode","opmode","opmode_main_router_untagged_mode_title","opmode_selected('mrt_untag')");})();</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--small map_untag_support sa-only" style="display:none" >
+			<div id="radio_map_untag_mode" class="el-form-item__content" style="margin-left: 180px;">
+				<script>(function(){draw_radio_btn("map_untag_mode","opmode","opmode_main_ap_untagged_mode_title","opmode_selected('map_untag')");})();</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--small sa-only" style="display:none">
+			<div id="radio_ap_mode" class="el-form-item__content" style="margin-left: 180px;">
+				<script>(function(){draw_radio_btn("ap_mode","opmode","opmode_ap_mode_title","opmode_selected('ap')");})();</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--small">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<button type="button" class="el-button el-button--primary el-button--small is-disabled" onclick="opmode_applied()" id="opmode_apply">
+					<span class="multi_lang" id="lang_apply_btn_title"></span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- include(management-opmode.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/management-opmode.js"></script>
+<!-- endinclude -->

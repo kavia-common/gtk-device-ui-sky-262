@@ -1,0 +1,12 @@
+{
+    "management_tools_nslookup": {
+        "lang_nslookup_title": "DNS",
+        "lang_nslookup_interface_title": "Interface Selection",
+        "lang_nslookup_proto_title": "Protocol Type",
+        "lang_nslookup_ipurl_title": "Target Address",
+        "lang_nslookup_ipurl_error": "Target Address Error!e.g. 192.168.1.100",
+        "lang_nslookup_result_title": "DNS Test Results",
+        "lang_nslookup_start_title": "Start",
+        "lang_nslookup_ipurl6_error": "Target Address Error!e.g. 2001:1234:abcd::1"
+    }
+}

@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Telnet']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var SAVE_TELNET_WAITING_TIME = 5000;
+</script>
+
+<div class="fhv-centent">
+	<h4 class="title-topic"><span class="multi_lang" id="lang_telnet_title">Service - Telnet Service Setup</span></h4>
+	<form class="el-form fhv-form el-form--label-left">
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_telnet_enabled_title">Enable Telnet Service</span>&nbsp;:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" aria-checked="true" class="el-switch">
+					<input type="checkbox" class="el-switch__input" true-value="true" value="0" id="telnet_enabled">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('telnet_enabled')"></span>
+				</div>
+			</div>
+		</div>
+	<p id="help_msg" style="display: none;"><span class="multi_lang" id="lang_telnet_help_msg">Please also go to "Service Ctrl" page to enable ACL rule for Telnet service.</span></p>
+		<div class="el-form-item el-form-item--mini">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<button type="button" class="el-button el-button--primary el-button--small" onclick="applied()">
+					<span class="multi_lang" id="lang_telnet_apply_title">Apply</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- include(adv_setting-telnet.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-telnet.js"></script>
+<!-- endinclude -->

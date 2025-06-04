@@ -1,0 +1,44 @@
+<!-- <form class="el-form dig">
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<span class="multi_lang" id="lang_pc_auth_info_title">Enter the parental controls password</span>:
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<div class="el-input el-input--mini">
+			<input type="password" maxlength="32" autocomplete="off" style="width:240px" id="pc_auth_pwd" onkeypress="if (event.keyCode == 13) {return false;}" class="el-input__inner">
+		</div>
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<a class="multi_lang" id="lang_pc_forgot_pwd_title" style="cursor:pointer;" onclick="close_dialog();_pop_diag('pc-dev-forgot-pwd','set_pc_forgot_pwd_init();');"></a>
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+        <div class="el-form-item__content">
+		<div class="el-form-item__error" style="display: none;" id="pc_auth_pwd_error"><span class="multi_lang" id="lang_pc_auth_error_title">The password is incorrect.</span></div>
+	</div>
+</div>
+<form> -->
+<div class="row">
+	<div id="pwinput_pc_auth_pwd" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+		<script>
+			draw_password('pc_auth_pwd', 'lang_pc_auth_info_title', 'Please Enter the value', '', '32')
+		</script>
+	</div>
+</div>
+<div class="row"></div>
+	<div id="textbtn_forgot_pwd">
+		<script>
+			/* PLEASE HELP TO CHECK THE CALLBACK FUNCTION */
+			draw_textbtn('forgot_pwd','','','lang_pc_forgot_pwd_title','close_dialog()\;_pop_diag(\'pc-dev-forgot-pwd\',\'set_pc_forgot_pwd_init()\;\')')
+		</script>
+	</div>
+</div>
+<div class="row">
+	<div class="error" style="display: none;" id="pc_auth_pwd_error">
+		<span class="multi_lang" id="lang_pc_auth_error_title">The password is incorrect.</span>
+	</div>
+</div>

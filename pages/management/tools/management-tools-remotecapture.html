@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    var OBJ_LIST = ['RemoteCapture']
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="fhv-centent">
+    <h4 class='title-topic' ><span class="multi_lang" id='lang_remotecapture_title'>Remote Capture</span></h4>
+    <form class="el-form fhv-form el-form--label-left">
+        <div class="el-form-item el-form-item--mini">
+            <label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_remotecapture_enable">Remote Capture Enable</span> :</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+                <div role="switch" class="el-switch is-checked" aria-checked="true">
+                    <input id="remoteCapture_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+                    <span class="el-switch__core" style="width: 40px;" id="enable_btn" onclick="switch_toggle(this)"></span>
+                </div>
+            </div>
+        </div>
+    
+    <div class="el-form-item el-form-item--mini remoteCapture_enable_show">
+        <label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_remotecapture_batchFile">Windows Batch File</span> :</label>
+        <div class="el-form-item__content" style="margin-left: 180px;">
+        <span class="el-form-item__label"><u><a id="remoteCapture_data" style = cursor:pointer onclick="remotecapture_link()">Download</a></u></span>
+        </div>
+    </div>
+    <div class="el-form-item el-form-item--mini">
+        <div class="el-form-item__content" style="margin-left: 180px;">
+        <button onclick="page_save()" type="button" class="el-button el-button--primary el-button--mini">
+            <span class="multi_lang" id="lang_remotecapture_apply">Apply</span>
+        </button>
+        </div>
+    </div>
+    </form>
+</div>
+
+<!-- include(management-tools-remotecapture.jsx) -->
+<script type="text/javascript" language="javascript" src="pages/management/tools/management-tools-remotecapture.js"></script>
+<!-- endinclude -->

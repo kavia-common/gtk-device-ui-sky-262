@@ -1,0 +1,29 @@
+<script type="text/javascript">
+	var OBJ_LIST = []
+        var STATUS_DUALIMAGE_COLUMNS_LIST_STR=['lang_partition_title','lang_version_title']
+	var STATUS_DUALIMAGE_COLUMNS_LIST_VALUE=['partition_index','partition_version']
+
+	var INF_LIST = ['DualImage']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+        <div class="panel-body">
+                <div class="change">
+                        <label><span class="multi_lang" id="lang_Current_title"></span>:</label><span id="current" style="margin-left: 5px;"></span>
+                </div>
+        </div>
+        <div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_info_title"></span>
+	</div>
+        <div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_tbody">
+			<script>
+				draw_table('tbody', STATUS_DUALIMAGE_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+</div>
+<!-- include(status-dualImage.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-dualImage.js"></script>
+<!-- endinclude -->

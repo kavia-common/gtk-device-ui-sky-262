@@ -1,0 +1,130 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanDeviceSsid','Mesh'];
+	var INFO_LIST = ['WlanStatus'];
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+<div>
+<form class="el-form fhv-form el-form--label-left">
+<div class="fhv-centent"><!--h4 class="title-topic">WIFI Basic Settings 2.4GHz</h4-->
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_title"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" aria-checked="true" class="el-switch el-tooltip" aria-describedby="el-tooltip-7731" tabindex="0">
+				<input type="checkbox" name="" true-value="true" class="el-switch__input"><span class="el-switch__core" id="enable_wlan_2g_btn" onclick="switch_toggle(this)" style="width: 40px;"></span>
+				</div>
+			</div>
+		</div>
+		<div id="div_ssid_select" class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_choose_title"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-select--mini" style="width: 100%;">
+				<div id="select_div_ssid_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+					<script>(function(){draw_select('ssid_select', ssid_select_str_2, ssid_select_val_2,'select_ssid_select();change_ssid_idx(this.value)', '');})();</script>
+                </div>
+				<div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+					<div class="el-scrollbar" style="">
+						<div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+							<ul class="el-scrollbar__view el-select-dropdown__list">
+								<li class="el-select-dropdown__item selected"><span>SSID1</span></li>
+								<li class="el-select-dropdown__item"><span>SSID2</span></li>
+								<li class="el-select-dropdown__item"><span>SSID3</span></li>
+								<li class="el-select-dropdown__item"><span>SSID4</span></li>
+							</ul>
+						</div>
+						<div class="el-scrollbar__bar is-horizontal">
+							<div class="el-scrollbar__thumb" style="transform: translateX(0%);">
+							</div>
+						</div>
+						<div class="el-scrollbar__bar is-vertical">
+							<div class="el-scrollbar__thumb" style="transform: translateY(0%);">
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_hide"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" class="el-switch">
+					<input type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" id="hide_ssid_btn" onclick="switch_toggle(this)"style="width: 40px;"></span>
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item is-required el-form-item--mini">
+			<label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_ssid"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini">
+					<input id="2g_ssid" maxlength="32" onblur="valid_ssid()" type="text" autocomplete="off" class="el-input__inner">
+				</div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_bssid"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<span id="id_bssid" class="fhv-form-itme"></span>
+			</div>
+		</div>
+		<div id="div_authtype_select" class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_auth_title"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-select--mini" style="width: 100%;">
+					<div id="select_div_authtype_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+						<script language="javascript" type="text/javascript" >
+						</script>
+						<script>(function(){draw_select('authtype_select', authtype_select_str, authtype_select_val,'select_authtype_select()', '');})();</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="div_encryptype_select" class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_encryption"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-select el-select--mini" style="width: 100%;">
+					<div id="select_div_encryptype_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+						<script>(function(){draw_select('encryptype_select', encryptype_select_str, encryptype_select_val,'select_encryptype_select()', '');})();</script>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="div_ssidpwd" class="el-form-item is-required el-form-item--mini">
+			<label for="ssidPassword" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_pwd"></span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div class="el-input el-input--mini el-input--suffix">
+					<input id="wpa_key" maxlength="63" onblur="valid_key()" type="password" autocomplete="new-password" class="el-input__inner">
+					<!--span class="el-input__suffix"><span class="el-input__suffix-inner">
+					<i class="el-input__icon glyphicon  fhv-password glyphicon-eye-open"></i>
+					</span-->
+					</span>
+				</div>
+				<a style="cursor: pointer; float: right;" onclick="password_display_control()">
+					<span id="password_display"></span>
+				</a>	
+			</div>
+		</div>
+
+		<div class="el-form-item el-form-item--mini">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<button type="button" class="el-button el-button--primary el-button--mini" onclick="page_save()"><span><span class="multi_lang" id="lang_apply_btn_title"></span></span></button>
+				<button type="button" class="el-button el-button--primary el-button--mini" onclick="page_initial()"><span><span class="multi_lang" id="lang_refresh_btn_title"></span></span></button>
+			</div>
+		</div>
+		<div class="el-loading-mask" style="display: none;">
+			<div class="el-loading-spinner">
+			<svg viewBox="25 25 50 50" class="circular">
+			<circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+			</svg>
+			</div>
+		</div>
+</div>
+</form>
+</div>
+<!-- include(basic_setting-wlan-wifi_basic2.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_basic2.js"></script>
+<!-- endinclude -->

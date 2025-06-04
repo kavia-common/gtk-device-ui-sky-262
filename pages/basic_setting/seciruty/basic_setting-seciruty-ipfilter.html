@@ -1,0 +1,92 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Lan','IpFilter','Wan','IpFilter4Black','IpFilter4White','IpFilter6Black','IpFilter6White']
+    var FILTER_COLUMNS_LIST_STR=['lang_ipfilter_item_number','lang_ipfilter_item_src_ipaddr','lang_ipfilter_item_end_ipaddr','lang_ipfilter_item_proto','lang_ipfilter_item_comment','lang_ipfilter_item_active']
+    var FILTER_COLUMNS_LIST_VALUE=['Number','LocalIpStart','LocalIpEnd','Protocol','Comment','TB_ACTION']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	if( "undefined" != typeof(ipfilter_proto_display) && ipfilter_proto_display == "0"  ){
+		var proto_str = ['All','Both','TCP','UDP'];
+		var proto_val = ['all','both','tcp','udp'];
+	}else{
+		var proto_str = ['Both','TCP','UDP'];
+		var proto_val = ['both','tcp','udp'];
+	}
+	
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+        <div id="switch_ipfilter_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('ipfilter_enable','lang_ipfilter_enable','ipfilter_enable_handler()')
+            </script>
+		</div>
+        <div id="radio_ipfilter_filter_mode" class="form-group no-padding-hr col-xs-12 col-sm-12 ipfilter_enabled_show">
+            <script>
+				var option_list=[
+					{"id":"ipfilter_blacklist","label":"Blacklist","cb":"ipfilter_mode_selector('b')"},
+					{"id":"ipfilter_whitelist","label":"Whitelist","cb":"ipfilter_mode_selector('w')"}
+				]
+                draw_radio('ipfilter_filter_mode','lang_ipfilter_filter_mode',option_list)
+            </script>
+		</div>
+        <div id="radio_ipfilter_filter_ipmode" class="form-group no-padding-hr col-xs-12 col-sm-12 ipfilter_enabled_show">
+            <script>
+				var option_list=[
+					{"id":"mode_ipv4","label":"Enable IPv4","cb":"ip_mode_selector('4')"},
+					{"id":"mode_ipv6","label":"Enable IPv6","cb":"ip_mode_selector('6')"}
+				]
+                draw_radio('ipfilter_filter_ipmode','lang_ipfilter_ipmode',option_list)
+            </script>
+		</div>
+        <div id="input_ipfilter_local_ip_start" class="form-group no-padding-hr col-xs-12 col-sm-6 ipfilter_enabled_show">
+            <script>
+                draw_input('ipfilter_local_ip_start','ipfilter_mode_local_string','Please Enter the value','','',12)
+            </script>
+        </div>
+        <div id="input_ipfilter_local_ip_end" class="form-group no-padding-hr col-xs-12 col-sm-6 ipfilter_enabled_show">
+            <script>
+                draw_input('ipfilter_local_ip_end','ipfilter_mode_dest_string','Please Enter the value','','',12)
+            </script>
+        </div>
+        <div id="select_ipfilter_proto" class="form-group no-padding-hr col-xs-12 col-sm-12 ipfilter_proto_zone ipfilter_enabled_show">
+            <script>
+                draw_select('ipfilter_proto', proto_str, proto_val,'', '', 'lang_ipfilter_proto');
+            </script>
+        </div>
+        <div id="input_ipfilter_comment" class="form-group no-padding-hr col-xs-12 col-sm-6 ipfilter_enabled_show">
+            <script>
+                draw_input('ipfilter_comment','lang_ipfilter_comment','Please Enter the value','',32,12)
+            </script>
+        </div>
+        <div id="btn_add_filter" class="ip-panel-heading ipfilter_enabled_show" style="border-bottom:0px;border-top:0px;">
+			<script>
+                draw_button('add_filter','lang_ipfilter_add_btn','add_ipfilter_item()')
+            </script>
+		</div>
+    </div>
+    <div class="panel-heading ng-binding ipfilter_enabled_show" style="display:none">
+		<span class="" id="ipfilter_mode_title"></span>
+	</div>
+    <div class="panel-body ipfilter_enabled_show">
+		<div class="table-responsive table-scroll-vr" id="tb_ipfilter_table">
+			<script>
+				draw_table('ipfilter_table',FILTER_COLUMNS_LIST_STR)
+			   </script>
+		</div>
+	</div>
+    <div class="text-center ipfilter_enabled_show" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+			<script>
+				 draw_btn('cancel','cancel','page_initial()')
+			</script>
+		 </div>
+		<div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+</div>
+<!-- include(basic_setting-seciruty-ipfilter.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/seciruty/basic_setting-seciruty-ipfilter.js"></script>
+<!-- endinclude -->

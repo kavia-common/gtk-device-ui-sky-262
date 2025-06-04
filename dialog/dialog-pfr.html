@@ -1,0 +1,196 @@
+<script type="text/javascript">
+	var proto_str = ['Both','TCP','UDP'];
+	var proto_val = ['both','tcp','udp'];
+</script>
+<!-- <form data-v-0eb466a4="" class="el-form" style="width: 93%;"> -->
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label for="rAddress" class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_enabled">Enable Port Forwarding</span>:
+		</label>
+		<div data-v-0eb466a4="" role="switch" aria-checked="true" class="el-switch is-checked">
+			<input id="pfr_item_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+			<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('pfr_item_enable')"></span>
+		</div>
+	</div> -->
+	<div class="row">
+		<div id="switch_pfr_item_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('pfr_item_enable', 'lang_pfr_dialog_enabled', '')
+			</script>
+		</div>
+	</div>
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_iface">Interface Selection</span>
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div id="select_div_pfr_item_wan" class="el-select el-select el-select--suffix" style="width: 100%;"></div>
+		</div>
+	</div> -->
+	<div class="row">
+		<div id="select_pfr_item_wan" class="form-group no-padding-hr col-xs-12 col-sm-5">
+			<script>
+				draw_select('pfr_item_wan', [], [],'', '', 'lang_pfr_dialog_iface','12');
+			</script>
+		</div>
+	</div>
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_rm_portrange">Remote Port Range</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div data-v-0eb466a4="" class="el-col el-col-11">
+				<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+					
+					<div class="el-form-item__content">
+						<div data-v-0eb466a4="" class="el-input el-input--mini">
+							<input id="pfr_item_remote_ipaddr_start" type="text" maxlength="5" autocomplete="off" class="el-input__inner">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div data-v-0eb466a4="" class="line el-col el-col-2" style="text-align: center;">
+				-
+			</div>
+			<div data-v-0eb466a4="" class="el-col el-col-11">
+				<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+					
+					<div class="el-form-item__content">
+						<div data-v-0eb466a4="" class="el-input el-input--mini">
+							<input id="pfr_item_remote_ipaddr_end" type="text" maxlength="5" autocomplete="off" class="el-input__inner">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div > -->
+	<div class="row">
+		<div id="input_pfr_item_remote_ipaddr_start" class="form-group no-padding-hr col-xs-12 col-sm-6">
+			<script>
+				draw_input('pfr_item_remote_ipaddr_start', 'lang_pfr_dialog_rm_portrange_start', 'Please Enter the value', '', '5','12')
+			</script>
+		</div>
+		<div id="input_pfr_item_remote_ipaddr_end" class="form-group no-padding-hr col-xs-12 col-sm-6">
+			<script>
+				draw_input('pfr_item_remote_ipaddr_end', 'lang_pfr_dialog_rm_portrange_end', 'Please Enter the value', '', '5','12')
+			</script>
+		</div>
+	</div>
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label for="address" class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_local_ipaddr">Local IP Address</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div data-v-0eb466a4="" class="el-input el-input--mini">
+				<input id="pfr_item_local_ipaddr" type="text" autocomplete="off" class="el-input__inner">
+			</div>
+			
+		</div>
+	</div> -->
+	<div class="row">
+		<div id="input_pfr_item_local_ipaddr" class="form-group no-padding-hr col-xs-12 col-sm-12 ">
+            <script>
+                draw_input('pfr_item_local_ipaddr','lang_pfr_dialog_local_ipaddr','Please Enter the value', '', '')
+            </script>
+        </div>
+	</div>
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_local_portrange">Local Port Range</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div data-v-0eb466a4="" class="el-col el-col-11">
+				<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+					<div class="el-form-item__content">
+						<div data-v-0eb466a4="" class="el-input el-input--mini">
+							<input id="pfr_item_local_ipaddr_start" maxlength="5" type="text" autocomplete="off" class="el-input__inner">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-v-0eb466a4="" class="line el-col el-col-2" style="text-align: center;">
+				-
+			</div>
+			<div data-v-0eb466a4="" class="el-col el-col-11">
+				<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+					<div class="el-form-item__content">
+						<div data-v-0eb466a4="" class="el-input el-input--mini">
+							<input id="pfr_item_local_ipaddr_end" maxlength="5" type="text" autocomplete="off" class="el-input__inner">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="row">
+		<div class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<div id="input_pfr_item_local_ipaddr_start" class="form-group no-padding-hr col-xs-12 col-sm-6">
+				<script>
+					draw_input('pfr_item_local_ipaddr_start', 'lang_pfr_dialog_local_portrange_start', 'Please Enter the value', '', '5','12')
+				</script>
+			</div>
+			<div id="input_pfr_item_local_ipaddr_end" class="form-group no-padding-hr col-xs-12 col-sm-6">
+				<script>
+					draw_input('pfr_item_local_ipaddr_end', 'lang_pfr_dialog_local_portrange_end', 'Please Enter the value', '', '5','12')
+				</script>
+			</div>
+		</div>
+	</div>
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_proto">Protocol</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div id="select_div_pfr_item_proto" class="el-select el-select el-select--suffix" style="width: 100%;">
+				<script>(function(){draw_select('pfr_item_proto', proto_str, proto_val,'', '');})();</script>
+			</div>
+		</div>
+	</div> -->
+	<div class="row">
+		<div id="select_pfr_item_proto" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('pfr_item_proto', proto_str, proto_val, '', '', 'lang_pfr_dialog_proto');
+			</script>
+		</div>
+	</div>
+	<!--  -->
+
+	<!--div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label for="rAddress" class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_rm_ipaddr">Remote IP Address</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div data-v-0eb466a4="" class="el-input el-input--mini">
+				<input id="pfr_item_remote_ipaddr" type="text" autocomplete="off" class="el-input__inner">
+			</div>
+			
+		</div>
+	</div -->
+
+	<!-- 
+	<div data-v-0eb466a4="" class="el-form-item el-form-item--mini">
+		<label for="comment" class="el-form-item__label" style="width: 180px;">
+			<span class="multi_lang" id="lang_pfr_dialog_common">Comment</span>:
+		</label>
+		<div class="el-form-item__content" style="margin-left: 180px;">
+			<div data-v-0eb466a4="" class="el-input el-input--mini">
+				<input id="pfr_item_remote_ipaddr_common" type="text" autocomplete="off" maxlength="20" class="el-input__inner">
+			</div>
+		</div>
+	</div> -->
+	<div class="row">
+		<div id="input_pfr_item_remote_ipaddr_common" class="form-group no-padding-hr col-xs-12 col-sm-6 ">
+            <script>
+                draw_input('pfr_item_remote_ipaddr_common','lang_pfr_dialog_common','Please Enter the value', '', '20','12')
+            </script>
+        </div>
+	</div>
+	<!--  -->
+<!-- </form> -->

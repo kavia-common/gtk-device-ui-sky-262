@@ -1,0 +1,56 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Acl','AclPolicy']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var ADV_SETTING_SERVICE_CONTROL_COLUMNS_LIST_STR = ['lang_acl_service_type_title', 'lang_acl_access_dir_title', 'lang_acl_protocol_title', 'lang_acl_ip_range_title','lang_acl_status_title', 'lang_acl_method_title']
+	var ADV_SETTING_SERVICE_CONTROL_COLUMNS_LIST_VALUE=['Protocol','Interface','IpVersion', 'IpRange', 'RuleEnable', 'TB_ACTION']
+
+	var protocol_str_list = ['HTTP', 'ICMP']
+	var protocol_val_list = ['HTTP', 'ICMP']
+	if (G_STORAGE_SUPPORT == "1"){
+		protocol_str_list.push('FTP','TFTP','SAMBA')
+		protocol_val_list.push('FTP','TFTP','SAMBA')
+	}
+	if (G_TELNET_SUPPORT == "1"){
+		protocol_str_list.push('TELNET')
+		protocol_val_list.push('TELNET')
+	}
+	if (G_SSH_SUPPORT == "1"){
+		protocol_str_list.push('SSH')
+		protocol_val_list.push('SSH')
+	}
+
+	var access_ctrl_str_list = ['WAN','LAN']
+	var access_ctrl_val_list = ['WAN','LAN']
+
+	var ip_proto_str_list = ['IPv4','IPv6']
+	var ip_proto_val_list = ['IPv4','IPv6']
+
+	var SAVE_ACL_WAITING_TIME = 3000;
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_acl_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('acl_enabled','lang_acl_enabled_title','acl_enable_switched(true)')
+            </script>
+		</div>
+		<div class="table-responsive table-scroll-vr acl_emabled_show" id="tb_acl_tbody">
+			<script>
+				draw_table('acl_tbody', ADV_SETTING_SERVICE_CONTROL_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="text-center acl_emabled_show" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_acl_add" style="border-bottom:0px;border-top:0px;">
+			<script>
+				draw_button('acl_add', 'lang_acl_add_title', 'add_clicked()')
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- include(adv_setting-service_control.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-service_control.js"></script>
+<!-- endinclude -->

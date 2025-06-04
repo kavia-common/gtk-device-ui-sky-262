@@ -1,0 +1,11 @@
+{
+    "login": {
+        "lang_login_title": "SIGN IN",
+        "lang_login_username": "USERNAME",
+        "lang_login_passwd": "PASSWORD",
+        "lang_login_error_auth_msg": "The name or password is wrong!",
+        "lang_login_empty_msg": "The name or password can not empty!",
+        "lang_login_btn": "SIGN IN",
+        "lang_login_permission_msg": "Login error! You do not have permission to login."
+    }
+}

@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+
+<div class="panel ng-scope" id="leaf_page_zone" style="display:none;">
+	<div class="alert alert-danger" id="page_warning_msg_zone"  style="display:none;">
+		<a aria-label="close" class="close" onclick="warning_control('off','page')">✖</a>
+		<p class="ng-binding" id="page_warning_msg"></p>
+	</div>
+	<div class="panel-heading ng-binding" style="display:none;">
+		<span class="" id="leaf_page_title"></span></span>
+	</div>
+	<div class="panel-body" id="leaf_page_content">
+	</div>
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;" id="leaf_page_footer" >
+	</div>
+</div>
+
+<div class="panel ng-scope" id="view_page_zone"></div>
+
+<!-- include(singlepage.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/singlepage.js"></script>
+<!-- endinclude -->

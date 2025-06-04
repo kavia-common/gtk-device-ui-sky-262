@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html dir="">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Internet blocked</title>
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="cache-control" content="no-cache, no-store">
+	<meta http-equiv="pragma" content="no-cache">
+	<link rel="stylesheet" href="../css/all.min.css">
+	<script language="javascript" type="text/javascript" src="../js/all.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/env.js"></script>
+</head>
+<style type="text/css">
+	.wrapper {
+		/* margin: auto; */
+	width: 100%;
+		/* padding: 1px; */
+	}
+
+	.row {
+		/* margin: auto; */
+		/* width: 60%; */
+		/* padding: 1px; */
+	}
+
+	.errorText {
+		width: 100%;
+		color: red;
+	}
+
+	.container-fluid {
+		/* margin: auto; */
+		/* width: 60%; */
+		/* padding: 1px; */
+	}
+
+	body#blocked {
+		font-size: 14px;
+		padding-top: 76px;
+		background-color: #f1f1f1;
+	}
+
+	.warp-login {
+		padding-top: 4%;
+		width:480px;
+		padding-bottom:50px;
+		margin: 0 auto;
+	}
+
+	.warp-login h3 {
+		font-family: 'db_helvethaicaais_x75_bd';
+		font-size: 35px;
+		margin-bottom: 50px;
+		color: #4D4D4D;
+	}
+
+	.fhv-centent {
+		margin: 0 25px 25px;
+	}
+
+	.fhv-centent > p {
+		font-size: 14px;
+		line-height: 1.42857143;
+		color:#333;
+	}
+
+	.btn-signin {
+		height: 40px;
+		border-radius: 20px;
+		border: none;
+		color: #ffffff;
+		width: 224px;
+		background-color: #8dc63f;
+	}
+
+	.input-form-login#pc_passwd {
+		width: 100%;
+		border-radius: 24px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: rgba(149, 152, 154, 0.25);
+		height: 47px;
+		font-family: 'db_helvethaicaais_x65_med';
+		font-size: 20px;
+		color: #4E4E4E;
+	}
+
+	.input-form-login:focus {
+		outline: none;
+	}
+
+	.input-form-login.password {
+		background: #F9F9F9 url('../img/icons/ic_lock_24px.png') no-repeat 5% 50%;
+		text-indent: 12%;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.warp-login {
+			/* max-width: 360px; */
+			margin-top: 30%;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.warp-login {
+			/* max-width: 300px; */
+			margin-top: 24%;
+		}
+
+		.input-form-login.username {
+			padding-left: 14%;
+		}
+
+		.input-form-login.password {
+			padding-left: 14%;
+		}
+	}
+
+	@media only screen and (max-width: 414px) {
+		.warp-login {
+			max-width: 280px;
+		}
+
+		.input-form-login.username {
+			padding-left: 16%;
+		}
+
+		.input-form-login.password {
+			padding-left: 16%;
+		}
+	}
+
+	@media only screen and (max-width: 375px) {
+
+		.warp-login {
+
+		margin-top: 12%;
+
+		}
+	}
+</style>
+<body id="blocked" >
+	<div id="loading_topology" class="el-loading-mask" style="display: none;position: absolute;">
+		<div class="el-loading-spinner">
+				<svg viewBox="25 25 50 50" class="circular">
+					<circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+				</svg>
+			</div>
+		<div>
+			<span class="el-loading-spinner-message" id="loading_message"></span>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="wrapper">
+				<div class="warp-login">
+					<h3 class="text-center"><span class="multi_lang" id="lang_content_title">Internet blocked</span></h3>
+					<div class="fhv-centent">
+						<p><span class="multi_lang" id="lang_content_info">Access to the Internet is blocked at this time.  Enter the parental controls password to make all blocked websites and content available for one hour.</span></p>
+					</div>
+					<div></div>
+					<div class="form-group">
+						<p class="title"><span class="multi_lang" id="lang_password_title">PASSWORD</span></p>
+						<div><input type="password" id="pc_passwd" name="pc_passwd" class="input-form-login password" placeholder="PASSWORD"></div>
+					</div>
+					<div class="clear"></div>
+					<div class="error loginError" style="display:none">
+						<p><span style="color:red;" class="multi_lang" id="lang_password_incorrect"></span></p>
+					</div>
+					</div>
+
+					<div class="text-center" style="margin-top:70px;"><button class="btn-signin" id="myButton" onclick="unlock()"><span class="multi_lang" id="lang_unblock_title">Unblock</span></button>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script language="JavaScript">
+	var MAC = "00:00:00:00:00:00"
+	var URL = ""
+	$(document).ready(function(){
+		var query_string=queryString();
+		if( "undefined" != typeof(query_string.mac) && query_string.mac != "" )
+			MAC = query_string.mac
+		if( "undefined" != typeof(query_string.url) && query_string.url != "" )
+			URL = decodeURIComponent(query_string.url)
+			$.when(
+				$.lang_load("parental_control_blocked")
+			).done(function(){
+			init_lang_list()
+		})
+	});
+
+	function unlock()
+	{
+		pw = $("#pc_passwd").val()
+		$(".loginError").hide()
+		$("#loader").show()
+		$.ajax({
+			type: "GET",
+			contentType: "application/json",
+			dataType: 'json',
+			url: '/pc/unlock?mac='+MAC+'&pwd='+pw,
+			cache: false,
+			timeout: 10000,
+			beforeSend: onSend,
+			success: onSuccess,
+			complete: onComplete,
+			error: onError
+		});
+		function onSend(){};
+		function onError(){};
+		function onComplete(){
+	};
+	function onSuccess(data){
+		$("#loading_topology").css("display", "block");
+		if("Success" == data.status.message){
+			setTimeout(function(){
+				$("#loading_topology").css("display", "none");
+				window.close();
+				window.location.href = URL + '?n=' + new Date().getTime(); // random number
+			}, 3000);
+		}
+		else{
+			$("#loader").hide()
+			$(".loginError").show()
+		}
+	};
+}
+</script>
+</html>

@@ -1,0 +1,40 @@
+<div id="radio_acl_rule_type" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_bridge6 wan_mode_route connection_type_dhcp">
+	<script>
+		var option_list=[
+			{"id":"radio_block","label":"block","cb":"switch_radio(this)"},
+			{"id":"radio_accept","label":"accept","cb":"switch_radio(this)"}
+		]
+		draw_radio('acl_rule_type','lang_acl_rule_type', option_list)
+	</script>
+</div>
+
+<div id="select_protocol" class="form-group no-padding-hr col-xs-12 col-sm-12">
+	<script>
+		draw_select('protocol', protocol_str_list, protocol_val_list,'', 'a', 'lang_acl_protocol_title');
+	</script>
+</div>
+
+<div id="select_access_ctrl" class="form-group no-padding-hr col-xs-12 col-sm-12">
+	<script>
+		draw_select('access_ctrl', access_ctrl_str_list, access_ctrl_val_list,'', 'a', 'lang_acl_access_ctrl_title');
+	</script>
+</div>
+
+<div id="select_ip_proto" class="form-group no-padding-hr col-xs-12 col-sm-12">
+	<script>
+		draw_select('ip_proto', ip_proto_str_list, ip_proto_val_list,'', 'a', 'lang_acl_ip_proto_title');
+	</script>
+</div>
+
+<div class="form-group no-padding-hr col-xs-12 col-sm-12">
+	<div id="input_ip_start" class="form-group no-padding-hr col-xs-12 col-sm-6">
+		<script>
+			draw_input('ip_start', 'lang_acl_srcip_title_start', 'Please Enter the value', 'valid_ip_address_range()','',12)
+		</script>
+	</div>
+	<div id="input_ip_end" class="form-group no-padding-hr col-xs-12 col-sm-6">
+		<script>
+			draw_input('ip_end', 'lang_acl_srcip_title_end', 'Please Enter the value', 'valid_ip_address_range()','',12)
+		</script>
+	</div>
+</div>

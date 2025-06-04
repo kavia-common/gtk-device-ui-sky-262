@@ -1,0 +1,94 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Guest']
+	var guest_allow_max_select_str = ["1","2","3","4","5","6","7","8","9","10"]
+	var guest_allow_max_select_val = ["1","2","3","4","5","6","7","8","9","10"]
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+
+<div>
+   <form class="el-form fhv-form el-form--label-left">
+      <div class="fhv-centent">
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label"><span class="multi_lang" id="lang_guest_title_desc">Guest Access provides visitors to your home with Internet access without giving them access to your computers or personal data.</span></label> 
+		</div>
+		<hr style="margin-top: 0px;">
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_guest_enabled">Allow Guest Access</span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <div role="switch" aria-checked="true" class="el-switch" aria-describedby="el-tooltip-7731" tabindex="0">
+				  <input type="checkbox" name="" true-value="true" class="el-switch__input"><span class="el-switch__core" id="enable_btn" onclick="guest_onoff_control()" style="width: 40px;"></span>
+			   </div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_guest_ssid">Guest Network Name</span> :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <div class="el-input el-input--mini">
+				  <span id="guest_ssid_2"></span>
+			   </div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<label for="ssid" class="el-form-item__label" style="width: 180px;"></label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <div class="el-input el-input--mini">
+				  <span id="guest_ssid_5"></span>
+			   </div>
+			</div>
+		</div>
+		<div id="div_ssidpwd2" class="el-form-item el-form-item--mini">
+			<label for="ssidPassword" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_guest_password">Guest Password</span> :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <div class="el-input el-input--mini el-input--suffix">
+				  <input id="guest_password" type="password" autocomplete="new-password" class="el-input__inner">
+			   </div>
+			</div>
+			<a style="cursor: pointer; float: right;" onclick="password_display_control('2')">
+				<span id="password_display"></span>
+			</a>
+		</div>
+		<div id="div_authtype_select" class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_guest_max_allowed">Total Guests Allowed</span> :</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <div class="el-select el-select--mini" style="width: 100%;">
+				  <div id="select_div_guest_allow_max_select" class="el-select el-select el-select--suffix" style="width: 100%;">
+						<script>(function(){draw_select('guest_allow_max_select', guest_allow_max_select_str, guest_allow_max_select_val,'select_guest_allow_max_select()', '');})();</script>
+				  </div>
+			   </div>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_guest_ssid_broadcast">SSID Broadcast </span>:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" class="el-switch">
+					<input type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" id="guest_hide_btn" onclick="guest_hide_control()"style="width: 40px;"></span>
+				</div>
+			</div>
+		</div>
+		<hr style="margin-top: 0px;">
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label"><span class="multi_lang" id="lang_guest_sub_desc">Your guests should connect to your wireless network listed above by opening a Web browser and entering the guest password.</span></label> 
+		</div>
+		<div class="el-form-item el-form-item--mini">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+			   <button type="button" class="el-button el-button--primary el-button--mini" onclick="page_save()"><span><span class="multi_lang" id="lang_apply_btn_title">Apply</span></span></button>
+			   <button type="button" class="el-button el-button--primary el-button--mini" onclick="page_initial()"><span><span class="multi_lang" id="lang_refresh_btn_title">Refresh</span></span></button>
+			</div>
+		</div>
+		<div class="el-loading-mask" style="display: none;">
+			<div class="el-loading-spinner">
+			   <svg viewBox="25 25 50 50" class="circular">
+				  <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+			   </svg>
+			</div>
+		</div>
+      </div>
+   </form>
+</div>
+
+<!-- include(basic_setting-wlan-wifi_guest.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_guest.js"></script>
+<!-- endinclude -->

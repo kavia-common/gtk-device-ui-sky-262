@@ -1,0 +1,36 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js?"></script>
+<script type="text/javascript">
+    var OBJ_LIST = ['WlanDeviceSsid']
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+    var SSID_DATA_COLUMNS_LIST_STR=['lang_ssid','lang_auth_title','lang_ssid_enabled','lang_ssid_action']
+    var SSID_DATA_COLUMNS_LIST_VALUE=['SSID','TB_SELECT','TB_CHECKBOX','TB_ACTION']
+    var RADIO_INDEX="5"
+    var SSID_CONFIG_LIST=[4,5,7]
+</script>
+
+<div class="panel-body panel-body-vr-20">
+    <div class="table-responsive" id="tb_ssid_data_list_table" >
+        <script>
+            draw_table('ssid_data_list_table',SSID_DATA_COLUMNS_LIST_STR)
+        </script>
+    </div>
+</div>
+<!--APPLY CONTROL START-->
+<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+    <div class="btn-align" id="btn_cancel">
+    <script>
+            draw_btn('cancel','cancel','page_initial()')
+    </script>
+    </div>
+    <div class="btn-align" id="btn_apply">
+        <script>
+            draw_btn('apply','apply','page_save()')
+        </script>
+    </div>
+</div>
+<!--APPLY CONTROL STOP-->
+
+<!-- include(wlan-wifi_indep5-ssid5.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/wlan/wifi_indep5/wlan-wifi_indep5-ssid5.js"></script>
+<!-- endinclude -->

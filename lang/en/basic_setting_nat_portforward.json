@@ -1,0 +1,27 @@
+{
+    "basic_setting_nat_portforward": {
+        "lang_pfr_wan_title": "WAN Connection",
+        "lang_pfr_add": "Add",
+        "lang_pfr_number": "Number",
+        "lang_pfr_enabled": "Enable",
+        "lang_pfr_desc": "Description",
+        "lang_pfr_remote_ip": "External IP Address",
+        "lang_pfr_proto": "Protocal",
+        "lang_pfr_remote_port_range": "External Port Range",
+        "lang_pfr_local_port_range": "Internal Port Range",
+        "lang_pfr_local_ip": "Internal IP Address",
+        "lang_pfr_active": "Active",
+        "lang_pfr_dialog_enabled": "Enable Port Forwarding",
+        "lang_pfr_dialog_iface": "Interface Selection",
+        "lang_pfr_dialog_local_ipaddr": "Local IP Address",
+        "lang_pfr_dialog_local_portrange": "Local Port Range",
+        "lang_pfr_dialog_proto": "Protocol",
+        "lang_pfr_dialog_rm_ipaddr": "External IP Address",
+        "lang_pfr_dialog_rm_portrange": "External Port Range",
+        "lang_pfr_dialog_common": "Comment",
+        "lang_pfr_dialog_rm_portrange_start": "External Port Range(Start)",
+        "lang_pfr_dialog_rm_portrange_end": "External Port Range(End)",
+        "lang_pfr_dialog_local_portrange_start": "Local Port Range(Start)",
+        "lang_pfr_dialog_local_portrange_end": "Local Port Range(End)"
+    }
+}

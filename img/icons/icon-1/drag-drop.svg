@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>08C8F6D3-C6C3-4483-8CE6-FB35C1EDC7E6</title>
+    <g id="Utilities" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="070_utilities_020-fw-upgrade" transform="translate(-552.000000, -356.000000)" stroke="#4B5057">
+            <g id="content" transform="translate(250.000000, 90.000000)">
+                <g id="Group-11" transform="translate(260.000000, 266.000000)">
+                    <g id="ico_drag_drop" transform="translate(42.000000, 0.000000)">
+                        <g id="Group-14" transform="translate(6.000000, 8.000000)">
+                            <polyline id="Path-2" points="0 12 -8.32667268e-17 20 24 20 24 12"></polyline>
+                            <polyline id="Path" transform="translate(12.000000, 12.000000) scale(1, -1) translate(-12.000000, -12.000000) " points="7 15 12 9 17 15"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="-2.14411822e-14" id="Path-4"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

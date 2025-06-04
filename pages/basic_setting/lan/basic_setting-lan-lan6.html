@@ -1,0 +1,298 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Lanv6','WlanGlobal']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+    var dhcpv6_server_select_val = ['11','00','01'];
+    var dhcpv6_server_select_str = ['statefulv6','slacc','statelessv6'];
+    var SAVE_LAN_TIME = 90000
+</script>
+<div class="wrapperdiv">
+   <div class="panel-body">
+      <h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+      <!--
+      <div id="switch_managed_flag" class="form-group no-padding-hr col-xs-12 col-sm-12">
+         <script>
+            draw_switch('managed_flag','lang_managed_flag','switch_toggle(\\\'managed_flag\\\', \\\'2\\\')')
+         </script>
+      </div>
+      <div id="switch_other_flag" class="form-group no-padding-hr col-xs-12 col-sm-12">
+         <script>
+            draw_switch('other_flag','lang_other_flag','switch_toggle(\\\'other_flag\\\', \\\'2\\\')')
+         </script>
+      </div>
+      -->
+      <style>
+         .input-group__prepend, .input-group__append{
+            background-color: #f5f7fa;
+            color: #909399;
+            display: table-cell;
+            text-align: center;
+            border: 1px solid #dcdfe6;
+            border-radius: 4px;
+            padding: 0 10px;
+         }
+      </style>
+      <script>
+         function draw_group_append_input(input_id, append_id ,multi_lang_id, placeholder, onblur) {
+            var group_append_input_html = ""
+            var onblur_html = ""
+            if ( 'undefined' != typeof(onblur) )
+               onblur_html='onblur="'+onblur+'"'
+         
+            group_append_input_html = '\
+               <div class="input-field no-padding-hr-l col-xs-12 col-sm-6" style="display: inline-table;">\
+                  <input class="form-control hidden-dom-removal" style="display: table-cell;" id="'+input_id+'" name="'+input_id+'" placeholder="'+placeholder+'" required="required" type="text" '+onblur_html+'>\
+                  <div id="'+append_id+'" class="multi_lang input-group__append" style="display: table-cell;"></div>\
+                  <label class="row active ng-binding" for="'+input_id+'"><span class="multi_lang" id="'+multi_lang_id+'">'+multi_lang_id+'</span></label>\
+                  <span class="error" id="'+input_id+'_error_msg" style="display:none">* This Field is Required</span>\
+               </div>\
+            ';
+         
+            $("#group_append_input_"+input_id).html(group_append_input_html)
+         }
+      </script>
+      <div id="switch_dhcp6s_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+         <script>
+            draw_switch('dhcp6s_enable','lang_dhcp6s','switch_toggle(\\\'dhcp6s_enable\\\', \\\'2\\\')')
+         </script>
+      </div>
+      <div id="select_v6server_mode" class="form-group no-padding-hr col-xs-12 col-sm-12 v6server_enabled" >
+         <script>
+             draw_select('v6server_mode', dhcpv6_server_select_str, dhcpv6_server_select_val,'v6server_change()', '', 'lang_dhcpv6_mode');
+         </script>
+     </div>
+      <div data-v-4451c442="" id="div_ipv6" style="display:none" class="v6server_enabled stateful_only">
+         <div id="input_start_ip" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+               draw_input('start_ip', 'lang_start_ipv6', 'Please Enter the value')
+            </script>
+         </div>
+         <div id="input_end_ip" class="form-group no-padding-hr col-xs-12 col-sm-12 v6server_enabled">
+            <script>
+               draw_input('end_ip', 'lang_end_ipv6', 'Please Enter the value')
+            </script>
+         </div>
+      </div>
+      <div id="group_append_input_max_ra" class="form-group no-padding-hr col-xs-12 col-sm-12 v6server_enabled stateful_only">
+        <script>
+           draw_group_append_input('max_ra', 'lang_seconds', 'lang_max_ra', '')
+        </script>
+     </div>
+     <div id="group_append_input_min_ra" class="form-group no-padding-hr col-xs-12 col-sm-12 v6server_enabled stateful_only">
+        <script>
+           draw_group_append_input('min_ra', 'lang_seconds', 'lang_min_ra', '')
+        </script>
+     </div>
+      <div id="radio_ipv6_mode" class="form-group no-padding-hr col-xs-12 col-sm-12 v6server_enabled">
+         <script>
+            var option_list = [
+               { "id": "ipv6_auto", "label": "auto", "cb": "switch_radio(this)" },
+               { "id": "ipv6_manual", "label": "manual", "cb": "switch_radio(this)" }
+            ]
+            draw_radio('ipv6_mode', 'lang_dns', option_list)
+         </script>
+      </div>
+      <div id="div_lan_manual" style="display:none" data-v-4451c442="">
+         <div id="input_ip_prefix" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+               draw_input('ip_prefix', 'lang_ipv6_prefix', 'Please Enter the value')
+            </script>
+         </div>
+         <div id="input_dns" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+               draw_input('dns', 'lang_dns', 'Please Enter the value')
+            </script>
+         </div>
+         <div id="input_prefix_set" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+               draw_input('prefix_set', 'lang_prefix_set', 'Please Enter the value')
+            </script>
+         </div>
+      </div>
+      <script>
+         function draw_custom_checkbox(id, multi_lang_id, cb, value, disabled, checked) {
+            var dis = ""
+            if("undefined" != typeof(disabled) && "" != disabled)
+               dis = "disabled"
+
+            var val = ""
+            if("undefined" != typeof(val) && "" != value)
+               val = '"'+value+'"'
+
+            var check = ""
+            if("undefined" != typeof(checked) && "" != checked)
+               check = "checked"
+
+            var checkbox_html = ""
+
+            checkbox_html = '\
+            <div class="row checkbox-top-align">\
+            <div class="no-padding-hr col-sm-12 col-md-12 col-lg-12 col-xs-12 text-left">\
+            <div class="checkbox1">\
+            <input class="hidden-dom-removal ng-pristine ng-untouched ng-valid value='+val+' '+dis+' '+check+' id="'+id+'" name="'+id+'" type="checkbox"><label class="checkbox1_left_align" for="'+id+'" onclick="'+cb+'"><span class="multi_lang" id="'+multi_lang_id+'">'+multi_lang_id+'</span></label>\
+            </div>\
+            </div>\
+            </div>\
+            ';
+
+            $("#checkbox_"+id).html(checkbox_html)
+         }
+      </script>
+      <div style="display:none">
+         <div style="display: inline-table;">
+            <label class="" style="width: 180px;">DHCPv6 Disable:</label>
+            <div class="row">
+               <div id="checkbox_dhcp6_lan1" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_lan1', 'LAN1', '', '0', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_lan2" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_lan2', 'LAN2', '', '1', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_lan3" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_lan3', 'LAN3', '', '2', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_lan4" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_lan4', 'LAN4', '', '3', '', 'checked')
+                  </script>
+               </div>
+            </div>
+            <div class="row">
+               <div id="checkbox_dhcp6_ssid1" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid1', 'SSID1', '', '10', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid2" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid2', 'SSID2', '', '12', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid3" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid3', 'SSID3', '', '13', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid4" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid4', 'SSID4', '', '14', 'disabled', '')
+                  </script>
+               </div>
+            </div>
+            <div class="row">
+               <div id="checkbox_dhcp6_ssid5" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid5', 'SSID5', '', '4', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid6" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid6', 'SSID6', '', '6', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid7" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid7', 'SSID7', '', '7', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_dhcp6_ssid8" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('dhcp6_ssid8', 'SSID8', '', '8', 'disabled', '')
+                  </script>
+               </div>
+            </div>
+         </div>
+         <div style="clear: both;"></div>
+         <div style="display: inline-table;">
+            <label class="" style="width: 180px;">RA Disable:</label>
+            <div class="row">
+               <div id="checkbox_ra_lan1" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_lan1', 'LAN1', '', '0', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_lan2" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_lan2', 'LAN2', '', '1', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_lan3" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_lan3', 'LAN3', '', '2', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_lan4" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_lan4', 'LAN4', '', '3', '', 'checked')
+                  </script>
+               </div>
+            </div>
+            <div class="row">
+               <div id="checkbox_ra_ssid1" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid1', 'SSID1', '', '10', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid2" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid2', 'SSID2', '', '12', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid3" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid3', 'SSID3', '', '13', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid4" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid4', 'SSID4', '', '14', 'disabled', '')
+                  </script>
+               </div>
+            </div>
+            <div class="row">
+               <div id="checkbox_ra_ssid5" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid5', 'SSID5', '', '4', '', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid6" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid6', 'SSID6', '', '6', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid7" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid7', 'SSID7', '', '7', 'disabled', '')
+                  </script>
+               </div>
+               <div id="checkbox_ra_ssid8" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: table-cell;">
+                  <script>
+                     draw_custom_checkbox('ra_ssid8', 'SSID8', '', '8', 'disabled', '')
+                  </script>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+         <div class="btn-align" id="btn_cancel">
+            <script>
+               draw_btn('cancel', 'cancel', 'page_initial()')
+            </script>
+         </div>
+         <div class="btn-align" id="btn_apply">
+            <script>
+               draw_btn('apply', 'apply', 'page_save()')
+            </script>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- include(basic_setting-lan-lan6.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/lan/basic_setting-lan-lan6.js"></script>
+<!-- endinclude -->

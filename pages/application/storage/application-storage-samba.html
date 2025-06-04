@@ -1,0 +1,52 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Samba']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<p class="notice-color-blue" style="padding-bottom: 10px;"><span class="multi_lang" id="lang_samba_note">Note: To enable Samba Server, at least one samba user account would be set, and also need a storage device. To add a samba user, please entry the page "Storage User Accounts".</span></p>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_samba_enable">Enable Samba Service</span>:</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="samba_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('samba_enable','','')"></span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_samba_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('samba_enable', 'lang_samba_enable', '')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+			</div>
+			<div class="col-md-8 col-offset-md-2 col-xs-8">
+				<button onclick="page_save()" type="button" class="el-button el-button--primary el-button--small">
+					<span>
+						<span class="multi_lang" id="lang_samba_apply">Apply</span>
+					</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','page_save()')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+</div>
+<!-- include(application-storage-samba.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/storage/application-storage-samba.js"></script>
+<!-- endinclude -->

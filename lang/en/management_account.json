@@ -1,0 +1,16 @@
+{
+    "management_account": {
+        "lang_account_title": "Account Management - Passwords",
+        "lang_account_help_msg": "Use the fields below to enter up to 15 characters and click \"Apply\" to change or create the password.",
+        "lang_account_note_msg": "Note : Password cannot contain a space.",
+        "lang_account_username_title": "Username",
+        "lang_account_oldpassword_title": "Old Password",
+        "lang_account_newpassword_title": "New Password",
+        "lang_account_confirmpassword_title": "Confirm Password",
+        "lang_account_apply_title": "Apply",
+        "lang_account_refresh_title": "Refresh",
+        "lang_account_password_empty_error": "The password must not be empty!",
+        "lang_account_password_confirm_error": "The two passwords are inconsistent, please modify!",
+        "lang_account_oldpassword_change_error": "Entered password is incorrect!"
+    }
+}

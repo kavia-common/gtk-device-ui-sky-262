@@ -1,0 +1,874 @@
+.gemtek-text-color {
+  color: #4b5057;
+}
+
+.gemtek-text-size-sm {
+  font-size: 12px;
+}
+
+.gemtek-font-family-medium {
+  font-family: 'Roboto-Medium';
+}
+
+.gemtek-font-weight-normal {
+  font-weight: normal !important;
+}
+
+.theme-default .gemtek-btn-primary {
+  border: solid 1px #0072bc !important;
+  background-color: #0072bc !important;
+  padding: 11px 32px !important;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.theme-default .gemtek-btn-primary:focus {
+  border: solid 1.5px #004f83 !important;
+}
+
+.theme-default .gemtek-btn-primary:active {
+  border: solid 1px #004f83 !important;
+  background-color: #004f83 !important;
+}
+
+.theme-default .gemtek-btn-primary:disabled {
+  color: #fff !important;
+  opacity: 0.5;
+}
+
+.theme-default .gemtek-btn-normal {
+  border-radius: 4px !important;
+  border: solid 1px #0072bc !important;
+  background-color: #fff;
+  color: #0072bc;
+  padding: 11px 27px !important;
+}
+
+.theme-default .gemtek-btn-normal-sm {
+  padding: 10px 19px !important;
+}
+
+.theme-default .gemtek-btn-normal:disabled,
+.theme-default .gemtek-btn-normal:disabled:active,
+.theme-default .gemtek-btn-normal:disabled:focus
+ {
+  border: solid 1px #0072bc !important;
+  background-color: #fff !important;
+  color: #0072bc !important;
+  opacity: 0.5;
+}
+
+.theme-default .gemtek-btn-add {
+  border-radius: 4px !important;
+  border: solid 1px #0072bc !important;
+  background-color: #fff;
+  color: #0072bc;
+  padding: 11px 34px 11px 5px !important;
+  width: 130px;
+  height: 36px;
+
+}
+.gemtek-btn-add:hover {
+  cursor:pointer;
+}
+
+.gemtek-btn-add-txt{
+  width: 22px;
+  height: 24px;
+  margin: 5px 0 5px 4px;
+  font-family: 'Roboto-Medium';
+  font-size: 14px;
+  font-weight: normal;
+  color: #0072bc;
+}
+
+.theme-default .gemtek-btn-normal:focus {
+  border: solid 1.5px #004f83 !important;
+}
+
+.theme-default .gemtek-btn-normal:active {
+  border: solid 1px #004f83 !important;
+  background-color: #004f83 !important;
+  color: #fff !important;
+}
+
+.theme-default .gemtek-btn-danger {
+  border: solid 1px #e44c4c !important;
+  background-color: #e44c4c !important;
+  padding: 11px 32px !important;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.gemtek-tab {
+  border-bottom: 1px solid #dee5ec;
+}
+
+.gemtek-tab > li.active, .gemtek-tab > li:hover{
+  border-bottom: 3px solid #0072bc !important;
+}
+
+.gemtek-tab > li.active > a {
+  color: #0072bc;
+}
+
+.gemtek-tab > li.active > a:hover {
+  color: #0072bc;
+}
+
+.gemtek-tab > li > a{
+  color: #4b5057;
+  padding: 22px 26px;
+  height: auto;
+  border: none !important;
+  background: transparent !important;
+  font-size: 12px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.gemtek-tab > li > a:hover {
+  color: #0072bc;
+}
+
+.gemtek-enabled {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  background-image: url(../../img/icons/icon-1/gemtek-enabled.svg);
+  background-repeat: no-repeat;
+}
+
+.gemtek-disabled {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  background-image: url(../../img/icons/icon-1/gemtek-disabled.svg);
+  background-repeat: no-repeat;
+}
+
+.gemtek-delete-icon {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  background-image: url(../../img/icons/icon-1/delete.svg);
+  background-repeat: no-repeat;
+}
+
+.gemtek-diagnostics-up {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../../img/icons/icon-1/gemtek-enabled.svg);
+  margin-right: 5px;
+}
+
+.gemtek-diagnostics-down {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../../img/icons/icon-1/gemtek-disabled.svg);
+  margin-right: 5px;
+}
+
+.gemtek-remind-p {
+  color: #4b5057;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.gemtek-dropdown {
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.gemtek-dropdown > img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.gemtek-dropdown-field {
+  background: #fff;
+  cursor: pointer;
+  border: 1px solid #dee5ec;
+  padding: 13px 10px;
+  border-radius: 4px;
+  height: 45px;
+  width: 100%;
+}
+
+.gemtek-dropdown-field > span {
+  float: left;
+}
+
+.gemtek-dropdown-field > img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.gemtek-input-p-left {
+  padding-left: 0px;
+}
+.gemtek-input-lh{
+  height: 40px;
+}
+
+.gemtek-input-mt30{
+  margin-top: 30px;
+}
+
+.gemtek-input-mt20{
+  margin-top: 20px;
+}
+
+.gemtek-input-mt10{
+  margin-top: 10px;
+}
+
+.gemtek-input-mb30{
+  margin-bottom: 30px;
+}
+
+.gemtek-hr {
+  width: 97%;
+  margin: 30px 0px 29px;
+  border-bottom: solid 1px #dee5ec;
+}
+.gemtek-full-hr {
+  width: 100%;
+  border-bottom: solid 1px #dee5ec;
+}
+.gemtek-table-style {
+  border: 0;
+  border-top:1px #dee5ec solid;
+  /* border-bottom:1px #dee5ec solid; */
+}
+
+.gemtek-diagnostics-item-border{
+  border:solid 1px #dee5ec;
+  min-height: 385px;
+}
+
+.gemtek-table-txt {
+  font-family: 'Roboto-Medium';
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5057;
+}
+
+.gemtek-panel-p20 {
+  padding: 20px;
+}
+.gemtek-normal-text {
+  font-size: 12px;
+  font-weight: 100;
+  color: #4b5057;
+}
+.gemtek-tr-bottom-line{
+  border-bottom:1px #dee5ec solid ;
+}
+
+.gemtek-switch-on {
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  background-image: url(../../img/icons/icon-1/btn-toggle-on.svg);
+}
+
+.gemtek-switch-off {
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  background-image: url(../../img/icons/icon-1/btn-toggle-off.svg);
+}
+
+.gemtek-switch-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.gemtek-switchblock-no-padding-left {
+  padding:10px 0px!important;
+}
+.gemtek-number-no-padding-left {
+ padding-left: 0px!important;
+ min-width: none!important;
+}
+.gemtek-toggle-label{
+  color:#292828;
+  /* min-width:0px!important;
+  max-width:190px; */
+}
+
+.rowtable-mt-up{
+  margin-top: -20px;
+  border: none;
+}
+
+.gemtek-no-border{
+  box-shadow:none!important;
+  border: none!important;
+}
+.gemtek-padding-border{
+  padding: 0px 20px!important;
+}
+
+.gemtek-assoc-title{
+  padding: 20px 20px;
+  width: 100%;
+  color: #4b5057;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  display: inline-block;
+}
+
+.gemtek-no-padding-bottom{padding-bottom:0px!important; }
+
+.gemtek-statistics-chat-th{
+  height: 14px!important;
+  margin: 0 0 10px!important;
+  font-size: 12px!important;
+  font-weight: 300!important;
+  line-height: normal!important;
+  letter-spacing: normal!important;
+  color: #4b5057!important;
+  text-align: center!important;
+  padding: 0px!important;
+}
+.gemtek-statistics-icon{
+  text-align: center;
+  font-size: 18px;
+}
+.gemtek-statistics-chat-thead{
+  border-bottom:none!important;
+}
+.gemtek-statistics-chat-thead > tr > th{
+  border-bottom:none!important ;
+  border-right: 1px solid #ddd!important;
+}
+.gemtek-statistics-chat-thead > td{
+  border-bottom:none!important ;
+  border-right: 1px solid #ddd!important;
+}
+
+.gemtek-statistics-chat-thead > tr > th:last-child{
+  border-right: none!important;
+}
+.gemtek-statistics-chat-thead > td:last-child{
+  border-right: none!important;
+}
+.gemtek-home-breadcrumbs{
+  width: 96px;
+  height: 14px;
+  margin: 10px 560px 30px 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #4b5057;
+}
+.gemtek-Device-Status{
+  margin: 20px;
+  font-size: 12px;
+  color: #00a3bc;
+  text-transform:uppercase;
+}
+.gemtek-border-right{
+  border-right: 1px solid #ddd!important;
+}
+
+.gemtek-two-color-table tr:nth-child(even) {background: #f8f8fa}
+.gemtek-two-color-table tr:nth-child(odd) {background: #fff}
+
+.gemtek-status-down {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/icons/icon-1/ico-status-down.svg);
+}
+.gemtek-status-up {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/icons/icon-1/ico-status-up.svg);
+}
+.gemtek-status-icons {
+    display: flex;
+    width: 36px;
+    margin: 0 0 0 20px;
+}
+.gemtek-status-up-text, .gemtek-status-down-text {
+  position: relative;
+}
+.gemtek-status-up-text::before {
+  content: 'Up';
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  position: absolute;
+  left: 27px;
+  top: 5px;
+}
+.gemtek-status-down-text::before {
+  content: 'Down';
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  position: absolute;
+  left: 27px;
+  top: 3px;
+}
+.gemtek-status-icons:first-child{
+  margin-left: 30px;
+}
+.gemtek-pr-0{
+  padding-right: 0px!important;
+}
+.adv_widget ul > li:nth-child(even) {background: #f8f8fa}
+.adv_widget ul > li:nth-child(odd) {background: #fff}
+.gemtek-dns-add-btn {
+  border: none;
+  background-color: transparent;
+  color: #0072bc;
+  position: absolute;
+  top: 0;
+  left: -54px;
+}
+
+.gemtek-table-plus-bc_white{
+  background: #fff;
+  padding:0px 20px!important;
+  box-shadow:0 3px 8px 0 #d4dce6;
+  border-radius: 4px;
+}
+.gemtek-display-flex-vc{
+  display: flex;
+  align-items:center;
+}
+.gemtek-add-portMapping-input{
+  text-align:left;
+  margin-bottom: 5px;
+}
+.gemtek-add-portMapping-iconHeight{
+  height: 120px;
+}
+.gemtek-portMapping-chk::after{
+  line-height: 2;
+}
+
+.gemtek-portMap-panel-title{
+  background-color: #FFF!important;
+  max-width: 1000px;
+}
+.gemtek-port-title-style{
+  margin-top:15px!important;
+  display: inline-block!important;
+}
+
+.gemtek-portMap-enable {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/icons/ico-checked-2.png);
+}
+.gemtek-more-btn {
+  background: url('../../img/icons/icon-1/gemtek-more.svg');
+  width: 24px;
+  height: 24px;
+  border: none;
+  vertical-align: middle;
+}
+
+.gemtek-more-btn.gemtek-less-btn {
+  background: url('../../img/icons/icon-1/gemtek-less.svg') !important;
+}
+
+.gemtek-table-padding {
+  padding: 12px 30px 12px 0px !important;
+}
+
+.gemtek-btn-init {
+  border: none;
+  background-color: transparent;
+  cursor: pointer !important;
+}
+
+.gemtek-btn-mr {
+  margin-right: 13px;
+}
+
+.gemtek-ptb-20 {
+  padding: 20px 0 !important;
+}
+
+.gemtek-pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.gemtek-pb-30 {
+  padding-bottom: 30px;
+}
+
+.gemtek-mb-10 {
+  margin-bottom: 10px;
+}
+
+.gemtek-mb-20 {
+  margin-bottom: 20px!important;
+}
+
+.gemtek-mb-30 {
+  margin-bottom: 30px!important;
+}
+
+.gemtek-mr-20 {
+  margin-right: 20px;
+}
+
+.gemtek-bb-1 {
+  border-bottom: 1px solid #dee5ec;
+}
+
+.gemtek-diagnostics-panel{
+  padding: 0 20px!important;
+}
+.gemtek-diagnostics-panel-heading{
+  height: 80px!important;
+  border-top: none!important;
+  border-bottom: 1px solid #dee5ec;
+  background-color: #fff!important;
+  display: flex!important;
+  justify-content: space-between!important;
+  align-items: center!important;
+}
+.gemtek-diagnostics-restartBtn{
+  border: none;
+  background: none;
+  font-weight: 900;
+  text-decoration:underline;
+}
+.gemtek-diagnose-content{
+  border-bottom: 1px solid #dee5ec;
+  margin-bottom: 30px;
+  padding: 0px;
+}
+
+.gemtek-btn-addplus:hover {
+  cursor:pointer;
+}
+
+.gemtek-pt-20{
+  padding-top: 20px;
+}
+
+.gemtek-pt-30{
+  padding-top: 30px !important;
+}
+
+.gemtek-font-w900{
+  font-weight: 900;
+}
+
+.gemtek-diagnostics-list-title{
+  padding:10px;
+  background-color:#f8f8fa ;
+  border-bottom: 1px solid #dee5ec;
+}
+.gemtek-p10-align-center{
+  padding:10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+.gemtek-align-center{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+.gemtek-mb-0{
+  margin-bottom: 0px!important;
+}
+.gemtek-button-style{
+  padding: 30px 0;
+  background-color: #FFF;
+  max-width: 1000px;
+}
+
+.gemtek-button-style-nobg{
+  padding: 30px 0;
+  max-width: 1000px;
+}
+.theme-default .gemtek-dropdown-label {
+  position: absolute;
+  top: -5px !important;
+  left: 0;
+  margin-bottom: 0 !important;
+  font-weight: normal;
+}
+
+.gemtek-plus-add {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+}
+
+.gemtek-wan-add-btn {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+}
+
+.gemtek-mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.gemtek-mt-20 {
+  margin-top: 20px;
+}
+
+.gemtek-mt-30 {
+  margin-top: 30px;
+}
+
+.gemtek-mt-22 {
+  margin-top: 22px;
+}
+
+.gemtek-card-panel {
+  padding: 30px 0px;
+  border-top: 1px solid #dee5ec;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.gemtek-card-panel > div {
+  max-width: 31%;
+}
+
+.gemtek-card-panel h6 {
+  font-weight: bold;
+}
+
+.gemtek-card {
+  border: 1px solid #dee5ec;
+  height: 430px;
+  position: relative;
+}
+
+.gemtek-card-head{
+  background-color: #f8f8fa;
+  padding: 10px;
+}
+
+.gemtek-card-body{
+  padding: 10px 10px 0px;
+  min-height: 75px;
+}
+
+.gemtek-card .btn-align {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gemtek-wps-input {
+  border: none !important;
+  font-size: 30px !important;
+}
+
+.gemtek-button-in-title {
+  padding:23px 20px;
+  border-bottom: 1px solid #d4dce6;
+  color:#4b5057;
+}
+
+.gemtek-panel-body-form {
+  padding: 30px 20px !important;
+}
+
+.gemtek-onerow {
+  display: inline-block;
+  width: auto;
+}
+
+.gemtek-onerow > .panel-body {
+  padding: 15px 20px;
+}
+
+.gemtek-button-inside-panel {
+  padding:30px 0;
+  border-top: 1px solid #dee5ec;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.gemtek-button-outside-panel {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gemtek-button-inside-panel-html {
+  padding:30px 0;
+  border-top: 1px solid #dee5ec;
+  margin: 35px auto 0px;
+}
+
+.gemtek-sub-label {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  transform: translateY(-140%);
+  color: #4b5057;
+  opacity: .5;
+}
+
+.gemtek-bottom-line {
+  padding: 0 20px 8px;
+  border-bottom: 1px solid #d4dce6;
+}
+
+.gemtek-border-top {
+  border-top: 1px solid #d4dce6;
+}
+
+.gemtek-border-bottom {
+  border-bottom: 1px solid #d4dce6;
+}
+
+.gemtek-font-bold {
+  font-weight: 600;
+}
+
+.gemtek-position-rel {
+  position: relative;
+}
+
+.gemtek-guest-title {
+  height: 63px;
+  line-height: 63px;
+}
+
+.gemtek-permit {
+  background-image: url('/img/icons/icon-1/ico-allow.svg');
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.gemtek-deny {
+  background-image: url('/img/icons/icon-1/ico-forbidden.svg');
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.gemtek-timepick {
+  background-image: url('/img/icons/icon-1/ico-time.svg');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.gemtek-color-primary {
+  color: #0072bc;
+}
+
+.gemtek-ddns-padding {
+  padding: 30px 20px 0px 20px !important;
+}
+
+.gemtek_speed_info {
+  display: flex;
+  border-bottom: 1px solid #dee5ec;
+  padding-bottom: 30px;
+}
+
+.gemtek_speed_info_contain {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.gemtek_speed_info_img {
+  display: inline-block;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.gemtek_speed_info_contain img{
+  width: 100%;
+}
+
+.gemtek_speed_info_contain span{
+  opacity: .5;
+}
+
+.gemtek_speed_info_contain p{
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0;
+}
+
+.gemtek_speed_ongoing {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.gemtek_speed_stop {
+  margin-top: 20px;
+}
+.gemtek_datatype {
+  position: absolute;
+  top: 385px;
+}
+.gemtek_datatype span:nth-child(2) {
+  opacity: .5;
+}
+.gemtek_datatype_img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(/img/icons/icon-1/speed-download.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+.gemtek_datatype_img.download {
+  background-image: url(/img/icons/icon-1/speed-download-green.svg);
+}
+
+.gemtek_datatype_img.upload {
+  background-image: url(/img/icons/icon-1/speed-upload-purple.svg);
+}
+
+.gemtek-btn-addplus > span {
+  font-weight: normal;
+}
+
+.panel-table-plus {
+  padding-top: 20px;
+}
+
+.weekdayslist-error.error {
+  display: block;
+  margin-top: 8px;
+}
+
+.gemtek-d-block {
+  display: block;
+}

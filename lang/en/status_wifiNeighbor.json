@@ -1,0 +1,25 @@
+{
+    "status_wifiNeighbor": {
+        "lang_wifinb_2g_title": "2.4G Wifi Neighbor",
+        "lang_wifinb_ssid_title": "SSID",
+        "lang_wifinb_bssid_title": "BSSID",
+        "lang_wifinb_channel_title": "Channel",
+        "lang_wifinb_signal_title": "Signal",
+        "lang_wifinb_security_title": "Security",
+        "lang_wifinb_wifimode_title": "Wireless Mode",
+        "lang_wifinb_no_data_title": "No Data",
+        "lang_wifinb_scan_title": "Scan",
+        "lang_wifinb_5g_title": "5G Wifi Neighbor",
+        "lang_wifinb_band_disabled_error": "search Wifi Neighbor faild! Error:WL is disenable!",
+        "lang_mode_ax": "AX",
+        "lang_mode_bgn_mixed": "B/G/N Mixed",
+        "lang_mode_bg_mixed": "B/G Mixed",
+        "lang_mode_b_only": "B only",
+        "lang_mode_anac_mixed": "A/N/AC Mixed",
+        "lang_mode_an_mixed": "A/N Mixed",
+        "lang_mode_a_only": "A only",
+        "lang_mode_n_only": "N only",
+        "lang_mode_g_only": "G only",
+        "lang_wifinb_6g_title": "6G Wifi Neighbor"
+    }
+}

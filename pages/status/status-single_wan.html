@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	var INFO_LIST = ['WanStatus']
+	var INFO_DATA = {}
+	var STATUS_WAN_COLUMNS_LIST_STR=['lang_wan_st_connection_name_title','lang_wan_st_type_title','lang_wan_st_ipaddress_title','lang_wan_st_status_title','lang_wan_st_method_title']
+	var STATUS_WAN_COLUMNS_LIST_VALUE=['ConnectionName','Type','IpAddress','ConnectStatus','TB_ACTION']
+	var DIALOG_DATA = {}
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-heading ng-binding">
+		<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_wan_st_ipv4_status_title">IPv4 WAN Connection Status</span>
+	</div>
+    <div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_status_wan_ipv4_table">
+			<script>
+			 //
+			 draw_table('status_wan_ipv4_table',STATUS_WAN_COLUMNS_LIST_STR)
+			</script>
+		  </div>
+    </div>
+	<div class="panel-heading ng-binding">
+		<span class="gemtek-port-title-style ng-binding multi_lang" id="lang_wan_st_ipv6_status_title">IPv6 WAN Connection Status</span>
+	</div>
+    <div class="panel-body">
+        <div class="table-responsive table-scroll-vr" id="tb_status_wan_ipv6_table">
+			<script>
+			 //
+			 draw_table('status_wan_ipv6_table',STATUS_WAN_COLUMNS_LIST_STR)
+			</script>
+		  </div>		  
+    </div>
+</div>
+
+<!-- include(status-single_wan.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-single_wan.js"></script>
+<!-- endinclude -->

@@ -1,0 +1,67 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['OpMode','Wps','WlanDeviceRadio','Mesh','WlanExtender']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var INFO_LIST = ['WifiNeighbor']
+	var Conn_INFO_LIST = ['WlanConnectionStatus']
+	var WPS_INFO_LIST = ['WscMonitor']
+
+	var SCAN_CMD = {"WifiNeighbor":{"Action":"scan","Band":"all"}};
+	var WPS_CMD = {"WpsProcess":{"Mode":"","PinCode":""}}
+
+	var SCAN_INTERVAL = 1000;
+	var SCAN_TIMEOUT = 30;	// 30 seconds
+	var TIME_2G = 0, TIME_5G = 0, TIME_6G = 0;
+
+	var CONNECTIONS_COLUMNS_LIST_STR=['lang_wirelessExtender_band_title','lang_wirelessExtender_status_title','lang_wirelessconn_ssid_title','lang_wirelessconn_security_title']
+	var CONNECTIONS_COLUMNS_LIST_VALUE=['Band','Status','SSID','AUTH']
+	var SCAN_COLUMNS_LIST_STR=['lang_wirelessconn_ssid_title','lang_wirelessconn_channel_title','lang_wirelessconn_signal_title','lang_wirelessExtender_site_select']
+	var SCAN_COLUMNS_LIST_VALUE=['Ssid','Channel','Signal','TB_ACTION']
+</script>
+
+<div class="panel-heading ng-binding wirelessExtender_enabled_show">
+	<span class="multi_lang" id="lang_extender_connection_status">Connections Status</span>
+</div>
+<div class="wrapperdiv"></div>
+	<div class="panel-body wirelessExtender_enabled_show">
+		 <div class="table-responsive table-scroll-vr" id="tb_ext_currentConn">
+			<script>
+				draw_table('ext_currentConn',CONNECTIONS_COLUMNS_LIST_STR)
+			</script>
+		 </div>
+	 </div>
+</div>
+<div class="panel-heading ng-binding">
+	<span class="multi_lang" id="lang_extender_connection_config">Extender Configurations</span>
+</div>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_extender_enable" class="form-group no-padding-hr col-xs-12 col-sm-5">
+			<script>
+				draw_switch('extender_enable','lang_extender_enable','wirelessExtender_enable_handler()')
+			</script>
+		</div>
+		<div id="radio_extender_mode_type" class="form-group no-padding-hr col-xs-12 col-sm-5 wirelessExtender_enabled_show">
+		</div>
+		<div id="tb_scan_list" class="panel-table-plus wirelessExtender_enabled_show"></div>
+			<script>
+				draw_table_plus_btn('scan_list',SCAN_COLUMNS_LIST_STR, "lang_scan_result_list","fa-search-plus","lang_scan_btn",'site_survey_start()')
+			</script>
+		</div>
+	</div>
+ </div>
+	
+	<!--div class="el-form fhv-form el-form--label-left wirelessExtender_enabled_show">
+		<div class="el-form-item el-form-item--mini">
+				<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_wirelessExtender_WPS_PBC">Press WPS Button</span>&nbsp;:</label>
+				<div class="el-form-item__content" style="margin-left: 180px;">
+					<button id="btn_pbc" class="el-button el-button--primary el-button--mini" onclick="start_wps()" style="height: 30px;;width:65px;">PBC</button>
+				</div>
+		</div>
+	</div-->
+</div>
+<!-- include(basic_setting-wlan-wireless_connection.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wireless_connection.js"></script>
+<!-- endinclude -->

@@ -1,0 +1,297 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan','Lan','WlanGlobal']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var wan_name_str = [];
+	var wan_name_val = ['0'];
+	var wan_mode_str = ['Route','Bridge','Bridge6'];
+	var wan_mode_val = ['route','bridge','bridge6'];
+	var wan_proto_str = ['IPv4','IPv4/v6','IPv6'];
+	var wan_proto_val = ['ipv4','ipv4v6','ipv6'];
+	//var wan_dial_str = ['Automatically','On_Demand','Manual'];
+	//var wan_dial_val = ['automatically','dial_on_demand','manual_connect'];
+	var wan_dial_str = ['Automatically','On_Demand'];
+	var wan_dial_val = ['automatically','dial_on_demand'];
+	var wan_802_str = ['0','1','2','3','4','5','6','7'];
+	var wan_802_val = ['0','1','2','3','4','5','6','7'];
+	var wan_service_str = ['INTERNET_TR069','INTERNET','TR069','OTHER'];
+	var wan_service_val = ['INTERNET_TR069','INTERNET','TR069','OTHER'];
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!--SELECT ELEMENT START-->
+		<div id="select_wan_name" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display: none;">
+			<script>
+				draw_select('wan_name', wan_name_str, wan_name_val,'select_wan_name()', '', 'lang_connection_name_title');
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+		<!--INPUT ELEMENT SWITCH START-->
+		<div id="switch_enable" class="raw no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('enable','lang_enable','switch_toggle(\\\'enable\\\', \\\'2\\\')');
+			</script>
+		</div>
+		<!--INPUT ELEMENT SWITCH STOP-->
+	</div>
+	<div class="panel-heading ng-binding ipfilter_emabled_show" style="">
+		<span class="multi_lang" id="lang_ipfilter_blacklist_title">Connection Configuration</span>
+	</div>
+	<div class="panel-body">
+		<!--SELECT ELEMENT START-->
+		<div id="select_wan_mode" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display:none">
+			<script>
+				draw_select('wan_mode', wan_mode_str, wan_mode_val,'select_wan_mode()', '', 'lang_mode');
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+		<!--div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;"></div-->
+		<!--INPUT ELEMENT RADIO START-->
+		<div id="radio_connect_type" class="raw no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_bridge6 wan_mode_route connection_type_dhcp">
+			<script>
+				var option_list=[
+					{"id":"radio_dhcp","label":"dhcp","cb":"switch_radio(this)"},
+					{"id":"radio_static","label":"static","cb":"switch_radio(this)"},
+					{"id":"radio_pppoe","label":"ppp","cb":"switch_radio(this)"}
+				]
+				draw_radio('connect_type','lang_ip_type_title',option_list)
+			</script>
+		</div>
+		<!--INPUT ELEMENT RADIO STOP-->
+
+        <!--SELECT ELEMENT START-->
+		<div id="select_wan_proto" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_route connection_type_dhcp">
+			<script>
+				draw_select('wan_proto', wan_proto_str, wan_proto_val,'select_wan_proto()', '', 'lang_ip_type_title',6);
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+
+		<!--SUBTILE ZONE START-->
+		<!-- 
+		<div class="panel-heading ng-binding">
+			<span class="multi_lang" id="lang_wan_setting_title">Wan Settings</span>
+		</div> 
+		-->
+		<!--SUBTILE ZONE STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_ppp_name" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection connection_type_selection connection_type_pppoe">
+			<script>
+				draw_input('ppp_name','lang_ppp_name','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_ppp_pwd" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection connection_type_selection connection_type_pppoe">
+			<script>
+				draw_input('ppp_pwd','lang_ppp_pwd','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+
+		<!--SELECT ELEMENT START-->
+		<div id="select_wan_dial" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection connection_type_selection connection_type_pppoe">
+			<script>
+				draw_select('wan_dial', wan_dial_str, wan_dial_val,'select_wan_dial()', '', 'lang_dial_title',6);
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_dial_timeout" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection">
+			<script>
+				draw_input('dial_timeout','lang_idle','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--APPLY CONTROL START-->
+		<!--div id="btn_connect" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection connection_type_selection connection_type_pppoe" style="display: none;">
+			<script>
+				draw_btn('connect','connect','')
+			</script>
+		</div>
+		<div id="btn_disconnect" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection connection_type_selection connection_type_pppoe" style="display: none;">
+			<script>
+				draw_btn('disconnect','disconnect','')
+			</script>
+		</div-->
+		<!--APPLY CONTROL STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_ip" class="form-group no-padding-hr col-xs-12 col-sm-6 wan_mode_selection connection_type_selection connection_type_static static_v4">
+			<script>
+				draw_input('static_ip','lang_ip_title','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_mask" class="form-group no-padding-hr col-xs-12 col-sm-6 connection_type_selection connection_type_static static_v4">
+			<script>
+				draw_input('static_mask','lang_subnet_title','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_gatway" class="form-group no-padding-hr col-xs-12 col-sm-12 connection_type_selection connection_type_static static_v4">
+			<script>
+				draw_input('static_gatway','lang_gateway','Please Enter the value','','',6);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_dns1" class="form-group no-padding-hr col-xs-12 col-sm-6 connection_type_selection connection_type_static static_v4">
+			<script>
+				draw_input('static_dns1','lang_dns1','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_dns2" class="form-group no-padding-hr col-xs-12 col-sm-6 connection_type_selection connection_type_static static_v4">
+			<script>
+				draw_input('static_dns2','lang_dns2','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT RADIO START-->
+		<div id="radio_ipv6_type" class="raw no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_protocol_v6 wan_mode_route connection_type_dhcp connection_type_pppoe">
+			<script>
+				var option_list=[
+					{"id":"radio_v6","label":"ipv6_dhcpv6","cb":"switch_radio(this)"},
+					{"id":"radio_SLAAC","label":"ipv6_slaac","cb":"switch_radio(this)"}
+				]
+				draw_radio('ipv6_type','lang_ipv6_title',option_list)
+			</script>
+		</div>
+		<!--INPUT ELEMENT RADIO STOP-->
+
+		<!--INPUT ELEMENT SWITCH START-->
+		<div id="switch_PD" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_protocol_v6 wan_mode_route connection_type_dhcp connection_type_pppoe">
+			<script>
+				draw_switch('PD','lang_pd','switch_toggle(\\\'PD\\\', \\\'2\\\')');
+			</script>
+		</div>
+		<!--INPUT ELEMENT SWITCH STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_v6_ip" class="form-group no-padding-hr col-xs-12 col-sm-6 static_ipv6_enable wan_mode_selection connection_type_selection connection_type_static ">
+			<script>
+				draw_input('static_v6_ip','lang_ipv6_address_title','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+		
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_v6_gatway" class="form-group no-padding-hr col-xs-12 col-sm-6 static_ipv6_enable connection_type_selection connection_type_static ">
+			<script>
+				draw_input('static_v6_gatway','lang_ipv6_address','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_v6_pd" class="form-group no-padding-hr col-xs-12 col-sm-6 static_ipv6_enable connection_type_selection connection_type_static ">
+			<script>
+				draw_input('static_v6_pd','lang_ipv6_pd','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_v6_dns1" class="form-group no-padding-hr col-xs-12 col-sm-6 static_ipv6_enable connection_type_selection connection_type_static ">
+			<script>
+				draw_input('static_v6_dns1','lang_ipv6_dns1','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_static_v6_dns2" class="form-group no-padding-hr col-xs-12 col-sm-6 static_ipv6_enable connection_type_selection connection_type_static ">
+			<script>
+				draw_input('static_v6_dns2','lang_ipv6_dns2','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+        <!--INPUT ELEMENT START-->
+		<div id="input_mtu" class=" no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_bridge6 wan_mode_route ">
+			<script>
+				draw_input('mtu','lang_mtu','Please Enter the value','','',6);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+		<!--div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;"></div-->
+	</div>
+	<div class="panel-heading ng-binding ipfilter_emabled_show" style="">
+		<span class="multi_lang" id="lang_ipfilter_blacklist_title">Others</span>
+	</div>
+	<div class="panel-body">
+		<!--SELECT ELEMENT START-->
+		<div id="select_wan_service" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display: none;">
+			<script>
+				draw_select('wan_service', wan_service_str, wan_service_val,'select_wan_service()', '', 'lang_service_type_title');
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+
+		<!--INPUT ELEMENT SWITCH START-->
+		<div id="switch_nat" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_bridge6 wan_mode_route connection_type_dhcp">
+			<script>
+				draw_switch('nat','lang_nat','switch_toggle(\\\'nat\\\', \\\'2\\\')');
+			</script>
+		</div>
+		<!--INPUT ELEMENT SWITCH STOP-->
+
+		<!--INPUT ELEMENT SWITCH START-->
+		<div id="switch_vlan" class="form-group no-padding-hr col-xs-12 col-sm-12 wan_mode_selection wan_mode_bridge6 wan_mode_route wan_mode_bridge connection_type_dhcp">
+			<script>
+				draw_switch('vlan','lang_vlan_title','switch_toggle(\\\'vlan\\\', \\\'2\\\')');
+			</script>
+		</div>
+		<!--INPUT ELEMENT SWITCH STOP-->
+
+		<!--INPUT ELEMENT START-->
+		<div id="input_vlan_id" class="form-group no-padding-hr col-xs-12 col-sm-6 vlan_enable">
+			<script>
+				draw_input('vlan_id','lang_vlan_id','Please Enter the value','','',12);
+			</script>
+		</div>
+		<!--INPUT ELEMENT STOP-->
+
+		<!--SELECT ELEMENT START-->
+		<div id="select_wan_802" class="form-group no-padding-hr col-xs-12 col-sm-5 vlan_enable">
+			<script>
+				draw_select('wan_802', wan_802_str, wan_802_val,'select_wan_802()', '', 'lang_802');
+			</script>
+		</div>
+		<!--SELECT ELEMENT STOP-->
+	</div>
+	<!--APPLY CONTROL START-->
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div class="btn-align" id="btn_cancel">
+			<script>
+			draw_btn('cancel','cancel','page_initial()')
+			</script>
+		</div>
+		<div class="btn-align" id="btn_apply">
+			<script>
+			draw_btn('apply','apply','page_save()')
+			</script>
+		</div>
+	</div>
+	<!--APPLY CONTROL STOP-->
+
+</div>
+<!-- include(basic_setting-wan-single_wan.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wan/basic_setting-wan-single_wan.js"></script>
+<!-- endinclude -->

@@ -1,0 +1,15 @@
+{
+    "application_storage_storage_account": {
+        "lang_storage_acct_note": "Configure User Accounts for both Samba and FTP Services.",
+        "lang_storage_acct_enabled": "Enable Anonymous Access",
+        "lang_storage_acct_user": "User Name",
+        "lang_storage_acct_pw": "Password",
+        "lang_storage_acct_cpw": "Confirmed Password",
+        "lang_storage_acct_apply_btn": "Apply Change",
+        "lang_storage_acct_current_table": "Current Account Table",
+        "lang_account_item_number": "Number",
+        "lang_account_item_username": "User Name",
+        "lang_account_item_method": "Method",
+        "lang_storage_acct_delete_btn": "Delete All"
+    }
+}

@@ -1,0 +1,179 @@
+<script language="javascript" type="text/javascript" src="js/env.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['Lan','Dhcp4s','Dhcp4Reserved','WlanGlobal']
+	var BASIC_LAN_COLUMNS_LIST_STR=['Number','lang_mac','lang_ip','lang_action']
+	var BASIC_LAN_COLUMNS_LIST_VALUE=['Number','MacAddress','AssignedIp','TB_ACTION']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var CUR_LAYER = ""
+	var CUR_INDEX = -1
+
+	var LOGINIP = ""
+	var SAVE_LAN_TIME = 30000
+</script>
+<div class="wrapperdiv">
+	<div id="page_content_l1">
+		<div class="panel-body">
+			<div id="input_ip" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_input('ip', 'lang_ip', 'Please Enter the value')
+				</script>
+			</div>
+			<div id="input_mask" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_input('mask', 'lang_mask', 'Please Enter the value')
+				</script>
+			</div>
+		</div>
+		<div class="panel-heading ng-binding" >
+			<span class="multi_lang" id="lang_dns"></span>
+		</div>
+		<div class="panel-body">
+			<div id="radio_dns_type" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					var option_list = [
+						{ "id": "dns_proxy", "label": "proxy", "cb": "dns_mode('p')" },
+						{ "id": "dns_relay", "label": "relay", "cb": "dns_mode('r')" },
+						{ "id": "dns_manually", "label": "manual", "cb": "dns_mode('m')" }
+					]
+					draw_radio('dns_type', 'lang_dns', option_list)
+				</script>
+			</div>
+			<div id="dns_zone" data-v-c02837f8="">
+				<div id="input_dns1" class="form-group no-padding-hr col-xs-12 col-sm-12">
+					<script>
+							draw_input('dns1', 'lang_primary_dns', 'Please Enter the value')
+					</script>
+				</div>
+				<div id="input_dns2" class="form-group no-padding-hr col-xs-12 col-sm-12">
+					<script>
+							draw_input('dns2', 'lang_secondary_dns', 'Please Enter the value')
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="panel-heading ng-binding" >
+			<span class="multi_lang" id="lang_dhcp"></span>
+		</div>
+		<div class="panel-body">
+			<div id="switch_dhcp_btn" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+					draw_switch('dhcp_btn','lang_dhcp','switch_toggle(\\\'dhcp_btn\\\', \\\'2\\\')')
+					</script>
+			</div>
+			<div data-v-c02837f8="">
+				<script>
+					function draw_group_prepend_input(input_id, prepend_id ,multi_lang_id, placeholder, onblur) {
+						var group_prepend_input_html = ""
+						var onblur_html = ""
+						if ( 'undefined' != typeof(onblur) )
+							onblur_html='onblur="'+onblur+'"'
+					
+						group_prepend_input_html = '\
+							<div class="input-field no-padding-hr-l col-xs-12 col-sm-12" style="display: inline-table;">\
+								<div id="'+prepend_id+'" class="input-group__prepend" style="display: table-cell;"></div>\
+								<input class="form-control hidden-dom-removal" style="display: table-cell;" id="'+input_id+'" name="'+input_id+'" placeholder="'+placeholder+'" required="required" type="text" '+onblur_html+'>\
+								<label class="row active ng-binding" for="'+input_id+'"><span class="multi_lang" id="'+multi_lang_id+'">'+multi_lang_id+'</span></label>\
+								<span class="error" id="'+input_id+'_error_msg" style="display:none">* This Field is Required</span>\
+							</div>\
+						';
+					
+						$("#group_prepend_input_"+input_id).html(group_prepend_input_html)
+					}
+				</script>
+				<style>
+					.input-group__prepend, .input-group__append{
+						background-color: #f5f7fa;
+						color: #909399;
+						display: table-cell;
+						text-align: center;
+						border: 1px solid #dcdfe6;
+						border-radius: 4px;
+						padding: 0 10px;
+					}
+				</style>
+				<div id="dhcp_start" class="form-group no-padding-hr col-xs-12 col-sm-5 dhcp_emabled_show" style="display:none">
+					<div id="group_prepend_input_dhcp_start_input">
+						<script>
+							draw_group_prepend_input('dhcp_start_input', 'pre_start', 'lang_start', 'Please Enter the value')
+						</script>
+					</div>
+				</div>
+				<div id="dhcp_end" class="form-group no-padding-hr col-xs-12 col-sm-5 dhcp_emabled_show" style="display:none">
+					<div id="group_prepend_input_dhcp_end_input">
+						<script>
+							draw_group_prepend_input('dhcp_end_input', 'pre_end', 'lang_end', 'Please Enter the value')
+						</script>
+					</div>
+				</div>
+				<div id="dhcp_lease" class="row dhcp_emabled_show" style="display:none">
+					<div id="input_dhcp_lease_input" class="form-group no-padding-hr col-xs-12 col-sm-12">
+						<script>
+								draw_input('dhcp_lease_input', 'lang_lease', 'Rang [1~604800]second')
+						</script>
+					</div>
+				</div>
+			</div>
+			<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+				<div id="btn_edit_reserved_ip" class="btn-align">
+					<script>
+						draw_custom_button('edit_reserved_ip', 'lang_edit_reserved_ip', 'lan_layer_switch(\'l2\')')
+					</script>
+				</div>
+			</div>
+			<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+				<div class="btn-align" id="btn_cancel">
+					<script>
+						draw_btn('cancel', 'cancel', 'refresh()')
+					</script>
+				</div>
+				<div class="btn-align" id="btn_apply">
+					<script>
+						draw_btn('apply', 'apply', 'page_save()')
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div id="page_content_l2" class="fhv-centent" style="display:none">
+			<h4  class="title-topic">
+				<div id="btn_lan_layer_switch" class="btn-align">
+					<script>
+						draw_custom_button('lan_layer_switch', '&lt;', 'lan_layer_switch(\'l1\')')
+					</script>
+				</div>
+				Reserved IP Address Settings
+			</h4>
+			<div id="switch_dhcpreserved_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+				<script>
+				draw_switch('dhcpreserved_enabled','lang_dhcp_reserved_enable','dhcpreserved_enable_switched(true)')
+				</script>
+			</div>
+			<div >
+				<hr >
+				<div class="table-responsive table-scroll-vr" id="tb_lan_dhcpreserved_tbody">
+					<script>
+						draw_table('lan_dhcpreserved_tbody', BASIC_LAN_COLUMNS_LIST_STR)
+					</script>
+				</div>
+				<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+					<div id="btn_dhcpreserved_add_btn" class="btn-align">
+						<script>
+							draw_custom_button('dhcpreserved_add_btn', 'lang_add', 'popup_add_dhcp_reserved()')
+						</script>
+					</div>
+					<div id="btn_refresh" class="btn-align">
+						<script>
+							draw_custom_button('refresh', 'lang_refresh', '_prepare_dhcpreserved_layout()')
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(basic_setting-lan-lan4.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/lan/basic_setting-lan-lan4.js"></script>
+<!-- endinclude -->

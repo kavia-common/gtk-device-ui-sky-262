@@ -1,0 +1,122 @@
+<script type="text/javascript">
+	var INFO_LIST = ['InformManual']
+	var INFO_DATA = {}
+
+	var OBJ_LIST = ['CpeAgent']
+	var OBJ_DATA = {}
+
+	var INFOMANUL_CMD = {"InformManual":{"Action":"report"}}
+
+	var timer_flag = false;
+	var timer_id;
+	var empty_data_count;
+
+	var NORMAL_INTERVAL = 1000;
+	var TIMER_INTERVAL;
+</script>
+
+<div class="fhv-centent">
+	<h4 class="title-topic"><span class="multi_lang" id="lang_infomanul_title">Inform manually report</span></h4>
+<div>
+   <form class="el-form fhv-form el-form--label-left">
+
+      <div class="fhv-centent">
+	<div style="">
+         <div class="el-form-item el-form-item--mini">
+            <label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_enable_title">Enable</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div role="switch" class="el-switch">
+                  <input type="checkbox" name="" true-value="true" class="el-switch__input">
+                  <span class="el-switch__core" id="enable1_btn" onclick="switch_toggle(this)" style="width: 40px;"></span>
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_server1_title">First Server:</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="server_1" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_time_title">Interval Time:</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="time_1" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <hr data-v-c02837f8="">
+         <div class="el-form-item el-form-item--mini">
+            <label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_enable_title">Enable</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div role="switch" class="el-switch">
+                  <input type="checkbox" name="" true-value="true" class="el-switch__input">
+                  <span class="el-switch__core" id="enable2_btn" onclick="switch_toggle(this)" style="width: 40px;"></span>
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_server2_title">Second Server:</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="server_2" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_time_title">Interval Time:</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="time_2" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <hr data-v-c02837f8="">
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_content1_title">AIS Agent secret key version:</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="ais_version" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ssid" class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_infomanul_content2_title">AIS Agent secret key</span></label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <input id="ais_key" maxlength="32" onblur="" type="text" autocomplete="off" class="el-input__inner">
+               </div>
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <button type="button" onclick="page_save()" class="el-button el-button--primary el-button--mini">
+               <span><span class="multi_lang" id="lang_apply_btn_title">Apply</span></span>
+               </button>
+               <button type="button" onclick="page_initial()" class="el-button el-button--primary el-button--mini">
+               <span><span class="multi_lang" id="lang_refresh_btn_title">Refresh</span></span>
+               </button>
+            </div>
+         </div>
+         <hr data-v-c02837f8="">
+	</div>
+         <div class="change">
+            <label for="time"><span class="multi_lang" id="lang_infomanul_dstaddr_title">Destination Address</span>:</label>
+            <button type="button" class="el-button el-button--primary el-button--small" onclick="start_report()" id="report_btn">
+            <span class="multi_lang" id="lang_infomanul_send_title">Send Now</span>
+            </button>
+         </div>
+         <div class="change">
+            <label for="time"><span class="multi_lang" id="lang_infomanul_result_title">Report the results</span>:</label>
+            <div id="infomanul_result"></div>
+         </div>
+      </div>
+   </form>
+</div>
+</div>
+
+<!-- include(management-tools-inform_ctrl.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/tools/management-tools-inform_ctrl.js"></script>
+<!-- endinclude -->

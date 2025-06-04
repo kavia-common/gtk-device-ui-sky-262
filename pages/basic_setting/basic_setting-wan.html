@@ -1,0 +1,596 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var wan_name_str = ['WAN1','WAN2','WAN3','WAN4','WAN5','WAN6'];
+	var wan_name_val = ['0','1','2','3','4','5'];
+	var wan_mode_str = ['Route','Bridge'];
+	var wan_mode_val = ['route','bridge'];
+	var wan_proto_str = ['ipv4','ipv4v6'];
+	var wan_proto_val = ['ipv4','ipv4v6'];
+	var wan_dial_str = ['automatically','dial_on_demand','manual_connect'];
+	var wan_dial_val = ['automatically','dial_on_demand','manual_connect'];
+	var wan_802_str = ['0','1','2','3','4','5','6','7'];
+	var wan_802_val = ['0','1','2','3','4','5','6','7'];
+	var wan_service_str = ['INTERNET_TR069','INTERNET','TR069','OTHER'];
+	var wan_service_val = ['INTERNET_TR069','INTERNET','TR069','OTHER'];
+</script>
+<h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+
+<form class="el-form fhv-form el-form--label-left">
+   <div class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Connection Name:</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div class="el-select el-select--mini" style="width: 100%;">
+            <!---->
+            <div id="select_div_wan_name" class="el-select el-select el-select--suffix" style="width: 100%;">
+		<script>(function(){draw_select('wan_name', wan_name_str, wan_name_val,'select_wan_name()', '');})();</script>
+               <!---->
+            </div>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Enable</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="switch" aria-checked="true" class="el-switch">
+            <input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" id="switch_enable" onclick="switch_toggle(this)" style="width: 40px;"></span><!---->
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Mode:</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div class="el-select el-select--mini" style="width: 100%;">
+            <!---->
+            <div id="select_div_wan_mode" class="el-select el-select el-select--suffix" style="width: 100%;">
+		<script>(function(){draw_select('wan_mode', wan_mode_str, wan_mode_val,'select_wan_mode()', '');})();</script>
+                  <!---->
+               </span>
+               <!---->
+            </div>
+            <div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+               <div class="el-scrollbar" style="">
+                  <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;">
+                     <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item selected"><span>Route</span></li>
+                        <li class="el-select-dropdown__item"><span>Bridge</span></li>
+                     </ul>
+                  </div>
+                  <div class="el-scrollbar__bar is-horizontal">
+                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                  </div>
+                  <div class="el-scrollbar__bar is-vertical">
+                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                  </div>
+               </div>
+               <!---->
+            </div>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div>
+      <div id="div_mtu" style="display:none" class="el-form-item is-required el-form-item--mini">
+         <label for="mtu" class="el-form-item__label" style="width: 180px;">MTU:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="mtu" autocomplete="off" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div id="div_type_dhcp" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">DHCP :</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <label role="radio" tabindex="0" class="el-radio">
+               <span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" id="radio_dhcp" name="wan_mode" onclick="switch_radio(this)" aria-hidden="true" tabindex="-1" class="el-radio__original" value="1"></span>
+               <span class="el-radio__label">
+                  Automatically get IP address from ISP.<!---->
+               </span>
+            </label>
+            <!---->
+         </div>
+      </div>
+      <div id="div_type_static" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">Static :</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <label role="radio" tabindex="0" class="el-radio">
+               <span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" id="radio_static" name="wan_mode" onclick="switch_radio(this)" aria-hidden="true" tabindex="-1" class="el-radio__original" value="0"></span>
+               <span class="el-radio__label">
+                  Configure static IP address from ISP.<!---->
+               </span>
+            </label>
+            <!---->
+         </div>
+      </div>
+      <div id="div_type_pppoe" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">PPPoE :</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <label role="radio" tabindex="0" class="el-radio" aria-checked="true">
+               <span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" id="radio_pppoe" name="wan_mode" onclick="switch_radio(this)" aria-hidden="true" tabindex="-1" class="el-radio__original" value="3"></span>
+               <span class="el-radio__label">
+                  Please choose this option if using PPPoE connection.<!---->
+               </span>
+            </label>
+            <!---->
+         </div>
+      </div>
+      <div id="div_ip_type" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">IP Protocal Type:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-select el-select--mini" style="width: 100%;">
+               <!---->
+            <div id="select_div_wan_proto" class="el-select el-select el-select--suffix" style="width: 100%;">
+		<script>(function(){draw_select('wan_proto', wan_proto_str, wan_proto_val,'select_wan_proto()', '');})();</script>
+                     <!---->
+                  <!---->
+               </div>
+               <div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+                  <div class="el-scrollbar" style="">
+                     <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;">
+                        <ul class="el-scrollbar__view el-select-dropdown__list">
+                           <!---->
+                           <li class="el-select-dropdown__item"><span>IPv4</span></li>
+                           <li class="el-select-dropdown__item selected"><span>IPv4/6</span></li>
+                        </ul>
+                     </div>
+                     <div class="el-scrollbar__bar is-horizontal">
+                        <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                     </div>
+                     <div class="el-scrollbar__bar is-vertical">
+                        <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                     </div>
+                  </div>
+                  <!---->
+               </div>
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div id="div_nat" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">NAT:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div role="switch" aria-checked="true" class="el-switch">
+               <input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" id="switch_nat" onclick="switch_toggle(this)" style="width: 40px;"></span><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+   </div>
+   <div>
+      <div id="div_ppp_name" style="display:none" class="el-form-item is-required el-form-item--mini">
+         <label for="PPPoE.userName" class="el-form-item__label" style="width: 180px;">PPPoE User Name:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="ppp_name" autocomplete="off" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div id="div_ppp_pwd" style="display:none" class="el-form-item is-required el-form-item--mini">
+         <label for="PPPoE.password" class="el-form-item__label" style="width: 180px;">PPPoE Password:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="password" id="ppp_pwd" autocomplete="off" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div id="div_dial_mode" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">Dial Mode:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-select el-select--mini" style="width: 100%;">
+               <!---->
+            <div id="select_div_wan_dial" class="el-select el-select el-select--suffix" style="width: 100%;">
+                <script>(function(){draw_select('wan_dial', wan_dial_str, wan_dial_val,'select_wan_dial()', '');})();</script>
+                  <!---->
+               </div>
+               <div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+                  <div class="el-scrollbar" style="">
+                     <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;">
+                        <ul class="el-scrollbar__view el-select-dropdown__list">
+                           <!---->
+                           <li class="el-select-dropdown__item selected"><span>Automatically</span></li>
+                           <li class="el-select-dropdown__item"><span>Dial on Demand</span></li>
+                           <li class="el-select-dropdown__item"><span>Manual connect</span></li>
+                        </ul>
+                     </div>
+                     <div class="el-scrollbar__bar is-horizontal">
+                        <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                     </div>
+                     <div class="el-scrollbar__bar is-vertical">
+                        <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                     </div>
+                  </div>
+                  <!---->
+               </div>
+            </div>
+            <!---->
+         </div>
+      </div>
+      <!----><!---->
+   </div>
+
+<div id="div_dial_timeout" style="display:none" class="el-form-item is-required el-form-item--mini">
+   <label for="PPPoE.idleTimeout" class="el-form-item__label" style="width: 180px;">Idle Timeout:</label>
+   <div class="el-form-item__content" style="margin-left: 180px;">
+      <div class="el-input el-input--mini">
+         <!----><input type="text" autocomplete="off" placeholder="Rang [60~65535]s" class="el-input__inner"><!----><!----><!---->
+      </div>
+      <!---->
+   </div>
+</div>
+
+<div id="div_dial_manual" style="display:none"class="el-form-item el-form-item--mini">
+   <!---->
+   <div class="el-form-item__content" style="margin-left: 180px;">
+      <button type="button" class="el-button el-button--primary el-button--mini">
+         <!----><!----><span>Connect</span>
+      </button>
+      <button type="button" class="el-button el-button--info el-button--mini">
+         <!----><!----><span>Disconnect</span>
+      </button>
+      <!---->
+   </div>
+</div>
+
+   <div id="div_enable_vlan" class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Enable VLAN:</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="switch" aria-checked="true" class="el-switch">
+            <input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" id="switch_VLAN" onclick="switch_toggle(this)" style="width: 40px;"></span><!---->
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div>
+      <div id="div_vlan_id" style="display:none"  class="el-form-item is-required el-form-item--mini">
+         <label for="VLANID" class="el-form-item__label" style="width: 180px;">VLAN ID:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="vlan_id" autocomplete="off" placeholder="Rang [1~4094]" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div id="div_802" style="display:none" class="el-form-item el-form-item--mini">
+         <label class="el-form-item__label" style="width: 180px;">802.1P:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-select el-select--mini" style="width: 100%;">
+               <!---->
+            <div id="select_div_wan_802" class="el-select el-select el-select--suffix" style="width: 100%;">
+                <script>(function(){draw_select('wan_802', wan_802_str, wan_802_val,'select_wan_802()', '');})();</script>
+                  <!---->
+               </div>
+               <div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+                  <div class="el-scrollbar" style="">
+                     <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;">
+                        <ul class="el-scrollbar__view el-select-dropdown__list">
+                           <!---->
+                           <li class="el-select-dropdown__item selected"><span>0</span></li>
+                           <li class="el-select-dropdown__item"><span>1</span></li>
+                           <li class="el-select-dropdown__item"><span>2</span></li>
+                           <li class="el-select-dropdown__item"><span>3</span></li>
+                           <li class="el-select-dropdown__item"><span>4</span></li>
+                           <li class="el-select-dropdown__item"><span>5</span></li>
+                           <li class="el-select-dropdown__item"><span>6</span></li>
+                           <li class="el-select-dropdown__item"><span>7</span></li>
+                        </ul>
+                     </div>
+                     <div class="el-scrollbar__bar is-horizontal">
+                        <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                     </div>
+                     <div class="el-scrollbar__bar is-vertical">
+                        <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                     </div>
+                  </div>
+                  <!---->
+               </div>
+            </div>
+            <!---->
+         </div>
+      </div>
+   </div>
+   <div id="div_service_type" class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Service Type:</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div class="el-select el-select--mini" style="width: 100%;">
+            <!---->
+            <div id="select_div_wan_service" class="el-select el-select el-select--suffix" style="width: 100%;">
+                <script>(function(){draw_select('wan_service', wan_service_str, wan_service_val,'select_wan_service()', '');})();</script>
+               <!---->
+            </div>
+            <div class="el-select-dropdown el-popper" style="display: none; min-width: 392px;">
+               <div class="el-scrollbar" style="">
+                  <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -10px; margin-right: -10px;">
+                     <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item selected"><span>INTERNET_TR069</span></li>
+                        <li class="el-select-dropdown__item"><span>INTERNET</span></li>
+                        <li class="el-select-dropdown__item"><span>TR069</span></li>
+                        <li class="el-select-dropdown__item"><span>OTHER</span></li>
+                     </ul>
+                  </div>
+                  <div class="el-scrollbar__bar is-horizontal">
+                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                  </div>
+                  <div class="el-scrollbar__bar is-vertical">
+                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                  </div>
+               </div>
+               <!---->
+            </div>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <!----><!---->
+   <div id="div_static_ip" style="display:none">
+      <div class="el-form-item is-required el-form-item--mini">
+         <label for="ipv4.address" class="el-form-item__label" style="width: 180px;">IP Address:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="static_ip" autocomplete="off" placeholder="e.g. 10.10.10.100" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div class="el-form-item is-required el-form-item--mini">
+         <label for="ipv4.mask" class="el-form-item__label" style="width: 180px;">Subnet Mask:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="static_mask" autocomplete="off" placeholder="e.g. 255.255.255.0" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div class="el-form-item is-required el-form-item--mini">
+         <label for="ipv4.gateway" class="el-form-item__label" style="width: 180px;">Default Gateway:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="static_gatway" autocomplete="off" placeholder="e.g. 10.10.10.1" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div class="el-form-item is-required el-form-item--mini">
+         <label for="ipv4.dns1" class="el-form-item__label" style="width: 180px;">Primary DNS Server:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="static_dns1" autocomplete="off" placeholder="e.g. 10.10.10.1" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+      <div class="el-form-item el-form-item--mini">
+         <label for="ipv4.dns2" class="el-form-item__label" style="width: 180px;">Secondary DNS Server:</label>
+         <div class="el-form-item__content" style="margin-left: 180px;">
+            <div class="el-input el-input--mini">
+               <!----><input type="text" id="static_dns2" autocomplete="off" placeholder="e.g. 10.10.10.1" class="el-input__inner"><!----><!----><!---->
+            </div>
+            <!---->
+         </div>
+      </div>
+   </div>
+   <div id="div_static_ipv6" style="display:none">
+      <!---->
+      <div>
+         <div class="el-form-item is-required el-form-item--mini">
+            <label for="ipv6.address" class="el-form-item__label" style="width: 180px;">IPv6 Address:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <!----><input type="text" id="static_v6_ip" autocomplete="off" placeholder="e.g. fe88::26ca/64" class="el-input__inner"><!----><!----><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+         <div class="el-form-item is-required el-form-item--mini">
+            <label class="el-form-item__label" style="width: 180px;" for="ipv6.gateway">Gateway IPv6 Address:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <!----><input type="text" id="static_v6_gatway" autocomplete="off" placeholder="e.g. fe88::1" class="el-input__inner"><!----><!----><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+         <div class="el-form-item is-required el-form-item--mini">
+            <label for="ipv6.pdAddr" class="el-form-item__label" style="width: 180px;">IPv6 PD Address:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <!----><input type="text" id="static_v6_pd" autocomplete="off" placeholder="e.g. 2022::" class="el-input__inner"><!----><!----><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+         <div class="el-form-item is-required el-form-item--mini">
+            <label for="ipv6.dns1" class="el-form-item__label" style="width: 180px;">First IPv6 DNS:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <!----><input type="text" id="static_v6_dns1" autocomplete="off" placeholder="e.g. fe88::1" class="el-input__inner"><!----><!----><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+         <div class="el-form-item el-form-item--mini">
+            <label for="ipv6.dns2" class="el-form-item__label" style="width: 180px;">Second IPv6 DNS:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div class="el-input el-input--mini">
+                  <!----><input type="text" id="static_v6_dns2" autocomplete="off" placeholder="e.g. fe88::1" class="el-input__inner"><!----><!----><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <div>
+      <div>
+         <div id="div_ipv6" style="display:none" class="el-form-item el-form-item--mini">
+            <label for="ipv6.addressAutoType" class="el-form-item__label" style="width: 180px;">Get IPv6 Address:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div role="radiogroup" class="el-radio-group">
+                  <label role="radio" aria-checked="true" tabindex="0" class="el-radio">
+                     <span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" id="radio_v6" onclick="switch_radio(this)" aria-hidden="true" tabindex="-1" class="el-radio__original" value="3"></span>
+                     <span class="el-radio__label">
+                        DHCPv6<!---->
+                     </span>
+                  </label>
+                  <label role="radio" tabindex="-1" class="el-radio">
+                     <span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" id="radio_SLAAC" onclick="switch_radio(this)" aria-hidden="true" tabindex="-1" class="el-radio__original" value="2"></span>
+                     <span class="el-radio__label">
+                        SLAAC<!---->
+                     </span>
+                  </label>
+                  <!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+         <div id="div_type_pd" style="display:none" class="el-form-item el-form-item--mini">
+            <label class="el-form-item__label" style="width: 180px;">PD Enable:</label>
+            <div class="el-form-item__content" style="margin-left: 180px;">
+               <div role="switch" aria-checked="true" class="el-switch">
+                  <input type="checkbox" name="" true-value="true" class="el-switch__input"><!----><span class="el-switch__core" id="switch_PD" onclick="switch_toggle(this)" style="width: 40px;"></span><!---->
+               </div>
+               <!---->
+            </div>
+         </div>
+      </div>
+      <!---->
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <label class="el-form-item__label" style="width: 180px;">Bound Ports:</label>
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="group" aria-label="checkbox-group" class="el-checkbox-group">
+            <label role="checkbox" class="el-checkbox is-checked" aria-checked="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-checked"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="0"></span>
+               <span class="el-checkbox__label">
+                  LAN1<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-checked" aria-checked="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-checked"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="1"></span>
+               <span class="el-checkbox__label">
+                  LAN2<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="2" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  LAN3<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="3" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  LAN4<!---->
+               </span>
+            </label>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <!---->
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="group" aria-label="checkbox-group" class="el-checkbox-group">
+            <label role="checkbox" class="el-checkbox is-checked" aria-checked="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-checked"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="10"></span>
+               <span class="el-checkbox__label">
+                  SSID1<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="12" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID2<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="13" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID3<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="14" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID4<!---->
+               </span>
+            </label>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <!---->
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="group" aria-label="checkbox-group" class="el-checkbox-group">
+            <label role="checkbox" class="el-checkbox is-disabled is-checked" aria-checked="true" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled is-checked"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="4" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID5<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="6" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID6<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="7" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID7<!---->
+               </span>
+            </label>
+            <label role="checkbox" class="el-checkbox is-disabled" aria-disabled="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-disabled"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="8" disabled="disabled"></span>
+               <span class="el-checkbox__label">
+                  SSID8<!---->
+               </span>
+            </label>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <!---->
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <div role="group" aria-label="checkbox-group" class="el-checkbox-group">
+            <label role="checkbox" class="el-checkbox is-checked" aria-checked="true">
+               <span aria-checked="mixed" class="el-checkbox__input is-checked"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="9"></span>
+               <span class="el-checkbox__label">
+                  WLAN MESH<!---->
+               </span>
+            </label>
+         </div>
+         <!---->
+      </div>
+   </div>
+   <div class="el-form-item el-form-item--mini">
+      <!---->
+      <div class="el-form-item__content" style="margin-left: 180px;">
+         <button type="button" onclick="page_save()" class="el-button el-button--primary el-button--mini">
+            <!----><!----><span>Apply</span>
+         </button>
+         <button type="button" class="el-button el-button--info el-button--mini">
+            <!----><!----><span>Delete</span>
+         </button>
+         <button type="button" class="el-button el-button--primary el-button--mini">
+            <!----><!----><span>Refresh</span>
+         </button>
+         <!---->
+      </div>
+   </div>
+</form>
+
+<!-- include(basic_setting-wan.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/basic_setting-wan.js"></script>
+<!-- endinclude -->

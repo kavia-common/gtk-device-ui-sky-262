@@ -1,0 +1,128 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['ShareFolder','StorageUser']
+	var INFO_LIST = ['StorageInfo']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var APPLICATION_STORAGE_SHARE_FOLDER_COLUMNS_LIST_STR=['lang_folder_name','lang_folder_path','lang_folder_owner','lang_folder_permission','lang_folder_method']
+	var APPLICATION_STORAGE_SHARE_FOLDER_COLUMNS_LIST_VALUE=['Owner','Path','Owner','Permission','TB_ACTION']
+
+	var permission_str = ['Read Only','Read Write'];
+	var permission_val = ['0','1'];
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<p style="padding-bottom: 10px;"><span class="multi_lang" id="lang_sharefloder_note">Configure folder permission for Samba Services.</span></p>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_sharefloder_path">Folder Path</span> :</span>
+			</div>
+			<div id="select_div_ftp_folder" class="col-md-6 col-offset-md-2 col-xs-8">
+			</div>
+		</div> -->
+		<div id="select_ftp_folder" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('ftp_folder', [], [],'', '', 'lang_sharefloder_path');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_sharefloder_owner">Owner</span> :</span>
+			</div>
+			<div id="select_div_folder_owner" class="col-md-6 col-offset-md-2 col-xs-8">
+			</div>
+		</div> -->
+		<div id="select_folder_owner" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('folder_owner', [], [],'', '', 'lang_sharefloder_owner');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_sharefloder_permission">Permission</span> :</span>
+			</div>
+			<div id="select_div_folder_permission" class="col-md-6 col-offset-md-2 col-xs-8">
+				<script>(function(){draw_select('folder_permission', permission_str, permission_val,'', '');})();</script>
+			</div>
+		</div> -->
+		<div id="select_folder_permission" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_select('folder_permission', permission_str, permission_val,'', '', 'lang_sharefloder_permission');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				
+			</div>
+			<div class="col-md-8 col-offset-md-2 col-xs-8">
+				<button id="add" onclick="add_permission_item()" type="button" class="el-button el-button--primary el-button--small">
+					<span>
+						<span class="multi_lang" id="lang_sharefloder_apply_btn">Apply Change</span>
+					</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','add_permission_item()')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+
+	<!-- 
+	<div>
+		<P>
+			<span class="multi_lang" id="lang_sharefloder_account_table">Current Account Table</span>:
+		</P>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_folder_name">Folder Name</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_folder_path">Folder Path</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_folder_owner">Owner</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_folder_permission">Permission</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_folder_method">Method</span></th>
+					</tr>
+				</thead>
+				<tbody id="permission_table">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="card-footer">
+				<button class="card-btn green" onclick="delete_permission_item('all')"><span class="multi_lang" id="lang_sharefloder_delete_btn">Delete All</span></button>
+				<//!-- button class="card-btn green" onclick="">Reset</button --//>
+			</div>
+		</div>
+	</div> -->
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_sharefloder_account_table"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_permission_table">
+			<script>
+				draw_table('permission_table', APPLICATION_STORAGE_SHARE_FOLDER_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_delete_all" class="btn-align">
+			<script>
+				draw_custom_button('delete_all', 'lang_sharefloder_delete_btn', 'delete_permission_item(\'all\')')
+			</script>
+		</div>
+	</div>
+</div>
+<!-- include(application-storage-share_floder.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/storage/application-storage-share_floder.js"></script>
+<!-- endinclude -->

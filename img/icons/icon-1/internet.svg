@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="kaole52l6a" cx="9" cy="9" r="9"/>
+    </defs>
+    <g transform="translate(3 3)" fill="none" fill-rule="evenodd">
+        <mask id="zn2t3uykwb" fill="#fff">
+            <use xlink:href="#kaole52l6a"/>
+        </mask>
+        <circle stroke="#FFF" cx="9" cy="9" r="8.5"/>
+        <ellipse stroke="#FFF" stroke-width=".8" mask="url(#zn2t3uykwb)" cx="9" cy="9" rx="4.1" ry="8.6"/>
+        <ellipse stroke="#FFF" stroke-width=".8" mask="url(#zn2t3uykwb)" cx="9" rx="8.6" ry="5.225"/>
+        <ellipse stroke="#FFF" stroke-width=".8" mask="url(#zn2t3uykwb)" cx="9" cy="18" rx="8.6" ry="5.225"/>
+        <path d="M0 9h18" stroke="#FFF" stroke-width=".8" mask="url(#zn2t3uykwb)"/>
+        <path d="M0 9h18" stroke="#FFF" stroke-width=".8" mask="url(#zn2t3uykwb)" transform="rotate(90 9 9)"/>
+    </g>
+</svg>

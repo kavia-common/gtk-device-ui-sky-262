@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	var INFO_LIST = ['WanStatus']
+	var INFO_DATA = {}
+
+	var DIALOG_DATA = {}
+</script>
+
+<div class="fhv-centent">
+	<h4 class="title-topic"><span class="multi_lang" id="lang_wan_st_ipv4_status_title">IPv4 WAN Connection Status</span></h4>
+	<div class="el-table fhv-table el-table--fit el-table--striped el-table--border el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition" style="width: 100%; margin-bottom: 50px;">
+		<div class="el-table__body-wrapper">
+			<table class="el-table__body" style="width:100%; min-width: 760px;" cellspacing="0" cellpadding="0" border="0">
+				<thead>
+					<tr>
+						<th colspan="1" rowspan="1" class="col-xs-2 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_connection_name_title">Connection Name</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_type_title">Type</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-2 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_ipaddress_title">IP Address</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_status_title">Status</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_method_title">Method</span></div></th>
+					</tr>
+				</thead>
+				<tbody id="wan_ipv4_conn_st"></tbody>
+			</table>
+		</div>
+	</div>
+
+	<h4 class="title-topic"><span class="multi_lang" id="lang_wan_st_ipv6_status_title">IPv6 WAN Connection Status</span></h4>
+	<div class="el-table fhv-table el-table--fit el-table--striped el-table--border el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition" style="width: 100%;">
+		<div class="el-table__body-wrapper">
+			<table class="el-table__body" style="width:100%; min-width: 760px;" cellspacing="0" cellpadding="0" border="0">
+				<thead>
+					<tr>
+						<th colspan="1" rowspan="1" class="col-xs-2 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_connection_name_title">Connection Name</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_type_title">Type</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-2 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_ipaddress_title">IP Address</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_status_title">Status</span></div></th>
+						<th colspan="1" rowspan="1" class="col-xs-1 is-leaf"><div class="cell"><span class="multi_lang" id="lang_wan_st_method_title">Method</span></div></th>
+					</tr>
+				</thead>
+				<tbody id="wan_ipv6_conn_st"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!-- include(status-wan.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-wan.js"></script>
+<!-- endinclude -->

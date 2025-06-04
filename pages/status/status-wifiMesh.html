@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    var INFO_LIST = ['MeshNodeStatus']
+    var OBJ_LIST = []
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+    var BH_SUPPORT_BAND_VAL = ['auto','2','5','6']
+    var BH_SUPPORT_BAND_STR = ['Auto','2.4G','5G','6G']
+    if ( "undefined" != typeof(G_DEMO_ELNABLED) && "1" == G_DEMO_ELNABLED ){
+        var MESH_NODE_COLUMNS_LIST_STR=['lang_name_title','lang_ip_title','lang_mac_title','lang_mesh_upstream','lang_mesh_medtype','lang_mesh_role','lang_mesh_demo_action']
+        var MESH_NODE_COLUMNS_LIST_VALUE=['DevName','IPv4Addr','MacAddr','Upstream','Medtype','Mode','TB_ACTION']
+        var MESH_CLIENT_COLUMNS_LIST_STR=['lang_name_title','lang_ip_title','lang_mac_title','lang_mesh_upstream','lang_mesh_medtype','lang_mesh_demo_action']
+        var MESH_CLIENT_COLUMNS_LIST_VALUE=['DevName','IPv4Addr','MacAddr','Upstream','Medtype','TB_ACTION']
+    }else{
+        var MESH_NODE_COLUMNS_LIST_STR=['lang_name_title','lang_ip_title','lang_mac_title','lang_mesh_upstream','lang_mesh_medtype','lang_mesh_hops','lang_mesh_role']
+        var MESH_NODE_COLUMNS_LIST_VALUE=['DevName','IPv4Addr','MacAddr','Upstream','Medtype','Hops','Mode']
+        var MESH_CLIENT_COLUMNS_LIST_STR=['lang_name_title','lang_ip_title','lang_mac_title','lang_mesh_upstream','lang_mesh_medtype','lang_mesh_hops']
+        var MESH_CLIENT_COLUMNS_LIST_VALUE=['DevName','IPv4Addr','MacAddr','Upstream','Medtype','Hops']
+    }
+</script>
+<script src="/js/d3_3.2.8.js"></script>
+
+<div class="panel-heading gemtek-portMap-panel-title">
+    <span class="gemtek-port-title-style ng-binding multi_lang" id="lang_meshinfo_title">Mesh Netowork Information</span>
+<a class="gemtek-btn-normal pull-right gemtek-btn-addplus" id="" onclick="open_map_topology()">
+    <i class="fa fa-sitemap icontxtgap"></i><span class="multi_lang" style="font-weight: normal;" id="lang_mesh_map">MAP</span>
+</a>
+<a style="margin:0px 10px" class="gemtek-btn-normal pull-right gemtek-btn-addplus" id="" onclick="open_map_log()">
+    <i class="fa fa-align-left icontxtgap"></i><span class="multi_lang" style="font-weight: normal;" id="lang_mesh_log">Logs</span>
+</a>
+</div>
+<div class="panel-body">
+    <div class="panel-heading ">
+    <span class="multi_lang" id="lang_mesh_node_list">Mesh Node List</span>
+</div>
+<div class="panel-body">
+        <div class="table-responsive table-scroll-vr" id="tb_Mesh_topology_table">
+            <script>
+                draw_table('Mesh_topology_table',MESH_NODE_COLUMNS_LIST_STR)
+            </script>
+        </div>
+    </div>
+<div class="panel-heading ">
+    <span class="multi_lang" id="lang_mesh_client_list">Mesh Client List</span>
+</div>
+<div class="panel-body">
+        <div class="table-responsive table-scroll-vr" id="tb_Device_topology_table">
+            <script>
+                draw_table('Device_topology_table',MESH_CLIENT_COLUMNS_LIST_STR)
+            </script>
+        </div>
+    </div>
+</div>
+<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+<div class="btn-align" id="btn_refresh_map">
+    <script>
+        draw_btn('apply','refresh_map','refresh_map(\'1\')', 'Refresh')
+    </script>
+</div>
+</div>
+<!-- include(status-wifiMesh.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-wifiMesh.js"></script>
+<!-- endinclude -->

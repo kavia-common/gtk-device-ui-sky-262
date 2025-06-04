@@ -1,0 +1,9 @@
+<svg width="48" height="24" viewBox="0 0 48 24" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <rect stroke="#4F5458" fill="#63696F" x=".5" y=".5" width="47" height="23" rx="11.5"/>
+        <circle stroke="#4F5458" fill="#FFF" cx="12" cy="12" r="9.5"/>
+        <text font-family="Roboto-Regular, Roboto" font-size="10" fill="#FFF">
+                        <tspan x="24" y="16">OFF</tspan>
+                    </text>
+    </g>
+</svg>

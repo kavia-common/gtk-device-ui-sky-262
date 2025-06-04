@@ -1,0 +1,73 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['AutoReboot']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var REBOOT_CMD = {"DeviceReset":{"Action":"reboot"}}
+
+	var auto_reboot_str_list = ['autoreboot_type_bootup','autoreboot_type_ntp']
+	var auto_reboot_val_list = ['bootup','ntp']
+	
+	var auto_reboot_day_str_list = ['0','1','2','3','4','5','6','7']
+	var auto_reboot_day_val_list = ['0','1','2','3','4','5','6','7']
+	
+	var auto_reboot_hour_str_list = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23']
+	var auto_reboot_hour_val_list = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23']
+	
+	var auto_reboot_min_str_list = ['00','05','10','15','20','25','30','35','40','45','50','55']
+	var auto_reboot_min_val_list = ['0','5','10','15','20','25','30','35','40','45','50','55']
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div class="backup-panel" id="textbtn_reboot_device">
+			<script>
+				draw_textbtn('reboot_device','lang_reboot_device_title','','lang_reboot_btn_title','reboot_clicked()')
+			</script>
+		</div>
+		<!--  -->
+		<div id="switch_auto_reboot_update" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+			   draw_switch('auto_reboot_update','lang_auto_reboot_enabled','auto_reboot_enable_control()')
+			 </script>
+		</div>
+		<div id="select_auto_reboot" class="form-group no-padding-hr col-xs-12 col-sm-12 auto_reboot_zone" style="display:none">
+			<script>
+			  draw_select('auto_reboot', auto_reboot_str_list, auto_reboot_val_list,'auto_reboot_select()', 'a', 'lang_reboot_auto_reboot_title');
+			</script>
+		</div>		 
+		<div class="el-form-item el-form-item--mini auto_reboot_ntp_zone">
+			<div id="select_auto_reboot_ntp_hour" class="form-group no-padding-hr col-xs-12 col-sm-5">
+				<script>
+				  draw_select('auto_reboot_ntp_hour', auto_reboot_hour_str_list, auto_reboot_hour_val_list,'', 'a', 'lang_reboot_ntp_hour', 12);
+				</script>
+			</div>
+			<div id="select_auto_reboot_ntp_min" class="form-group no-padding-hr col-xs-12 col-sm-5">
+				<script>
+				  draw_select('auto_reboot_ntp_min', auto_reboot_min_str_list, auto_reboot_min_val_list,'', 'a', 'lang_reboot_ntp_min', 12);
+				</script>
+			</div>
+		</div>
+		<div class="el-form-item el-form-item--mini auto_reboot_bootup_zone">
+			<div id="select_auto_reboot_bootup_day" class="form-group no-padding-hr col-xs-12 col-sm-5">
+				<script>
+				  draw_select('auto_reboot_bootup_day', auto_reboot_day_str_list, auto_reboot_day_val_list,'', 'a', 'lang_reboot_bootup_day', 12);
+				</script>
+			</div>
+			<div id="select_auto_reboot_bootup_hour" class="form-group no-padding-hr col-xs-12 col-sm-5">
+				<script>
+				  draw_select('auto_reboot_bootup_hour', auto_reboot_hour_str_list, auto_reboot_hour_val_list,'', 'a', 'lang_reboot_bootup_hour',12);
+				</script>
+			</div>
+		</div>
+		<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+			<script>
+				draw_btn('apply', 'apply', 'page_save()')
+			</script>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(management-reboot.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/management-reboot.js"></script>
+<!-- endinclude -->

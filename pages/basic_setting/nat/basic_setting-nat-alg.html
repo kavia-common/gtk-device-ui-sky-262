@@ -1,0 +1,92 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Alg']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_alg_pptp_pth">PPTP Passthrough</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="pptp_pth" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('pptp_pth')">
+					</span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_pptp_pth" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('pptp_pth', 'lang_alg_pptp_pth', '')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_alg_l2tp_pth">L2TP Passthrough</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="l2tp_pth" type="checkbox" name="" true-value="true" class="el-switch__input" >
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('l2tp_pth')">
+					</span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_l2tp_pth" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('l2tp_pth', 'lang_alg_l2tp_pth', '')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_alg_ipsec_pth">IPSEC Passthrough</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="ipsec_pth" type="checkbox" name="" true-value="true" class="el-switch__input" >
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('ipsec_pth')">
+					</span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_ipsec_pth" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('ipsec_pth', 'lang_alg_ipsec_pth', '')
+			</script>
+		</div>
+		<!--  -->
+	</div>
+	<!-- 
+	<div class="row form-group">
+		<div class="col-xs-4">
+			
+		</div>
+		<div class="col-md-6 col-offset-md-2 col-xs-8">
+			<button onclick="page_save()" type="button" class="el-button el-button--primary el-button--small">
+				<span class="multi_lang" id="lang_alg_add_btn">
+					Add
+				</span>
+			</button>
+		</div>
+	</div> -->
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div class="btn-align" id="btn_apply">
+			<script>
+				draw_btn('apply','apply','page_save()')
+			</script>
+		</div>
+	</div>
+	<!--  -->
+</div>
+<!-- include(basic_setting-nat-alg.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/nat/basic_setting-nat-alg.js"></script>
+<!-- endinclude -->

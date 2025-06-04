@@ -1,0 +1,211 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js?"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['Mesh','OpMode','WlanDeviceSsid','WlanGlobal']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+
+<div class="wrapperdiv">
+    <!--ONE LINE ZONE START-->
+    <div class="panel-body">
+        <!--INPUT ELEMENT SWITCH START-->
+		<div id="switch_single_ssid_enable" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_switch('single_ssid_enable','lang_wlan_commin_ssid_title','single_ssid_enable_handler()')
+            </script>
+		</div>
+        <!--INPUT ELEMENT SWITCH STOP-->
+        <div id="switch_MLO_enable" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display: none;">
+            <script>
+                draw_switch('MLO_enable','lang_wlan_mlo_title','MLO_enable_handler()')
+            </script>
+		</div>
+	</div>
+    <!--ONE LINE ZONE STOP-->
+
+    <!--SINGLE SSID SETUP ZONE START-->
+    <!--SUBTILE ZONE START-->
+    <div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_2g_setting_title"></span>Wireless SSID Settings</span>
+	</div>
+    <!--SUBTILE ZONE STOP-->
+    <div class="panel-body single_ssid_zone" id="ssid_zone_common" >
+        <!--INPUT ELEMENT START-->
+        <div id="input_commong_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('commong_ssid','lang_ssid','Please Enter the value')
+            </script>
+        </div>
+        <!--INPUT ELEMENT STOP-->
+
+        <!--SELECT ELEMENT START-->
+        <div id="select_authtype_commong" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_select('authtype_commong', allinone_common_ssid_authtype_select_str, allinone_common_ssid_authtype_select_val,'select_authtype_select(\'common\')', '', 'lang_auth_title');
+            </script>
+        </div>
+        <!--SELECT ELEMENT STOP-->
+
+        <!--SELECT ELEMENT START-->
+        <div id="select_encryptype_commong" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display:none">
+            <script>
+                draw_select('encryptype_commong', allinone_common_ssid_authtype_select_str, allinone_common_ssid_authtype_select_val,'', '', 'lang_encryption');
+            </script>
+        </div>
+        <!--SELECT ELEMENT STOP-->
+        
+        <!--PASSWORD INPUT ELEMENT START-->
+        <div class="row">
+            <div id="pwinput_commong_wpa_key" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+                <script>
+                    draw_password('commong_wpa_key','lang_pwd','Please Enter the value','',63)
+                </script>
+            </div>
+        </div>
+        <!--PASSWORD INPUT ELEMENT STOP-->
+
+        <!--CHECKBOX ELEMENT START-->
+        <div class="row">
+            <div id="checkbox_hide_ssid_btn_common" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none">
+                <script>
+                    draw_checkbox('hide_ssid_btn_common','lang_hide','ssid_hide_switch(\'common\')')
+                </script>
+            </div>
+        </div>
+        <!--CHECKBOX ELEMENT STOP-->
+    </div>
+    <!--SINGLE SSID SETUP ZONE STOP-->
+
+    <!--MULTI SSID SETUP ZONE START-->
+    <div class="panel-body multi_ssid_zone"  >
+        <div class="panel" id="multi_ssid_zone_2g">
+            <div class="panel-heading gemtek-portMap-panel-title">
+                <span class="multi_lang" id="lang_2g_setting_title">2.4 GHz Wireless Settings</span>
+            </div>
+            <div class="panel-body">
+                <div id="input_2g_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12">
+                    <script>
+                        draw_input('2g_ssid','lang_ssid','Please Enter the value')
+                    </script>
+                </div>
+                <div id="select_authtype_2g" class="form-group no-padding-hr col-xs-12 col-sm-5">
+                    <script>
+                        draw_select('authtype_2g', allinone_common_ssid_authtype_select_str, allinone_common_ssid_authtype_select_val,'select_authtype_select(\'2\')', '', 'lang_auth_title');
+                    </script>
+                </div>
+                <div id="select_encryptype_2g" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display:none">
+                    <script>
+                        draw_select('encryptype_2g', encryptype_select_str, encryptype_select_val,'select_encrytype_select(\'2\')', ''), 'lang_encryption';
+                    </script>
+                </div>
+                <div class="row">
+                    <div id="pwinput_2g_wpa_key" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+                        <script>
+                            draw_password('2g_wpa_key','lang_pwd','Please Enter the value','',63)
+                        </script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="checkbox_hide_ssid_btn2" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none">
+                        <script>
+                            draw_checkbox('hide_ssid_btn2','lang_hide','ssid_hide_switch(\'2\')')
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel" id="multi_ssid_zone_5g">
+            <div class="panel-heading gemtek-portMap-panel-title">
+                <span class="multi_lang" id="lang_5g_setting_title">5 GHz Wireless Settings</span>
+            </div>
+            <div class="panel-body">
+                <div id="input_5g_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12">
+                    <script>
+                        draw_input('5g_ssid','lang_ssid','Please Enter the value')
+                    </script>
+                </div>
+                <div id="select_authtype_5g" class="form-group no-padding-hr col-xs-12 col-sm-5">
+                    <script>
+                        draw_select('authtype_5g', allinone_common_ssid_authtype_select_str, allinone_common_ssid_authtype_select_val,'select_authtype_select(\'5\')', '', 'lang_auth_title');
+                    </script>
+                </div>
+                <div id="select_encryptype_5g" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display:none">
+                    <script>
+                        draw_select('encryptype_5g', encryptype_select_str, encryptype_select_val,'select_encrytype_select(\'5\')', '', 'lang_encryption');
+                    </script>
+                </div>
+                <div class="row">
+                    <div id="pwinput_5g_wpa_key" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+                        <script>
+                            draw_password('5g_wpa_key','lang_pwd','Please Enter the value','',63)
+                        </script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="checkbox_hide_ssid_btn5" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none">
+                        <script>
+                            draw_checkbox('hide_ssid_btn5','lang_hide','ssid_hide_switch(\'5\')')
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel" id="multi_ssid_zone_6g">
+            <div class="panel-heading gemtek-portMap-panel-title">
+                <span class="multi_lang" id="lang_6g_setting_title">6 GHz Wireless Settings</span>
+            </div>
+            <div class="panel-body">
+                <div id="input_6g_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12">
+                    <script>
+                        draw_input('6g_ssid','lang_ssid','Please Enter the value')
+                    </script>
+                </div>
+                <div id="select_authtype_6g" class="form-group no-padding-hr col-xs-12 col-sm-5">
+                    <script>
+                        draw_select('authtype_6g', allinone_common_ssid_authtype_select_str, allinone_common_ssid_authtype_select_val,'select_authtype_select(\'6\')', '', 'lang_auth_title');
+                    </script>
+                </div>
+                <div id="select_encryptype_6g" class="form-group no-padding-hr col-xs-12 col-sm-5" style="display:none">
+                    <script>
+                        draw_select('encryptype_6g', encryptype_select_str, encryptype_select_val,'select_encrytype_select(\'6\')', '', 'lang_encryption');
+                    </script>
+                </div>
+                <div class="row">
+                    <div id="pwinput_6g_wpa_key" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+                        <script>
+                            draw_password('6g_wpa_key','lang_pwd','Please Enter the value','',63)
+                        </script>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="checkbox_hide_ssid_btn6" class="form-group no-padding-hr col-xs-12 col-sm-12" style="display: none">
+                        <script>
+                            draw_checkbox('hide_ssid_btn6','lang_hide','ssid_hide_switch(\'6\')')
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MULTI SSID SETUP ZONE STOP-->
+    <!--APPLY CONTROL START-->
+    <div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+           <script>
+                draw_btn('cancel','cancel','page_initial()')
+           </script>
+        </div>
+        <div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+    <!--APPLY CONTROL STOP-->
+
+</div>
+<!-- include(basic_setting-wlan-wifi_basic_allinone.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-wifi_basic_allinone.js"></script>
+<!-- endinclude -->

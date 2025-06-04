@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	var OBJ_LIST = []
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+
+</script>
+
+<div class="fhv-centent">
+	<h4 class="title-topic"><span class="multi_lang" id="lang_multi_lang_title">Multiple Language</span></h4>
+	<form class="el-form fhv-form el-form--label-left">
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_multi_lang_info_title">Select your language</span>&nbsp;:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+                                        <div id="select_div" class="el-select el-select el-select--suffix" style="width: 100%;">
+						<select name="langSelection" id="langSelection" onchange="lang_switcher()" style="margin: 0px 0px 10px;"></select>
+                                        </div>
+			</div>
+		</div>
+
+
+	</form>
+</div>
+
+<!-- include(management-settings-multi_lang.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/settings/management-settings-multi_lang.js"></script>
+<!-- endinclude -->

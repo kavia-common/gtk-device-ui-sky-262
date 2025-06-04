@@ -1,0 +1,266 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Pc','PcPolicy']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var INFO_LIST = ['DhcpClientT']
+	var INFO_DATA = {}
+
+	var SPACE_NO = true;
+	var MAX_DEV_NUM = 5;
+	var SAVE_PC_WAITING_TIME = 3000;
+
+	var time_start_str_list = ["pc_noon_title","12:30 PM","1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM","9:30 PM","10:00 PM","10:30 PM","11:00 PM","11:30 PM","pc_midnight_title"]
+	var time_start_val_list = ["12:00","12:30","13:00","13:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00","21:30","22:00","22:30","23:00","23:30","00:00"]
+
+	var time_end_str_list = ["12:30 AM","1:00 AM","1:30 AM","2:00 AM","2:30 AM","3:00 AM","3:30 AM","4:00 AM","4:30 AM","5:00 AM","5:30 AM","6:00 AM","6:30 AM","7:00 AM","7:30 AM","8:00 AM","8:30 AM","9:00 AM","9:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM"]
+	var time_end_val_list = ["12:30","1:00","1:30","2:00","2:30","3:00","3:30","4:00","4:30","5:00","5:30","6:00","6:30","7:00","7:30","8:00","8:30","9:00","9:30","10:00","10:30","11:00","11:30"]
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- 
+		<div class="el-form-item el-form-item--mini">
+			<label class="el-form-item__label" style="width: 180px;"><span class="multi_lang" id="lang_pc_title">Parent Controls</span>&nbsp;:</label>
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<div role="switch" aria-checked="true" class="el-switch">
+					<input type="checkbox" true-value="true" value="0" class="el-switch__input" id="pc_enabled">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('pc_enabled','','pc_enable_switched()')"></span>
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_pc_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_switch('pc_enabled','lang_pc_title','pc_enable_switched()')
+            </script>
+		</div>
+		<div class="no-padding-hr col-xs-12 col-sm-12">
+			<div style=" display: flex;align-items: center;">
+				<div id="select_dev_list" class="no-padding-hr-l col-xs-5  col-sm-5">
+					<select id="dev_list" class="form-control" style="flex: 1;"></select>
+				</div>
+				<div class="btn-align" id="btn_pc_add" style="margin-left: 10px">
+					<script>
+						draw_custom_button('pc_add', 'lang_pc_add_title', 'pc_device_add();set_dev_list_init();','add');
+					</script>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+
+	<!-- 
+	<h5 class="title-topic" style="margin-bottom: 10px;"><span class="multi_lang" id="lang_pc_target_dev_title">Target Devices</span></h5>
+	<hr style="margin-top: 5px;"> -->
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_pc_target_dev_title"></span>
+	</div>
+	<!--  -->
+	<div class="panel-body">
+		<!--  -->
+		<div >
+			<!-- <label ><span class="multi_lang" id="lang_pc_dev_restrict_title">Restrict Internet access on</span></label> -->
+			<div >
+				<!-- 
+				<select class="el-select" style="width:100%; margin-bottom: 10px;" size="7" id="restrict_internet_access" onchange="pc_device_selected(this.index,this.value)"></select>
+				 -->
+				<div id="select_restrict_internet_access" class="form-group no-padding-hr col-xs-12 col-sm-12">
+					<script>
+						draw_select('restrict_internet_access', '', '', 'pc_device_selected(this.index,this.value)', '', 'lang_pc_dev_restrict_title');
+					</script>
+				</div>
+
+				<div class="text-center" style="padding:30px 0; width: calc(100% - 40px);margin: 0 auto;">
+					<!-- 
+					<button type="button" class="el-button el-button--primary el-button--small" onclick="_pop_diag('pc-dev-list','set_dev_list_init()')" id="pc_dev_add">
+						<span class="multi_lang" id="lang_pc_add_title">Add</span>
+					</button> -->
+					<!-- <div class="btn-align" id="btn_pc_dev_add"> -->
+						<!-- <script> -->
+							<!-- draw_custom_button('pc_dev_add', 'lang_pc_add_title', '_pop_diag(\'pc-dev-list\',\'set_dev_list_init()\')') -->
+						<!-- </script> -->
+					<!-- </div> -->
+					<!-- 
+					<button type="button" class="el-button el-button--primary el-button--small" onclick="pc_device_remove()" id="pc_dev_remove">
+						<span class="multi_lang" id="lang_pc_reomve_title">Remove</span>
+					</button> -->
+					<div class="btn-align" id="btn_pc_dev_remove">
+						<script>
+							draw_custom_button('pc_dev_remove', 'lang_pc_reomve_title', 'pc_device_remove();set_dev_list_init();')
+						</script>
+					</div>
+					<!-- 
+					<button type="button" class="el-button el-button--primary el-button--small" onclick="_pop_diag('pc-dev-rename','set_dev_rename_init()')" id="pc_dev_rename">
+						<span class="multi_lang" id="lang_pc_rename_title">Rename</span>
+					</button> -->
+					<div class="btn-align" id="btn_pc_dev_rename">
+						<script>
+							draw_custom_button('pc_dev_rename', 'lang_pc_rename_title', 'pc_device_rename_pop();')
+						</script>
+					</div>
+				</div>
+				<!--  -->
+			</div>
+		</div>
+		<!--  -->
+	</div>
+
+	<!-- 
+	<h5 class="title-topic" style="margin-bottom: 10px;"><span class="multi_lang" id="lang_pc_schedule_title">Schedule</span></h5>
+	<hr style="margin-top: 5px;"> -->
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_pc_schedule_title"></span>
+	</div>
+	<!-- PLEASE HELP TO IMPLEMENT THIS AREA START -->
+	<div class="panel-body">
+		<div>
+			<label><span class="multi_lang" id="lang_pc_block_internet_title">Block Internet Access</span>&nbsp;:</label>
+			<table cellspacing="0" cellpadding="0" border="0">
+				<colgroup>
+					<col colspan="1" rowspan="1" class="col-xs-1">
+					</col>
+					<col colspan="1" rowspan="1" class="col-xs-2" style="min-width: 70px;">
+					</col>
+					<col colspan="1" rowspan="1" class="col-xs-1">
+					</col>
+					<col colspan="1" rowspan="1" class="col-xs-2" style="min-width: 70px;">
+					</col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<td colspan="4">
+							<!-- 
+							<div id="radio_schedule_never" style="display: inline;">
+								<script>(function () { draw_radio_btn("schedule_never", "radio_schedule", "pc_never_title", "pc_blocktype_radio_selected('0')"); })();</script>
+							</div> -->
+							<!-- 
+							<div id="radio_schedule_always" style="display: inline; margin-left: 10px;">
+								<script>(function () { draw_radio_btn("schedule_always", "radio_schedule", "pc_always_title", "pc_blocktype_radio_selected('1')"); })();</script>
+							</div> -->
+							<!-- 
+							<div id="radio_schedule_spectime" style="display: inline; margin-left: 10px;">
+								<script>(function () { draw_radio_btn("schedule_spectime", "radio_schedule", "pc_spectime_title", "pc_blocktype_radio_selected('2')"); })();</script>
+							</div> -->
+							<div id="radio_radio_schedule" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									var option_list=[
+										{"id":"schedule_specific","label":"pc_specific_title","cb":"pc_blocktype_radio_selected('3')"},
+										{"id":"schedule_always","label":"pc_always_title","cb":"pc_blocktype_radio_selected('1')"}
+									]
+									draw_radio('radio_schedule','',option_list)
+								</script>
+							</div>
+							<div id="radio_radio_schedule_specific" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									var option_specific_list=[
+										{"id":"schedule_never","label":"pc_specific_url_title","cb":"pc_blocktype_radio_selected('0')"},
+										{"id":"schedule_spectime","label":"pc_specific_schedule_title","cb":"pc_blocktype_radio_selected('2')"}
+									]
+									draw_radio('radio_schedule_specific','lang_pc_specific_type_title',option_specific_list)
+								</script>
+							</div>
+							<!--  -->
+						</td>
+					</tr>
+					<tr id="pc_school_schedule_select">
+						<td>
+							<label><span class="multi_lang" id="lang_pc_school_night_title">School nights</span>&nbsp;:</label>
+						</td>
+						<td>
+							<!-- 
+							<script>(function () { draw_select("schoolnight_start", time_start_str_list, time_start_val_list, "", "a"); })();</script>
+							<div id="select_div_schoolnight_start" style="display: inline;"></div> -->
+							<div id="select_schoolnight_start" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									draw_select('schoolnight_start', time_start_str_list, time_start_val_list, '', 'a', '');
+								</script>
+							</div>
+							<!--  -->
+						</td>
+						<td style="text-align: center;"><span class="multi_lang" id="lang_pc_to_title">to</span></td>
+						<td>
+							<!-- 
+							<script>(function () { draw_select("schoolnight_end", time_end_str_list, time_end_val_list, "", "a"); })();</script>
+							<div id="select_div_schoolnight_end" style="display: inline;"></div> -->
+							<div id="select_schoolnight_end" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									draw_select('schoolnight_end', time_end_str_list, time_end_val_list, '', 'a', '');
+								</script>
+							</div>
+							<!--  -->
+						</td>
+					</tr>
+					<tr id="pc_weekend_schedule_select">
+						<td>
+							<label><span class="multi_lang" id="lang_pc_weekend_title">Weekends</span>&nbsp;:</label>
+						</td>
+						<td>
+							<!-- 
+							<script>(function () { draw_select("weekend_start", time_start_str_list, time_start_val_list, "", "a"); })();</script>
+							<div id="select_div_weekend_start" style="display: inline;"></div> -->
+							<div id="select_weekend_start" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									draw_select('weekend_start', time_start_str_list, time_start_val_list, '', 'a', '');
+								</script>
+							</div>
+							<!--  -->
+						</td>
+						<td style="text-align: center;"><span class="multi_lang" id="lang_pc_to_title">to</span></td>
+						<td>
+							<!-- 
+							<script>(function () { draw_select("weekend_end", time_end_str_list, time_end_val_list, "", "a"); })();</script>
+							<div id="select_div_weekend_end"></div> -->
+							<div id="select_weekend_end" class="form-group no-padding-hr col-xs-12 col-sm-12">
+								<script>
+									draw_select('weekend_end', time_end_str_list, time_end_val_list, '', 'a', '');
+								</script>
+							</div>
+							<!--  -->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- PLEASE HELP TO IMPLEMENT THIS AREA END -->
+	<!-- 
+	<h5 class="title-topic" style="margin-bottom: 10px;"><span class="multi_lang" id="lang_pc_block_site_title">Block Specific Sites</span></h5>
+	<hr style="margin-top: 5px;"> -->
+	<div class="panel-heading ng-binding" id="pc_block_site_title">
+		<span class="multi_lang" id="lang_pc_block_site_title"></span>
+	</div>
+	<!--  -->
+	<div class="panel-body" id="pc_div_block_site">
+		<div id="div_block_site"></div>
+	</div>
+	<div class="panel-body">
+		<!-- 
+		<div class="el-form-item el-form-item--mini">
+			<div class="el-form-item__content" style="margin-left: 180px;">
+				<button type="button" class="el-button el-button--primary el-button--small" onclick="pc_applied()">
+					<span class="multi_lang" id="lang_apply_btn_title">Apply</span>
+				</button>
+				<button type="button" class="el-button el-button--primary el-button--small" onclick="pc_refresh()">
+					<span class="multi_lang" id="lang_refresh_btn_title">Refresh</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_cancel">
+				<script>
+					draw_btn('cancel', 'cancel', 'pc_refresh()')
+				</script>
+			</div>
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply', 'apply', 'pc_applied()')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+</div>
+
+<!-- include(adv_setting-parental_control.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-parental_control.js"></script>
+<!-- endinclude -->

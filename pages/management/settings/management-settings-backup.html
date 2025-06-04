@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	var OBJ_LIST = []
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+<script src="js/ajaxfileupload.js"></script>
+
+<div class="wrapperdiv">
+    <div class="backup-panel" id="textbtn_backup">
+        <script>
+            draw_textbtn('backup','lang_backup_config','lang_content1','lang_save','backup_config()')
+        </script>
+    </div>
+    <div class="backup-panel" id="textbtn_restore">
+        <script>
+            draw_textbtn_with_upload('restore','lang_restore_config','lang_content2','lang_update','upload_config_file()', 'restore_file_path', 'check_upload_file()')
+        </script>
+    </div>
+</div>
+
+<!-- include(management-settings-backup.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/settings/management-settings-backup.js"></script>
+<!-- endinclude -->

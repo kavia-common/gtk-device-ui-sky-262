@@ -1,0 +1,61 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Wan']
+        var OBJ_DATA = {}
+
+	var INFO_LIST = ['TraceRoute']
+	var INFO_DATA = {}
+
+	var LAN_NAME = "lan";
+	var TRACEROUTE_CMD = {"TraceRoute":{"IpUrl":"","IpProtocolType":"ipv4","Interface":LAN_NAME}}
+
+	var traceroute_iface_str_list = [LAN_NAME]
+	var traceroute_iface_val_list = [LAN_NAME]
+
+	var traceroute_proto_str_list = ["IPv4","IPv6"]
+	var traceroute_proto_val_list = ["IPv4","IPv6"]
+
+	var is_summary = false;
+	var timer_flag = false;
+	var timer_id;
+	var empty_data_count;
+
+	var SHORT_INTERVAL = 100;
+	var NORMAL_INTERVAL = 1000;
+	var LONG_INTERVAL = 5000;
+	var TIMER_INTERVAL;
+</script>
+<div class="wrapperdiv">
+    <div class="panel-body">
+        <div id="select_traceroute_iface" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('traceroute_iface', traceroute_iface_str_list, traceroute_iface_val_list,'', 'a', 'lang_traceroute_interface_title');
+            </script>
+        </div>
+        <div id="select_traceroute_proto" class="form-group no-padding-hr col-xs-12 col-md-12">
+            <script>
+                draw_select('traceroute_proto', traceroute_proto_str_list, traceroute_proto_val_list,'', 'a', 'lang_traceroute_proto_title');
+            </script>
+        </div>
+		<div class="no-padding form-group no-padding-hr col-xs-12 col-md-12">
+			<div class="diagnose_tblcell">
+				<div style="display: inline-block;">
+					<label class="diagnose_titles active gemtek-text-color gemtek-font-family-medium gemtek-text-size-sm" style="font-weight:normal"><span id="lang_traceroute_ipurl_title" class="multi_lang"></span></label> 
+					<input class="" id="traceroute_ipurl" name="ipping" onblur="valid_traceroute_ipurl(this,true)" placeholder="Please enter IP/Host address" style="width: 360px;" type="text" value="">
+				</div>
+				<div style="display: inline-block;margin-left: 15px;">
+					<button class="gemtek-btn-primary" id="traceroute_btn" value="Apply" onclick="start_traceroute()" ><span class="multi_lang" id="lang_traceroute_start_title"></span></button>
+				</div>
+			</div>
+			<div style="display: none;" id="traceroute_ipurl_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_traceroute_ipurl_error">Target Address Error!e.g. 192.168.1.100</span></div>
+        	<div style="display: none;" id="traceroute_ipurl6_error"><span class="gemtek-diagnostics-down"></span><span class="multi_lang" id="lang_traceroute_ipurl6_error">Target Address Error!e.g. 2001:1234:abcd::1</span></div>
+		</div>
+		<div class="panel panel-default" style=" display: none;" id="traceroute_result_panel">
+			<div class="panel-heading"><span class="multi_lang" id="lang_traceroute_result_title">DNS Test Results</span></div>
+			<div class="textb" id="traceroute_result" style="padding: 15px"></div>
+		</div>
+    </div>
+</div>
+
+<!-- include(management-tools-traceroute.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/tools/management-tools-traceroute.js"></script>
+<!-- endinclude -->

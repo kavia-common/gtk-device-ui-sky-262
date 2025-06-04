@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(2.5 3)" stroke="#FFF" fill="none" fill-rule="evenodd">
+        <circle cx="9.5" cy="3.5" r="3"/>
+        <path d="M9.5 7v5" stroke-linecap="square"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12V9h-14v3"/>
+        <rect x=".5" y="12.5" width="4" height="4" rx="1"/>
+        <rect x="7.5" y="12.5" width="4" height="4" rx="1"/>
+        <rect x="14.5" y="12.5" width="4" height="4" rx="1"/>
+    </g>
+</svg>

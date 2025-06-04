@@ -1,0 +1,7 @@
+{
+    "application_storage_ftp": {
+        "lang_ftp_enable": "Enable FTP Service",
+        "lang_ftp_dir": "FTP Direatory",
+        "lang_ftp_apply_btn": "Apply"
+    }
+}

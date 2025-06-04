@@ -1,0 +1,52 @@
+
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanDeviceRadio', 'WlanGlobal', 'Mesh']
+	var INFO_LIST = ['WlanStatus']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+    var TARGET_BAND="6"
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+
+        <div id="switch_SSID_enable6" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+            draw_switch('SSID_enable6','lang_ssid_enabled','SSID_enable_handler()')
+            </script>
+        </div>
+        <div id="select_wifi_mode_select6" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_select('wifi_mode_select6', wifi_mode_select_str_6, wifi_mode_select_val_6,'select_wifi_mode_select(\'6\')', '', 'lang_mode', '12');
+            </script>
+        </div>
+        <div id="select_wifi_bw_select6" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_select('wifi_bw_select6', wifi_bw_select_str_6, wifi_bw_select_val_6,'select_wifi_bw_select(\'6\')', '', 'lang_bandwidth', '12');
+            </script>
+        </div> 
+        <div id="select_wifi_channel_select6" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_select('wifi_channel_select6', wifi_channel_select_str_6, wifi_channel_select_val_6,'select_wifi_channel_select(\'6\')', '', 'lang_channel', '12');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+	<div class="btn-align" id="btn_cancel">
+	   <script>
+			draw_btn('cancel','cancel','page_initial()')
+	   </script>
+	</div>
+	<div class="btn-align" id="btn_apply">
+		<script>
+			draw_btn('apply','apply','page_save()')
+		</script>
+	</div>
+</div>
+
+
+<!-- include(wlan-wifi_indep6-configuration6.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/wlan/wifi_indep6/wlan-wifi_indep6-configuration6"></script>
+<!-- endinclude -->

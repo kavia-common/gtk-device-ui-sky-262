@@ -1,0 +1,26 @@
+{
+    "status_wifiMesh": {
+        "lang_name_title": "Name",
+        "lang_interface_title": "Interface",
+        "lang_ip_title": "IP Address",
+        "lang_mac_title": "MAC Address",
+        "lang_fw_title": "Firmware Version",
+        "lang_title": "Connected parent node information:",
+        "lang_model_name_title": "Model Name",
+        "lang_system_name_title": "System Name",
+        "lang_model_desc_title": "Model Description",
+        "lang_state_title": "State",
+        "lang_meshmap_title": "Mesh Network Topology",
+        "lang_meshmap_show_btn": "show",
+        "lang_mesh_role": "Role",
+        "lang_connect_type": "Backhaul",
+        "lang_mesh_upstream": "Parent node",
+        "lang_mesh_medtype": "Connection Type",
+        "lang_mesh_hops": "Hops",
+        "lang_meshinfo_title": "Mesh Netowork Information",
+        "lang_mesh_map": "MAP",
+        "lang_mesh_node_list": "Mesh Node List",
+        "lang_mesh_client_list": "Mesh Client List",
+        "lang_mesh_demo_action": "Mesh Control Action"
+    }
+}

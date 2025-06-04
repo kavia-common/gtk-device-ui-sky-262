@@ -1,0 +1,75 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanDeviceSsid','WlanDeviceRadio']
+	var ORIGINAL_OBJ_DATA = {}
+	var STATUS_WIFINEIGHBOR_COLUMNS_LIST_STR=['lang_wifinb_ssid_title','lang_wifinb_bssid_title','lang_wifinb_channel_title','lang_wifinb_signal_title','lang_wifinb_security_title','lang_wifinb_wifimode_title']
+	var STATUS_WIFINEIGHBOR_COLUMNS_LIST_VALUE=['Ssid','Bssid','Channel','Signal','Security','WifiMode']
+
+	var INFO_LIST = ['WifiNeighbor']
+	var INFO_DATA_2G = {}
+	var INFO_DATA_5G = {}
+    var INFO_DATA_6G = {}
+
+	var SCAN_CMD = {"WifiNeighbor":{"Action":"scan","Band":"all"}};
+
+	var SCAN_INTERVAL = 1000;
+	var SCAN_TIMEOUT = 30;	// 30 seconds
+	var TIME_2G = 0, TIME_5G = 0, TIME_6G = 0;
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_wifinb_2g_title"></span>
+	</div>	
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_result_2g">
+			<script>
+				draw_table('result_2g', STATUS_WIFINEIGHBOR_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_scan_2g" class="btn-align">
+			<script>
+				draw_custom_button('scan_2g', 'lang_wifinb_scan_title', 'start_scan(\'2\')')
+			</script>
+		</div>
+	</div>
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_wifinb_5g_title"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_result_5g">
+			<script>
+				draw_table('result_5g', STATUS_WIFINEIGHBOR_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_scan_5g" class="btn-align">
+			<script>
+				draw_custom_button('scan_5g', 'lang_wifinb_scan_title', 'start_scan(\'5\')')
+			</script>
+		</div>
+	</div>
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_wifinb_6g_title"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_result_6g">
+			<script>
+				draw_table('result_6g', STATUS_WIFINEIGHBOR_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_scan_6g" class="btn-align">
+			<script>
+				draw_custom_button('scan_6g', 'lang_wifinb_scan_title', 'start_scan(\'6\')')
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- include(status-wifiNeighbor.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-wifiNeighbor.js"></script>
+<!-- endinclude -->

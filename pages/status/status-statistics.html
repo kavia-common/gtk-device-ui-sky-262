@@ -1,0 +1,33 @@
+<script type="text/javascript">
+	var INFO_LIST = ['Statistics']
+	var INFO_DATA = {}
+	// var STATUS_STATISTICS_COLUMNS_LIST_STR=['lang_statistics_port_title','lang_statistics_bytes_title','lang_statistics_packets_title','lang_statistics_error_title','lang_statistics_discard_title',
+	// 										'lang_statistics_bytes_title','lang_statistics_packets_title','lang_statistics_error_title','lang_statistics_discard_title']
+	var STATUS_STATISTICS_COLUMNS_LIST_STR=['Port','RxBytes','RxPackets','RxError','RxDiscard','TxBytes','TxPackets','TxError','TxDiscard']
+	var STATUS_STATISTICS_COLUMNS_LIST_VALUE=['Port','RxBytes','RxPackets','RxError','RxDiscard','TxBytes','TxPackets','TxError','TxDiscard']
+</script>
+<div class="wrapperdiv">
+	<div class="panel-heading ng-binding" >
+		<span class="multi_lang" id="lang_statistics_lan_title"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_lan_statistics_tbody">
+			<script>
+				draw_table('lan_statistics_tbody',STATUS_STATISTICS_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+	<div class="panel-heading ng-binding" >
+		<span class="multi_lang" id="lang_statistics_wlan_title"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_wlan_statistics_tbody">
+			<script>
+				draw_table('wlan_statistics_tbody',STATUS_STATISTICS_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+</div>
+<!-- include(status-statistics.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/status/status-statistics.js"></script>
+<!-- endinclude -->

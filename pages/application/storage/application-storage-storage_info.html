@@ -1,0 +1,42 @@
+<script type="text/javascript">
+	var INFO_LIST = ['StorageInfo']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var APPLICATION_STORAGE_INFO_COLUMNS_LIST_STR=['lang_storage_partition','lang_storage_total','lang_storage_available','lang_storage_used','lang_storage_percentage','lang_storage_type']
+	var APPLICATION_STORAGE_INFO_COLUMNS_LIST_VALUE=['Name','Size','Available','Used','UsePercentage','Filesystem']
+
+</script>
+
+<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4>
+<div>
+    <div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_partition">Partition</span></th>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_total">Total</span></th>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_available">Available</span></th>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_used">Uesd</span></th>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_percentage">Use%</span></th>
+					<th class="col-xs-2"><span class="multi_lang" id="lang_storage_type">System Type</span></th>
+				</tr>
+			</thead>
+			<tbody id="storage_info_table">
+				
+			</tbody>
+		</table>
+	</div>
+</div> -->
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_storage_info_table">
+			<script>
+				draw_table('storage_info_table', APPLICATION_STORAGE_INFO_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- include(application-storage-storage_info.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/storage/application-storage-storage_info.js"></script>
+<!-- endinclude -->

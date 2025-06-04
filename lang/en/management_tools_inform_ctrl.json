@@ -1,0 +1,19 @@
+{
+    "management_tools_inform_ctrl": {
+        "lang_infomanul_title": "Inform manually report",
+        "lang_infomanul_dstaddr_title": "Destination Address",
+        "lang_infomanul_report_title": "Inform manually report",
+        "lang_infomanul_result_title": "Report the results",
+        "lang_infomanul_waiting_msg": "Results obtained in a later....",
+        "lang_infomanul_success_msg": "manually inform success",
+        "lang_infomanul_enable_title": "Enable",
+        "lang_infomanul_server1_title": "First Server:",
+        "lang_infomanul_time_title": "Interval Time:",
+        "lang_infomanul_server2_title": "Second Server:",
+        "lang_infomanul_content1_title": "AIS Agent secret key version",
+        "lang_infomanul_content2_title": "AIS Agent secret key",
+        "lang_infomanul_send_title": "Send Now",
+        "lang_infomanul_server_disabled": "Disabled",
+        "lang_infomanul_timeout": "Idle Timeout"
+    }
+}

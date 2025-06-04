@@ -1,0 +1,37 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js?"></script>
+<script type="text/javascript">
+	var OBJ_LIST = ['WlanGlobal']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+</script>
+
+<div class="wrapperdiv">
+    
+    <div class="panel-body">
+        <div id="switch_twt_enabled" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                draw_switch('twt_enabled','lang_twt_enabled','twt_enabled_handler()')
+            </script>
+		</div>
+	</div>
+
+    <!--APPLY CONTROL START-->
+    <div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+           <script>
+                draw_btn('cancel','cancel','page_initial()')
+           </script>
+        </div>
+        <div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+    <!--APPLY CONTROL STOP-->
+
+</div>
+
+<!-- include(wlan-wifi_adv_common.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/wlan/wlan-wifi_adv_common.js"></script>
+<!-- endinclude -->

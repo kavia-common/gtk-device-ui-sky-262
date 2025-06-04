@@ -1,0 +1,58 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Account']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+
+	var account_username_str_list = []
+	var account_username_val_list = []
+
+	var SAVE_ACCOUNT_WAITING_TIME = 3000;
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<p><span class="multi_lang" id="lang_account_help_msg"></span></p>
+		<p><span class="multi_lang" id="lang_account_note_msg"></span></p>
+		<div id="select_account_username" class="form-group no-padding-hr col-xs-12 col-sm-5 account_zone" style="display: none">
+			<script>
+				draw_select('account_username', [], [],'', '', 'lang_account_username_title');
+			</script>
+		</div>
+		<div class="row" style="padding: 10px 0px;" >
+			<div id="pwinput_old_pwd" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+				<script>
+					draw_password('old_pwd','lang_account_oldpassword_title','Please Enter the value', 'valid_password(this.id)')
+				</script>
+			</div>
+		</div>
+		<div class="row" style="padding: 10px 0px;">
+			<div id="pwinput_new_pwd" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+				<script>
+					draw_password('new_pwd','lang_account_newpassword_title','Please Enter the value', 'valid_password(this.id)','15')
+				</script>
+			</div>
+		</div>
+		<div class="row" style="padding: 10px 0px;">
+			<div id="pwinput_confirm_pwd" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+				<script>
+					draw_password('confirm_pwd','lang_account_confirmpassword_title','Please Enter the value', 'confirm_password(this.id)','15')
+				</script>
+			</div>
+		</div>
+		<div class="text-center " style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_cancel">
+				<script>
+					 draw_btn('cancel','cancel','account_refresh()')
+				</script>
+			 </div>
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','account_applied()')
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(management-account.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/management/management-account.js"></script>
+<!-- endinclude -->

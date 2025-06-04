@@ -1,0 +1,19 @@
+<svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="wjeryoiu3a" cx="34" cy="34" r="34"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(11 11)">
+            <mask id="pterpchakb" fill="#fff">
+                <use xlink:href="#wjeryoiu3a"/>
+            </mask>
+            <use fill="#FFF" xlink:href="#wjeryoiu3a"/>
+            <path d="M44 3c4.747 2.667 4.747 6.969 0 12.906L45.78 27S53 32.664 44 32.664s-8.5-9.336-17 0-17 0-17 0S15.047 42 10 42c-3.365 0-10.198-3.112-20.5-9.336L10-3C27.92-1.667 39.253.333 44 3z" fill="#B3EBF7" mask="url(#pterpchakb)" transform="rotate(-15 19.01 19.5)"/>
+            <path d="M6.242 64c5.172 0 10.591-1.833 16.258-5.5.333.167 3.167.667 8.5 1.5s9.667 3.5 13 8l4 16s-26.242 6-34 0C6.242 78-1.516 64 6.242 64zM68 19.5c-8.805 0-12.055-5.457-10.43 4.5s5.014 12 5.014 20S54 56 68 60s22.469-11 22.469-16S76.805 19.5 68 19.5z" fill="#B3EBF7" mask="url(#pterpchakb)"/>
+        </g>
+        <circle stroke="#63696F" cx="45" cy="45" r="33.5"/>
+        <text font-family="Roboto-Medium, Roboto" font-size="10" font-weight="400" fill="#0072BC">
+                            <tspan x="22.146" y="48">INTERNET</tspan>
+                        </text>
+    </g>
+</svg>

@@ -1,0 +1,67 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Qos','QosPolicy']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var ADV_SETTING_QOS_COLUMNS_LIST_STR = ['lang_qos_priority_title','lang_qos_name_titlie','lang_qos_information_title','lang_qos_method_title']
+	var ADV_SETTING_QOS_COLUMNS_LIST_VALUE = ['PriorityT','NameT','InfoT','TB_ACTION']
+
+	var SAVE_QOS_WAITING_TIME = 3000;
+	var EDIT_INDEX = -1;
+
+	var qos_bw_str_list = ["qos_bw_auto_title","qos_bw_manual_titlie"]
+	var qos_bw_val_list = ['0','1']
+
+	var qos_unit_str_list = ["qos_unit_kbps_titlie","qos_unit_mbps_titlie"]
+	var qos_unit_val_list = ['0','1']
+
+	var qos_cat_str_list = ["qos_app_title","qos_macaddr_title"]
+	var qos_cat_val_list = ['0','1']
+
+	var qos_proto_str_list = ["qos_disabled_title","qos_tcp_title","qos_udp_title","qos_both_title"]
+	var qos_proto_val_list = ['0','1','2','3']
+
+	var qos_prio_str_list = ["qos_low_titlie","qos_normal_titlie","qos_medium_titlie","qos_high_titlie"]
+	var qos_prio_val_list = ['0','1','2','3']
+
+	var qos_ifac_str_list = ["LAN1","LAN2","LAN3","LAN4","SSID1","SSID2","SSID3","SSID4","SSID5","SSID6","SSID7","SSID8"]
+	var qos_ifac_val_list = ["LAN1","LAN2","LAN3","LAN4","SSID1","SSID2","SSID3","SSID4","SSID5","SSID6","SSID7","SSID8"]
+</script>
+
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_qos_enabled" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('qos_enabled','lang_qos_enable_title','qos_enable_switched(true)')
+			</script>
+		</div>
+	</div>
+	
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr qos_emabled_show" id="tb_qos_tbody">
+			<script>
+				draw_table('qos_tbody', ADV_SETTING_QOS_COLUMNS_LIST_STR)
+				// draw_table_plus_btn('qos_tbody', ADV_SETTING_QOS_COLUMNS_LIST_STR,'lang_qos_summary_title','fa-plus','lang_qos_add_title','qos_update(\'new\')')
+			</script>
+		</div>
+	</div>
+
+	<div class="text-center qos_emabled_show" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_qos_add" style="border-bottom:0px;border-top:0px;">
+			<script>
+				draw_button('qos_add', 'lang_qos_add_title', 'qos_update(\'new\')')
+			</script>
+		</div>
+	</div>
+
+	<!-- <div class="text-center qos_emabled_show" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div class="btn-align" id="btn_qos_apply">
+			<script>
+				draw_btn('apply','qos_apply','qos_apply()')
+			</script>
+		</div>
+	</div> -->
+</div>
+
+<!-- include(adv_setting-qos.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/adv_setting/adv_setting-qos.js"></script>
+<!-- endinclude -->

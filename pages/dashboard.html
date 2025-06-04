@@ -1,0 +1,224 @@
+<!--Device Status-->
+<div class="col-lg-7" id="dashboard_network_info">
+	<div class="row">
+		<div class="panel no-padding-vr">
+			<div class="text-left gemtek-Device-Status">
+				<span class="multi_lang" id="lang_dev_info_name_title">Device Status</span>
+			</div>
+			<div class="panel-body no-padding-vr">
+				<div class="row">
+					<table class="table tableCount theme_intel">
+						<tbody>
+							<tr>
+								<th class=" gemtek-statistics-chat-th">
+									<div class="gemtek-border-right">
+										<div class="multi_lang" id="lang_intermet_status_title">
+											Internet Status
+										</div>
+										<div class="gemtek-input-mt10">
+											<span id="internet_downup_status_icon" class=""></span> 
+											<span class="gemtek-statistics-icon " style="vertical-align: super;" id="internet_downup_status"></span><!-- end ngIf: DeviceIPInterface.Status!='Up' -->
+										</div>
+									</div>
+								</th>
+								<th class=" gemtek-statistics-chat-th">
+									<div class="">
+										<div class="">
+											<span class="multi_lang" id="lang_content2">Active Clients</span>
+										</div>
+										<div class="gemtek-input-mt10">
+											<img alt="" src="img/icons/icon-1/ico-client.svg"> <span class="gemtek-statistics-icon  ng-untouched  " style="vertical-align: text-top;"><span id="online_device_count"></span></span>
+										</div>
+									</div>
+								</th>
+								<!--th class=" gemtek-statistics-chat-th">
+									<div class="">
+										<div class="">
+											2.4GHz WiFi Security Level
+										</div>
+										<div class="gemtek-input-mt10">
+											<img alt="" src="img/icons/ico-wifi-secruity-mode.png"> <span class="gemtek-statistics-icon " style="vertical-align: text-top;">WPA2-Personal</span> <span class="error  ng-hide"></span>
+										</div>
+									</div>
+								</th>
+								<td class=" gemtek-statistics-chat-th">
+									<div>
+										<div class="">
+											5GHz WiFi Security Level
+										</div>
+										<div class="gemtek-input-mt10">
+											<img alt="" src="img/icons/ico-wifi-secruity-mode.png"> <span class="gemtek-statistics-icon " style="vertical-align: text-top;">WPA2-Personal</span> <span class="error  ng-hide"></span>
+										</div>
+									</div>
+								</td-->
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="table tableCount theme_intel gemtek-two-color-table">
+						<tbody>
+							<tr class="gemtek-tr-bottom-line">
+								<td><span class="multi_lang" id="lang_intermet_protocol">Protocol</span></td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_protocol">DHCP</span> <span class="error  ng-hide"></span></td>
+							</tr>
+							<tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_address">Internet Address</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_address"></span> <span class="error  ng-hide"></span></td>
+							</tr>
+							<!--tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_gw">Default Gateway</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_gw"></span> <span class="error  ng-hide"></span></td>
+							</tr>
+							<tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_netmask">Subnet Mask</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_netmask"></span> <span class="error  ng-hide"></span></td>
+							</tr-->
+							<tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_dns1">Primary DNS</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_dns1"></span> <span class="error  ng-hide"></span></td>
+							</tr>
+							<tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_dns2">Secondary DNS</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_dns2"></span> <span class="error  ng-hide"></span></td>
+							</tr>
+							<tr class="gemtek-tr-bottom-line">
+								<td class="multi_lang" id="lang_intermet_macaddress">MacAddress</td>
+								<td class="text-right gemtek-text-color"><span class="" id="dashboard_internet_macaddress"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--System Info-->
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 mbl-no-padding-hr" id="dashboard_system_info">
+	<div class="panel acc">
+		<div class="gemtek-Device-Status">
+			<span class="multi_lang" id="lang_systeminfo_title">System Info</span>
+		</div>
+		<div class="panel-body adv_widget no-padding">
+			<ul class="">
+				<li class=""><label><span class="multi_lang" id="lang_system_mfg">Manufacturer</span> <span class="" id="dashboard_system_mfg">Gemtek Technology Co.</span></label></li><!-- end ngRepeat: key in obj| keys1 track by $index -->
+				<li class=""><label><span class="multi_lang" id="lang_system_sn">Serial Number</span> <span class="" id="dashboard_system_sn"></span></label></li><!-- end ngRepeat: key in obj| keys1 track by $index -->
+				<li class=""><label><span class="multi_lang" id="lang_dev_fw_ver">Software Version</span> <span class="" id="dashboard_system_swversion"></span></label></li><!-- end ngRepeat: key in obj| keys1 track by $index -->
+				<li class=""><label><span class="multi_lang" id="lang_dev_model_name">Model Name</span> <span class="" id="dashboard_system_modelname"></span></label></li><!-- end ngRepeat: key in obj| keys1 track by $index -->
+				<li class=""><label><span class="multi_lang" id="lang_dev_hw_ver">Hardware Version</span> <span class="" id="dashboard_system_hwversion"></span></label></li><!-- end ngRepeat: key in obj| keys1 track by $index -->
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--Ethernet Port Status-->
+<div class="row">
+	<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+		<div class="port_status col-sm-12 col-xs-12 col-lg-12 col-md-12 mbl-no-padding-hr no-padding-hr">
+			<div class="panel">
+				<div class="gemtek-Device-Status">
+					<span class="multi_lang" id="lang_portstatus_title">Ethernet Port Status</span>
+				</div>
+				<div class="panel-body no-padding">
+					<div class="row status_box" id="eth_port_zone"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	lang_tag='dashboard'
+	var INFO_LIST = ['DeviceInfo','InternetStatus','DhcpClientT','MeshStatus','LanStatus','WanStatus']
+	var EasyDia = {"EasyDiagnostic":{"Action":"start"}};
+	var INFO_DATA = {}
+	var OBJ_LIST = ['WlanDeviceSsid']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {} 
+
+	$(document).ready(function(){
+		$.when(
+			$.lang_load("dashboard")			
+		 ).done(function(){
+			loading_control(1);
+			get_info_data(INFO_LIST)
+		 })
+	});
+
+	function get_info_success_cb(obj) {
+		INFO_DATA = API.obj.copy(obj);
+		info_init(INFO_DATA)
+	}
+	function get_info_error_cb(obj) {
+		loading_control(0);
+
+		if(obj.api_return == 403) {
+			logout('sto');
+		}
+	}
+	function get_info_data(info_list){
+			API.info.get(info_list, get_info_success_cb, get_info_error_cb,20000);
+	}
+
+	function eth_port_layout(data){
+		var layout_content=""
+		var eth_port_down_img_path="img/icons/icon-1/ico-ethernet-port-inactive.svg"
+		var eth_port_up_img_path="img/icons/icon-1/ico-ethernet-port-active.svg"
+		$.each(G_ETH_PORT_LIST, function(index, eth_ifname) {
+			iface_link_status = "Down"
+			//$("#lanstatus").attr('src',pass_path)
+			if (typeof(eth_ifname) == 'undefined')
+				return;
+			if( eth_ifname.search("LAN") > -1){
+				$.each(data.LanStatus.Lan, function(i, lan_data) {
+					if (lan_data.Interface == eth_ifname){
+						iface_link_status = lan_data.Status
+					}
+				});
+			}else if (eth_ifname.search("WAN") > -1){
+				if (data.WanStatus.WanPort.Duplex != "")
+					iface_link_status = "Up"
+			}
+			layout_content=layout_content+'<div class="gemtek-status-icons">'
+			layout_content=layout_content+'<div class="lanport">'
+			if (iface_link_status == "Up")
+				layout_content=layout_content+'<img alt="img" src="'+eth_port_up_img_path+'">'
+			else
+				layout_content=layout_content+'<img alt="img" src="'+eth_port_down_img_path+'">'
+			layout_content=layout_content+'<p class="">'+eth_ifname+'</p>'
+			layout_content=layout_content+'</div></div>'
+		});
+		$("#eth_port_zone").html(layout_content)
+	}
+
+	function info_init(obj){
+		// internet bashboard
+		if("OK" == obj.InternetStatus.WanStatus){
+			$("#internet_downup_status").text(L.dashboard.lang_intermet_up)
+			$("#internet_downup_status_icon").removeClass("gemtek-status-down");
+			$("#internet_downup_status_icon").addClass("gemtek-status-up");
+		}else{
+			$("#internet_downup_status").text(L.dashboard.lang_intermet_down)
+			$("#internet_downup_status_icon").removeClass("gemtek-status-up");
+			$("#internet_downup_status_icon").addClass("gemtek-status-down");
+		}
+		$("#online_device_count").text(obj.DhcpClientT.Clients.length)
+		$("#dashboard_internet_protocol").text(obj.InternetStatus.Protocol)
+		$("#dashboard_internet_address").text(obj.InternetStatus.IpAddress)
+		$("#dashboard_internet_dns1").text(obj.WanStatus.Ipv4[0].Dns1)
+		$("#dashboard_internet_dns2").text(obj.WanStatus.Ipv4[0].Dns2)
+		$("#dashboard_internet_macaddress").text(obj.DeviceInfo.Mac)
+
+		//system dashboard
+		//$("#dashboard_system_mfg").text('Gemtek Technology Co.')
+		$("#dashboard_system_sn").text(obj.DeviceInfo.SN)
+		$("#dashboard_system_swversion").text(obj.DeviceInfo.FwVer)
+		$("#dashboard_system_modelname").text(obj.DeviceInfo.ModelName)
+		$("#dashboard_system_hwversion").text(obj.DeviceInfo.HwVer)
+
+		//
+		eth_port_layout(obj)
+		
+		loading_control(0);
+	}
+</script>

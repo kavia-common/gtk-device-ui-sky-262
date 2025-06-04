@@ -1,0 +1,122 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Dmz','DmzPolicy','Wan']
+	var INFO_LIST = ['DhcpClientT']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var BASIC_SETTING_NAT_DMZ_COLUMNS_LIST_STR=['#','lang_dmz_item_ipaddr','lang_dmz_item_interface','lang_dmz_item_method']
+	var BASIC_SETTING_NAT_DMZ_COLUMNS_LIST_VALUE=['Number','DstIp','Interface','TB_ACTION']
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4>	 -->
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_dmz_enable">Enable DMZ</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="dmz_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('dmz_enable','','dmz_enable_handler()')"></span>
+					
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_dmz_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('dmz_enable', 'lang_dmz_enable', 'dmz_enable_handler()')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group dmz_emabled_show">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_dmz_interface">Interface Selection</span> :</span>
+			</div>
+			<div id="select_div_dmz_wan" class="col-md-6 col-offset-md-2 col-xs-8"></div>
+		</div> -->
+		<div id="select_dmz_wan" class="form-group no-padding-hr col-xs-12 col-sm-12 dmz_emabled_show">
+			<script>
+				draw_select('dmz_wan', [], [],'', '', 'lang_dmz_interface');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group dmz_emabled_show">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_dmz_host">DMZ Host</span> :</span>
+			</div>
+			<div id="select_div_dmz_host_list" class="col-md-6 col-offset-md-2 col-xs-8" >
+			</div>
+		</div> -->
+		<div id="select_dmz_host_list" class="form-group no-padding-hr col-xs-12 col-sm-12 dmz_emabled_show">
+			<script>
+				draw_select('dmz_host_list', [], [],'', '', 'lang_dmz_host');
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group dmz_emabled_show">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_dmz_ipaddr">DMZ Host IP Address</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<input id="dmz_host_ip" type="text" class="ais-fiber-input">
+			</div>
+		</div> -->
+		<div id="input_dmz_host_ip" class="form-group no-padding-hr col-xs-12 col-sm-12 dmz_emabled_show">
+            <script>
+                draw_input('dmz_host_ip','lang_dmz_ipaddr','Please Enter the value', '', '')
+            </script>
+        </div>
+		<!-- 
+		<div class="row form-group dmz_emabled_show">
+			<div class="col-xs-4">
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<button onclick="add_dmz_item()" type="button" class="el-button el-button--primary el-button--small">
+					<span>
+						<span class="multi_lang" id="lang_dmz_add_btn">Add</span>
+					</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center dmz_emabled_show"   style="padding:30px 0; width: calc(100% - 40px);margin: 0 auto;">
+			<div id="btn_add_btn" class="btn-align">
+				<script>
+					draw_custom_button('add_btn', 'lang_dmz_add_btn', 'add_dmz_item()', 'add')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+	<!-- 
+	<div class="dmz_emabled_show">
+		<h4>
+			<span class="multi_lang" id="lang_dmz_list_title">DMZ Host Lists</span>:
+		</h4>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_dmz_number">#</span></th>
+						<th class="col-xs-4"><span class="multi_lang" id="lang_dmz_item_ipaddr">DMZ Host IP Address</span></th>
+						<th class="col-xs-4"><span class="multi_lang" id="lang_dmz_item_interface">Interface</span></th>
+						<th class="col-xs-1"><span class="multi_lang" id="lang_dmz_item_method">Method</span></th>
+					</tr>
+				</thead>
+				<tbody id="dmz_table"></tbody>
+			</table>
+		</div>
+	</div> -->
+	<div class="panel-heading ng-binding dmz_emabled_show">
+		<span class="multi_lang" id="lang_dmz_list_title"></span>
+	</div>
+	<div class="panel-body dmz_emabled_show">
+		<div class="table-responsive table-scroll-vr" id="tb_dmz_table">
+			<script>
+				draw_table('dmz_table', BASIC_SETTING_NAT_DMZ_COLUMNS_LIST_STR)
+			</script>
+		</div>
+	</div>
+</div>
+<!-- include(basic_setting-nat-dmz.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/nat/basic_setting-nat-dmz.js"></script>
+<!-- endinclude -->

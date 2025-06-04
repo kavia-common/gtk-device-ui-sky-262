@@ -1,0 +1,144 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['StorageUser']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var APPLICATION_STORAGE_ACCOUNT_COLUMNS_LIST_STR=['lang_account_item_number','lang_account_item_username','lang_account_item_method']
+	var APPLICATION_STORAGE_ACCOUNT_COLUMNS_LIST_VALUE=['Number','Username','TB_ACTION']
+
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<!-- <h4 class='title-topic' ><span id='rightContentTitle'></span></h4> -->
+		<p style="padding-bottom: 10px;"><span class="multi_lang" id="lang_storage_acct_note">Configure User Accounts for booth Samba and FTP Services.</span></p>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_storage_acct_enabled">Enable Anonymous Access</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<div role="switch" class="el-switch is-checked" aria-checked="true">
+					<input id="annonymous_enable" type="checkbox" name="" true-value="true" class="el-switch__input">
+					<span class="el-switch__core" style="width: 40px;" onclick="switcher_handler('annonymous_enable','','annonymous_enable_handler()')"></span>
+				</div>
+			</div>
+		</div> -->
+		<div id="switch_annonymous_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('annonymous_enable', 'lang_storage_acct_enabled', 'annonymous_enable_handler()')
+			</script>
+		</div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_storage_acct_user">User Name</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<input id="storage_username" maxlength="12" type="text" class="ais-fiber-input">
+			</div>
+		</div> -->
+		<div id="input_storage_username" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('storage_username','lang_storage_acct_user','Please Enter the value', '', '')
+            </script>
+        </div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_storage_acct_pw">Password</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<input id="storage_pw" type="text" maxlength="64" class="ais-fiber-input">
+			</div>
+		</div> -->
+		<div id="input_storage_pw" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('storage_pw','lang_storage_acct_pw','Please Enter the value', '', '')
+            </script>
+        </div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+				<span class="ais-fiber-label"><span class="multi_lang" id="lang_storage_acct_cpw">Confirmed Password</span> :</span>
+			</div>
+			<div class="col-md-6 col-offset-md-2 col-xs-8">
+				<input id="storage_pw_confirm" type="text" maxlength="64" class="ais-fiber-input">
+			</div>
+		</div> -->
+		<div id="input_storage_pw_confirm" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('storage_pw_confirm','lang_storage_acct_cpw','Please Enter the value', '', '')
+            </script>
+        </div>
+		<!-- 
+		<div class="row form-group">
+			<div class="col-xs-4">
+			</div>
+			<div class="col-md-8 col-offset-md-2 col-xs-8">
+				<button onclick="add_account_item()" type="button" class="el-button el-button--primary el-button--small">
+					<span>
+						<span class="multi_lang" id="lang_storage_acct_apply_btn">Apply Change</span>
+					</span>
+				</button>
+			</div>
+		</div> -->
+		<div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+				<script>
+					draw_btn('apply','apply','add_account_item()')
+				</script>
+			</div>
+		</div>
+		<!--  -->
+	</div>
+
+	<!-- 
+	<div>
+		<P>
+			<span class="multi_lang" id="lang_storage_acct_current_table">Current Account Table</span>:
+		</P>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_account_item_number">Number</span></th>
+						<th class="col-xs-8"><span class="multi_lang" id="lang_account_item_username">User Name</span></th>
+						<th class="col-xs-2"><span class="multi_lang" id="lang_account_item_method">Method</span></th>
+					</tr>
+				</thead>
+				<tbody id="account_table">
+				</tbody>
+			</table>
+		</div>
+	</div> -->
+	<div class="panel-heading ng-binding">
+		<span class="multi_lang" id="lang_storage_acct_current_table"></span>
+	</div>
+	<div class="panel-body">
+		<div class="table-responsive table-scroll-vr" id="tb_account_table">
+			<script>
+				draw_table('account_table', APPLICATION_STORAGE_ACCOUNT_COLUMNS_LIST_STR)
+			</script>
+		</div>
+
+	</div>
+	<!-- 
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="card-footer">
+				<button class="card-btn green" onclick="delete_account_item('all')"><span class="multi_lang" id="lang_storage_acct_delete_btn">Delete All</span></button>
+				<//!-- button class="card-btn green" onclick="">Reset</button --//>
+			</div>
+		</div>
+	</div> -->
+	<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+		<div id="btn_delete_all" class="btn-align">
+			<script>
+				draw_custom_button('delete_all', 'lang_storage_acct_delete_btn', 'delete_account_item(\'all\')')
+			</script>
+		</div>
+	</div>
+</div>
+
+<!-- include(application-storage-storage_account.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/storage/application-storage-storage_account.js"></script>
+<!-- endinclude -->

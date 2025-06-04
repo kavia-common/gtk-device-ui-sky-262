@@ -1,0 +1,30 @@
+<svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-1.4%" y="-1.8%" width="102.7%" height="104.6%" filterUnits="objectBoundingBox" id="h4iui5wsza">
+            <feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.832454884 0 0 0 0 0.862273812 0 0 0 0 0.902032382 0 0 0 1 0" in="shadowBlurOuter1"/>
+        </filter>
+        <path d="M4 122h992a4 4 0 0 1 4 4v578a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V126a4 4 0 0 1 4-4z" id="7m3tbjvpgb"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F5F7FA" d="M-1050-396H390v924h-1440z"/>
+        <g transform="translate(-800 -306)">
+            <use fill="#000" filter="url(#h4iui5wsza)" xlink:href="#7m3tbjvpgb"/>
+            <path stroke="#E2E8EF" d="M996 122.5c.966 0 1.841.392 2.475 1.025A3.489 3.489 0 0 1 999.5 126v578c0 .966-.392 1.841-1.025 2.475A3.489 3.489 0 0 1 996 707.5H4a3.489 3.489 0 0 1-2.475-1.025A3.489 3.489 0 0 1 .5 704V126c0-.966.392-1.841 1.025-2.475A3.489 3.489 0 0 1 4 122.5z" stroke-linejoin="square" fill="#FFF"/>
+        </g>
+        <path stroke="#DEE5EC" d="M-60.5-30.5h211v373h-211z"/>
+        <g transform="translate(7 20)">
+            <path d="M60 .5c1.243 0 2.368.504 3.182 1.318A4.486 4.486 0 0 1 64.5 5v36.5h-59V5c0-1.243.504-2.368 1.318-3.182A4.486 4.486 0 0 1 10 .5z" stroke="#63696F" fill="#DEE5EC"/>
+            <path d="M11 4h48a2 2 0 0 1 2 2v35H9V6a2 2 0 0 1 2-2z" fill="#FFF"/>
+            <path fill="#B3EBF7" d="M11 7h48v2H11zM11 11h16v23H11z"/>
+            <path d="M29 11h30v1H29v-1zm0 3h30v1H29v-1zm0 3h14v1H29v-1zm0 3h14v1H29v-1zm0 3h14v1H29v-1zm0 3h14v1H29v-1zm0 3h14v1H29v-1zm0 3h14v1H29v-1z" fill="#DEE5EC"/>
+            <path d="m27.8 37.5 2.1 2h10.2l2.1-2h27.3V40c0 .69-.28 1.315-.732 1.768A2.492 2.492 0 0 1 67 42.5H3c-.69 0-1.315-.28-1.768-.732A2.492 2.492 0 0 1 .5 40v-2.5h27.3z" stroke="#63696F" fill="#FFF"/>
+            <rect stroke="#63696F" fill="#DEE5EC" x="53.5" y="17.5" width="21" height="38" rx="3"/>
+            <path fill="#FFF" d="M56 20h16v27H56z"/>
+            <path d="M64 29a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm-2 2v6l5-3-5-3z" fill="#B3EBF7"/>
+            <circle stroke="#63696F" stroke-width=".5" fill="#FFF" cx="64" cy="51" r="1.75"/>
+        </g>
+    </g>
+</svg>

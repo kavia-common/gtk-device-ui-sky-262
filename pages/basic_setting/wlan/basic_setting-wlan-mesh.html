@@ -1,0 +1,82 @@
+<script language="javascript" type="text/javascript" src="js/wlan-param.js"></script>
+<script type="text/javascript">
+    var OBJ_LIST = ['Mesh','OpMode']
+    var ORIGINAL_OBJ_DATA = {}
+    var MODIFIED_OBJ_DATA = {}
+    var authtype_2g_select_str = ['WPA2 PSK','WPA3 PSK'];
+    var authtype_2g_select_val = ['wpa2','wpa3'];
+    var encryptype_2g_select_str = ['AES'];
+    var encryptype_2g_select_val = ['aes'];
+    var authtype_5g_select_str = ['Mixed','WPA2 PSK','WEOP','OPEN'];
+    var authtype_5g_select_val = ['mixed2','wpa2psk','wep','open'];
+    var encryptype_5g_select_str = ['AES','TKIP'];
+    var encryptype_5g_select_val = ['aes','tkip'];
+    var backhaul_authtype_2g_str = ['none'];
+    var backhaul_authtype_2g_val = ['none'];
+    var backhaul_encryptype_2g_str = ['none'];
+    var backhaul_encryptype_2g_val = ['none'];
+</script>
+<div class="wrapperdiv">
+   <div class="panel-body">
+      <div id="switch_enable_btn" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                  draw_switch('enable_btn','lang_mesh_enabled','')
+            </script>
+      </div>
+      <div id="switch_enable_btn1" class="form-group no-padding-hr col-xs-12 col-sm-5">
+            <script>
+                  draw_switch('enable_btn1','lang_BSS_color_enabled','')
+            </script>
+      </div>
+   </div>
+</div>
+<div class="panel-heading ">
+   <span class="multi_lang" id="lang_backhaul_title">Backhaul Configuration</span>
+</div>
+<div class="wrapperdiv">
+    <div class="panel-body">
+        <div id="input_backhaul_ssid" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('backhaul_ssid','lang_ssid','Please Enter the value')
+            </script>
+        </div>
+        <div id="input_backhaul_authtype" class="form-group no-padding-hr col-xs-12 col-sm-12">
+            <script>
+                draw_input('backhaul_authtype','lang_auth','')
+            </script>
+        </div>
+        <div class="row">
+            <div id="pwinput_backhaul_wpa_key" class="no-padding-hr pwdblock col-xs-6 col-sm-6">
+                <script>
+                    draw_password('backhaul_wpa_key','lang_pwd','Please Enter the value')
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="text-center" style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+        <div class="btn-align" id="btn_cancel">
+           <script>
+                draw_btn('cancel','cancel','page_initial()')
+           </script>
+        </div>
+        <div class="btn-align" id="btn_apply">
+            <script>
+                draw_btn('apply','apply','page_save()')
+            </script>
+        </div>
+    </div>
+</div>
+
+<!--hr style="margin-top: 0px;">
+<div class="el-form-item el-form-item--mini" style="">
+    <label class="el-form-item__label" style="width: 180px;">
+        <span class="multi_lang" id="lang_meshtopology_title">Mesh Network Topology</span>&nbsp;:
+    </label>
+    <div class="el-form-item__content" style="margin-left: 180px;">
+        <button type="button" class="el-button el-button--primary el-button--small multi_lang" id="lang_meshtopology_show_btn" onclick="open_mesh_map()">show</button>
+    </div>
+</div-->
+
+<!-- include(basic_setting-wlan-mesh.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/basic_setting/wlan/basic_setting-wlan-mesh.js"></script>
+<!-- endinclude -->

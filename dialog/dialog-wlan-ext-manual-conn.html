@@ -1,0 +1,27 @@
+<form class="el-form">
+	<div class="el-form-item is-required el-form-item--mini">
+		<label class="el-form-item__label" style="width: 200px;"><span class="multi_lang">SSID</span>:</label>
+		<div class="el-form-item__content" style="margin-left: 200px;">
+			<div class="el-input el-input--mini">
+					<input id="wireless_extend_ssid" type="text" autocomplete="off" class="el-input__inner">
+			</div>
+		</div>
+	</div>
+	<div class="el-form-item el-form-item--mini">
+		<label class="el-form-item__label" style="width: 200px;"><span class="multi_lang">Security</span>:</label>
+		<div class="el-form-item__content" style="margin-left: 200px;">
+			<div id="select_div_wireless_extend_security" class="el-select el-select el-select--suffix" style="width: 100%;"></div>
+		</div>
+	</div>
+	<div class="el-form-item is-required el-form-item--mini">
+		<label class="el-form-item__label" style="width: 200px;"><span class="multi_lang">Password</span>:</label>
+		<div class="el-form-item__content" style="margin-left: 200px;">
+			<div class="el-input el-input--mini el-input--suffix">
+				<input id="wireless_extend_password" type="password" autocomplete="new-password" class="el-input__inner">
+			</div>
+			<a style="cursor: pointer; float: right;" onclick="password_display_hide()">
+				<span id="password_display">Show Password</span>
+			</a>
+		</div>
+	</div>
+</form>

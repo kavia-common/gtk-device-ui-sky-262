@@ -1,0 +1,32 @@
+<!-- <form class="el-form dig">
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<span class="multi_lang" id="lang_pc_auth_ans_title"></span>:
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+        <div class="el-form-item__content">
+		<span id="pc_quest"></span>
+        </div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<div class="el-input el-input--mini">
+			<input type="text" maxlength="32" autocomplete="off" style="width:240px" id="pc_auth_ans" onkeypress="if (event.keyCode == 13) {return false;}" class="el-input__inner">
+		</div>
+		<div class="el-form-item__error" style="display: none;" id="pc_auth_ans_error"><span class="multi_lang" id="lang_pc_ans_error_title">The answer is incorrect.</span></div>
+	</div>
+</div>
+<form> -->
+<div class="row">
+	<div id="input_pc_auth_ans" class="form-group no-padding-hr col-xs-12 col-sm-12">
+		<script>
+			draw_input('pc_auth_ans', 'lang_pc_auth_ans_title', 'Please Enter the value', '', '32')
+		</script>
+	</div>
+</div>
+<div class="row">
+	<div class="error" style="display: none;" id="pc_auth_ans_error">
+		<span class="multi_lang" id="lang_pc_ans_error_title">The answer is incorrect.</span>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	var OBJ_LIST = ['Dlna']
+	var ORIGINAL_OBJ_DATA = {}
+	var MODIFIED_OBJ_DATA = {}
+	var APPLICATION_DLNA_str_list = ['Share All Folders', 'Custom Shared Folders'];
+	var APPLICATION_DLNA_val_list = ['a', 'c'];
+</script>
+<div class="wrapperdiv">
+	<div class="panel-body">
+		<div id="switch_dlna_enable" class="form-group no-padding-hr col-xs-12 col-sm-12">
+			<script>
+				draw_switch('dlna_enable', 'lang_dlna_enable', 'dlna_enable_handler()')
+			</script>
+		</div>
+		<div id="select_upnp_share_type" class="form-group no-padding-hr col-xs-12 col-sm-12 dlna_emabled_show">
+			<script>
+				draw_select('upnp_share_type', APPLICATION_DLNA_str_list, APPLICATION_DLNA_val_list, 'share_mode_handler()', 'a', 'lang_dlna_folder');
+			</script>
+		</div>
+		<div id="input_upnp_custom_path" class="form-group no-padding-hr col-xs-12 col-sm-12 share_custom_enabled_show">
+			<script>
+				draw_input('upnp_custom_path', 'lang_dlna_custom_shared_folders_path', 'Please Enter the value')
+			</script>
+		</div>
+		<div class="text-center"   style="padding:30px 0;border-top: 1px solid #dee5ec;width: calc(100% - 40px);margin: 0 auto;">
+			<div class="btn-align" id="btn_apply">
+			<script>
+				draw_btn('apply', 'apply', 'page_save()')
+			</script>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- include(application-dlna.jsx) -->
+<script language="javascript" type="text/javascript" src="pages/application/application-dlna.js"></script>
+<!-- endinclude -->

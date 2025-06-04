@@ -1,0 +1,44 @@
+<!-- <form class="el-form dig">
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<span class="multi_lang" id="lang_pc_dev_rename_info1_title"></span>:
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<span class="multi_lang" id="lang_pc_dev_rename_info2_title"></span>
+		<b id="dev_name"></b>
+	</div>
+</div>
+<div class="el-form-item el-form-item--mini">
+	<div class="el-form-item__content">
+		<div class="el-input el-input--mini">
+			<input maxlength="32" autocomplete="off" style="width:300px" name="dev_new_name" id="dev_new_name" onblur="valid_pc_devname(this)" onkeypress="if (event.keyCode == 13) {return false;}" class="el-input__inner">
+		</div>
+		<div class="el-form-item__error" style="display: none;" id="dev_new_name_error"><span class="multi_lang" id="lang_pcdev_name_empty_title">The device name must not be blank!</span></div>
+	</div>
+</div>
+<form> -->
+<div class="row">
+	<div>
+		<span class="multi_lang" id="lang_pc_dev_rename_info1_title"></span>:
+	</div>
+</div>
+<div class="row">
+	<div>
+		<span class="multi_lang" id="lang_pc_dev_rename_info2_title"></span>
+		<b id="dev_name"></b>
+	</div>
+</div>
+<div class="row">
+	<div id="input_dev_new_name" class="form-group no-padding-hr col-xs-12 col-sm-12 ">
+		<script>
+			draw_input('dev_new_name', '', 'Please Enter the value', 'valid_pc_devname(this)')
+		</script>
+	</div>
+</div>
+<div class="row">
+	<div class="error" style="display: none;" id="dev_new_name_error">
+		<span class="multi_lang" id="lang_pcdev_name_empty_title">The device name must not be blank!</span>
+	</div>
+</div>

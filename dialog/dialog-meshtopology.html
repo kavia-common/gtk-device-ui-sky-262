@@ -1,0 +1,476 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		touch-action: pan-y;
+	}
+
+	.node-info {
+		position: absolute;
+		display: none;
+		border-radius: 0.5em;
+		background: #555;
+	}
+
+	.node-info ul {
+		margin: 0;
+		padding: 0.5em;
+		list-style: none;
+	}
+
+	.node-info ul li {
+		color: #fff;
+		font-size: 12px;
+	}
+	
+	.display_btn_container {
+		position: absolute;
+		top: 20px;
+		cursor: pointer;
+		display: flex;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+	
+	.display_btn {
+		display: flex;
+		flex: 1;
+		border-radius: 0;
+	}
+	
+	.unselected {
+		opacity: 0.5;
+	}
+</style>
+
+<div id="mapContainer" class="display_graph" style="overflow: hidden;height: 400px;visibility: hidden;"></div>
+<div class="display_btn_container">
+		<button id="displayG_button" type="button" class="el-button el-button--primary el-button--small display_btn" onclick="set_display('graph')">
+			<span>Graph</span>
+		</button>
+		<button id="displayT_button" type="button" class="el-button el-button--primary el-button--small display_btn" style="margin: 0" onclick="set_display('table')">
+			<span>Table</span>
+		</button>
+</div>
+<div class = "el-dialog__refreshbtn">
+	<button id="refresh_button" type="button" aria-label="Close" class="el-dialog__refresh" onclick="refresh_map()">
+		<span>↻ Refresh</span><span id="countdown"></span>
+	</button>
+</div>
+<div id="loading_topology" class="el-loading-mask" style="display: block;position: absolute;margin: 80px auto;"><div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg></div><div><span class="el-loading-spinner-message" id="loading_message"></span></div></div>
+<h4 class='title-topic display_table' ><span id=''>Mesh Node List</span></h4>
+<div class="el-table fhv-table el-table--fit el-table--striped el-table--border el-table--enable-row-hover el-table--enable-row-transition el-table--scrollable-x display_table" style="width: 100%;">
+      <table id ="info"class="el-table__body" style="width:100%; min-width: 320px;" cellspacing="0" cellpadding="0" border="0">
+         <thead>
+            <tr class="">
+			   <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Device Name</span></div>
+			   </th>
+			   <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">IPv4 Address</span></div>
+			   </th>
+               <th colspan="1" rowspan="1" class="col-xs-6 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Mac Address</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Medium Type</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-6 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Upstream</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-2 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Hops</span></div>
+               </th>
+			   <th colspan="1" rowspan="1" class="col-xs-3 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Mode</span></div>
+               </th>
+            </tr>
+         </thead>
+		 <tbody id="Mesh_topology_table">
+		 </tbody>
+      </table>
+</div>
+<h4 class='title-topic display_table' ><span id=''>Device List</span></h4>
+<div class="el-table fhv-table el-table--fit el-table--striped el-table--border el-table--enable-row-hover el-table--enable-row-transition el-table--scrollable-x display_table" style="width: 100%;">
+	  <table id ="info"class="el-table__body" style="width:100%; min-width: 320px;" cellspacing="0" cellpadding="0" border="0">
+         <thead>
+            <tr class="">
+			   <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Device Name</span></div>
+			   </th>
+			   <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">IPv4 Address</span></div>
+			   </th>
+               <th colspan="1" rowspan="1" class="col-xs-6 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Mac Address</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Medium Type</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-6 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Upstream</span></div>
+               </th>
+               <th colspan="1" rowspan="1" class="col-xs-5 is-leaf">
+                  <div class="cell"><span class="multi_lang" id="">Hops</span></div>
+               </th>
+            </tr>
+         </thead>
+		 <tbody id="Device_topology_table">
+		 </tbody>
+      </table>
+</div>
+
+<script src="/js/d3_3.2.8.js"></script>
+<script>
+	var mesh_refresh;
+	var timeoutRefresh;
+	var timer;
+	var waitting_time = 60;
+	var prevent_lock = 0;
+	var noncache_str=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+	var map_graph = {"nodes":[], "lines":[]}
+	var tpoption = {
+		container: '#mapContainer',
+		data: map_graph,
+		width: 550,
+		height: 400
+	};
+	
+	set_display('graph')
+	map_data_prepare();
+	$.getScript( "/js/d3-meshmap.js" )
+		.done(function( script, textStatus ) {
+			var tp = new TPChart(tpoption);
+			tp.init();
+
+			interval_refresh();
+
+			document.addEventListener("click", function(){
+				if($('#dialog-frame').is(":hidden")){
+					clearInterval(mesh_refresh);
+					clearTimeout(timeoutRefresh);
+					clearInterval(timer);
+					prevent_lock = 0;
+				}
+			})
+		})
+	$(".dialog-footer").css(style={"height": "100px", "text-align": "left"});
+	
+	function set_display(mode){
+		if(mode == 'graph') {
+			$('#displayG_button').removeClass('unselected')
+			$('#displayT_button').addClass('unselected')
+			$('.display_table').css('display','none');
+			$('.display_graph').css('display','');
+		}
+		if(mode == 'table') {
+			$('#displayT_button').removeClass('unselected')
+			$('#displayG_button').addClass('unselected')
+			$('.display_graph').css('display','none');
+			$('.display_table').css('display','');
+		}
+	}
+
+	function init_trigger_success_cb(obj){
+		get_json();
+		if(prevent_lock == 1){
+			prevent_lock = 0;
+			interval_refresh();
+		}
+	}
+
+	function init_trigger_error_cb(obj){
+		if(obj.api_return == 403){
+			logout('sto');
+			return;
+		}
+	}
+
+	function refresh_map(){
+		hidden_button();
+		var trigger_data = {"MeshMap":{}}
+		if(prevent_lock == 0)
+			map_data_prepare();
+		else
+			$(tpoption.container).html("");
+		
+		prevent_lock = 1;
+		clearTimeout(timeoutRefresh)
+		clearInterval(mesh_refresh);
+		topology_show(0)
+	}
+
+	function interval_refresh(){
+		timeout_refresh();
+		clearInterval(mesh_refresh);
+		mesh_refresh = setInterval(function(){
+			refresh_map();
+		},waitting_time*1000+2000)
+	}
+
+	function timeout_refresh(){
+		clearTimeout(timeoutRefresh)
+		topology_show(0);
+		timeoutRefresh=setTimeout(function(){
+			topology_show(1);
+			show_button();
+		},2000)
+	}
+
+	function topology_show(enable = 0){
+		if(enable == 0){
+			timer_refresh(enable);
+			$("#loading_topology").css("display", "block");
+			$("#mapContainer").css("visibility", "hidden");
+		}else{
+			timer_refresh(enable);
+			$("#loading_topology").css("display", "none");
+			$("#mapContainer").css("visibility", "visible");
+		}
+	}
+
+	function timer_refresh(enable=0){
+		clearInterval(timer);
+		let countdown=waitting_time;
+		if(enable==0){
+			$('#countdown').text(" "+countdown+"s");
+		}else{
+			timer = setInterval(function(){
+				countdown--;
+				$('#countdown').text(" "+countdown+"s");
+			},1000)
+		}
+	}
+
+	function hidden_button(){
+		$("#close_dialog_button").hide();
+		$("#refresh_button").hide();
+	}
+
+	function show_button(){
+		$("#close_dialog_button").show();
+		$("#refresh_button").show();
+	}
+
+	function show_graph(){
+		var noncache_str=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+		var tpoption = {
+			container: '#mapContainer',
+			data: map_graph,
+			width: 550,
+			height: 400
+		};
+		tp = new TPChart(tpoption);
+		$(tpoption.container).html("");
+		tp.init();
+	}
+	
+	function map_data_prepare() {
+		API.info.get(['MeshTopoStatus'], get_topo_success_cb, init_trigger_error_cb);
+	}
+	
+	function get_topo_success_cb(obj) {
+		info_data = API.obj.copy(obj);
+		
+		if(prevent_lock == 1){
+			prevent_lock = 0;
+			interval_refresh();
+		}
+		
+		if (info_data.MeshTopoStatus.status == "OK") {
+			mesh_topo_result(info_data.MeshTopoStatus.data)
+		} else if (info_data.MeshTopoStatus.status == "NOK") {
+			console.log(info_data.MeshTopoStatus.message)
+		}
+		console.log(info_data);
+	}
+	
+	function mesh_topo_result(obj) {
+		map_graph.nodes.splice(0, map_graph.nodes.length)
+		map_graph.lines.splice(0, map_graph.lines.length)
+		var MeshNode = [{
+			"DevName": obj.Name,
+			"IPv4Addr": obj.IPv4,
+			"MacAddr": obj.Mac,
+			"Mode": obj.Mode,
+			"Medtype": "",
+			"Upstream": obj.Upstream_device,
+			"Hops": 0
+		}];
+		
+		map_graph.nodes.push({"hostname": obj.Name, "macaddr": obj.Mac, "type": obj.Mode.toLowerCase(),"status":"1", "info": {"netstatus": "online"}});
+
+		var DeviceNode = []
+
+		obj.LegacyDevices.forEach((dev) => {
+			var device = {
+				"DevName": dev.Name,
+				"IPv4Addr": "",
+				"MacAddr": dev.Mac,
+				"Mode": "",
+				"Medtype": dev.medtype,
+				"Upstream": obj.Mac,
+				"Hops": 1
+			}
+			DeviceNode.push(device);
+			var graph_index = map_graph.nodes.length;
+			var if_type = dev.medtype;
+			if(if_type == "ETHER") if_type = "Eth";
+			map_graph.nodes.push({"hostname": dev.Name, "macaddr": dev.Mac, "type": "client","status":"1", "info": {"netstatus": "online"}});
+			map_graph.lines.push({"source": 0, "target": graph_index, "status": (map_graph.nodes[0].status && map_graph.nodes[graph_index].status), "netspeed": "", "ifname": if_type});
+		});
+
+		obj.DB.forEach((db) => {
+			var device_index = DeviceNode.findIndex((d) => {
+				return d.MacAddr == db.Mac
+			});
+			var med_type = "";
+			var max_mid = 0;
+			db.Connect.forEach((row) => {
+				if (row.legacyBridge == "No") return;
+				if (row.messageID >= max_mid) {
+					max_mid = row.messageID;
+					med_type = row.medtype;
+				}
+			});
+			if (device_index < 0) {
+				var node = {
+					"DevName": db.Name,
+					"IPv4Addr": db.IPv4,
+					"MacAddr": db.Mac,
+					"Mode": db.Mode,
+					"Medtype": med_type,
+					"Upstream": db.Upstream_device,
+					"Hops": db.Hops
+				};
+				MeshNode.push(node);
+				var graph_index = map_graph.nodes.length;
+				map_graph.nodes.push({"hostname": db.Name, "macaddr": db.Mac, "type": "agent","status":"1", "info": {"netstatus": "online"}});
+				var up_graph_index = map_graph.nodes.findIndex((d) => {
+					return d.macaddr == db.Upstream_device
+				});
+				if (up_graph_index >= 0){
+					var if_type = med_type;
+					if(if_type == "ETHER") if_type = "Eth";
+					map_graph.lines.push({"source": up_graph_index, "target": graph_index, "status": (map_graph.nodes[0].status && map_graph.nodes[graph_index].status), "netspeed": "", "ifname": if_type});
+				}
+			} else {
+				var node = {
+					...DeviceNode[device_index]
+				};
+				DeviceNode.splice(device_index, 1);
+				if (db.IPv4 != "") node["IPv4Addr"] = db.IPv4;
+				if (db.Mode != "") node["Mode"] = db.Mode;
+				if (med_type != "") node["Medtype"] = med_type;
+				if (db.Upstream_device != "") node["Upstream"] = db.Upstream_device;
+				if (node["Hops"] < db.Hops) node["Hops"] = db.Hops;
+				MeshNode.push(node);
+				var graph_node_index = map_graph.nodes.findIndex((d) => {
+					return d.macaddr == db.Mac
+				});
+				map_graph.nodes[graph_node_index].type = "agent";
+			}
+
+			db.LegacyDevices.forEach((dev) => {
+				var dev_index = DeviceNode.findIndex((d) => {
+					return d.MacAddr == dev.Mac
+				});
+				var mesh_index = MeshNode.findIndex((d) => {
+					return d.MacAddr == dev.Mac
+				});
+
+				if (mesh_index < 0) {
+					if (dev_index < 0) {
+						var node = {
+							"DevName": dev.Name,
+							"IPv4Addr": "",
+							"MacAddr": dev.Mac,
+							"Mode": "",
+							"Medtype": dev.medtype,
+							"Upstream": db.Mac,
+							"Hops": db.Hops + 1
+						};
+						DeviceNode.push(node);
+						var graph_index = map_graph.nodes.length;
+						map_graph.nodes.push({"hostname": dev.Name, "macaddr": dev.Mac, "type": "client","status":"1", "info": {"netstatus": "online"}});
+						var up_graph_index = map_graph.nodes.findIndex((d) => {
+							return d.macaddr == db.Mac
+						});
+						if (up_graph_index >= 0){
+							var if_type = med_type;
+							if(if_type == "ETHER") if_type = "Eth";
+							map_graph.lines.push({"source": up_graph_index, "target": graph_index, "status": (map_graph.nodes[up_graph_index].status && map_graph.nodes[graph_index].status), "netspeed": "", "ifname": if_type});
+						}
+					} else {
+						var node = DeviceNode[dev_index];
+						if (node["Hops"] < (db.Hops + 1)) {
+							node["Upstream"] = db.Mac;
+							node["Medtype"] = dev.medtype;
+							node["Hops"] = db.Hops + 1;
+							var graph_t_node_index = map_graph.nodes.findIndex((d) => {
+								return d.macaddr == dev.Mac
+							});
+							var graph_s_node_index = map_graph.nodes.findIndex((d) => {
+								return d.macaddr == db.Mac
+							});
+							var graph_line_index = map_graph.lines.findIndex((d) => {
+								return d.target == graph_t_node_index
+							});
+							map_graph.lines[graph_line_index].source = graph_s_node_index;
+						}
+					}
+				} else {
+					var node = MeshNode[mesh_index];
+					if (node["Medtype"] == "")node["Medtype"] = dev.medtype;
+					if (node["Hops"] < (db.Hops + 1)) node["Hops"] = db.Hops + 1;
+					var graph_index = map_graph.nodes.findIndex((d) => {
+						return d.macaddr == node["MacAddr"]
+					});
+					var up_graph_index = map_graph.nodes.findIndex((d) => {
+						return d.macaddr == node["Upstream"]
+					});
+					if (up_graph_index >= 0){
+						var if_type = dev.medtype;
+						if(if_type == "ETHER") if_type = "Eth";
+						map_graph.lines.push({"source": up_graph_index, "target": graph_index, "status": (map_graph.nodes[up_graph_index].status && map_graph.nodes[graph_index].status), "netspeed": "", "ifname": if_type});
+					}
+				}
+			});
+		})
+
+		set_mesh_topology_table(MeshNode, DeviceNode);
+		show_graph();
+	}
+
+	function set_mesh_topology_table(mesh_node, device_node) {
+		//console.log(mesh_node);
+		//console.log(device_node);
+		var mesh_tab = document.getElementById('Mesh_topology_table');
+		mesh_tab.innerHTML = "";
+		mesh_node.forEach((m) => {
+			tr = document.createElement("tr");
+			tr.classList.add("el-table__row");
+			[m.DevName, m.IPv4Addr, m.MacAddr, m.Medtype, m.Upstream, m.Hops, m.Mode].forEach((data) => {
+				var td = document.createElement("td");
+				if (data == "") data = "-"
+				td.innerHTML = '<div class="cell">' + data + '</div>';
+				tr.appendChild(td);
+			});
+			mesh_tab.appendChild(tr);
+		})
+
+		var dev_tab = document.getElementById('Device_topology_table');
+		dev_tab.innerHTML = "";
+		device_node.forEach((d) => {
+			tr = document.createElement("tr");
+			tr.classList.add("el-table__row");
+			[d.DevName, d.IPv4Addr, d.MacAddr, d.Medtype, d.Upstream, d.Hops].forEach((data) => {
+				var td = document.createElement("td");
+				if (data == "") data = "-"
+				td.innerHTML = '<div class="cell">' + data + '</div>';
+				tr.appendChild(td);
+			});
+			dev_tab.appendChild(tr);
+		})
+	}
+</script>
