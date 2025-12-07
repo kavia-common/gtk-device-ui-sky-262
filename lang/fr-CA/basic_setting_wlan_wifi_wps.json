@@ -1,6 +1,6 @@
 {
     "basic_setting_wlan_wifi_wps": {
-        "lang_wps_title": "WPS Configuration",
+        "lang_wps_title": "Configuration WPS",
         "lang_wps_enable_title": "Activer WPS",
         "lang_wps_pbc_title": "Press WPS Button",
         "lang_wps_pin_title": "Input PIN Number",
@@ -13,13 +13,13 @@
         "lang_wps_band_hd": "Band",
         "lang_wps_status_hd": "WPS État",
         "lang_wps_ssid_hd": "SSID",
-        "lang_wps_auth_hd": "Authentication",
+        "lang_wps_auth_hd": "Authentification",
         "lang_wps_encryption_hd": "Encryption",
-        "lang_wps_configured_title": "Configured",
-        "lang_wps_notconfigured_title": "Not configured",
+        "lang_wps_configured_title": "Configuré",
+        "lang_wps_notconfigured_title": "Non configuré",
         "lang_wps_pin_error_msg": "Invalid WPS PIN code",
         "lang_wps_title2": "Wi-Fi Protected Setup<sup>TM</sup>",
-        "lang_wps_success_title": "Congratulations!",
+        "lang_wps_success_title": "Félicitations !",
         "lang_wps_failed_title": "Couldn't connect!",
         "lang_wps_mesh_msg": "If you want to Activer WPS, you need to disabled EasyMesh function."
     }

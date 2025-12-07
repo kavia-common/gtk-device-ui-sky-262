@@ -1,8 +1,8 @@
 {
     "basic_setting_wlan_wifi_adv5": {
         "lang_mode": "Mode",
-        "lang_bandwidth": "Bandwidth",
-        "lang_channel": "Channel",
+        "lang_bandwidth": "Bande passante",
+        "lang_channel": "Canal",
         "lang_max": "Maxinum Clients",
         "lang_gi": "Short GI",
         "lang_wmm": "WMM",

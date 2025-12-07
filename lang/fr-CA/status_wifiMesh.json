@@ -15,7 +15,7 @@
         "lang_mesh_role": "Role",
         "lang_connect_type": "Backhaul",
         "lang_mesh_upstream": "Parent node",
-        "lang_mesh_medtype": "Connection Type",
+        "lang_mesh_medtype": "Type de connexion",
         "lang_mesh_hops": "Hops",
         "lang_meshinfo_title": "Mesh Netowork Information",
         "lang_mesh_map": "MAP",

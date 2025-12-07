@@ -1,16 +1,16 @@
 {
     "application_storage_share_floder": {
         "lang_sharefloder_note": "Configure folder permission for Samba Services.",
-        "lang_sharefloder_path": "Folder Path",
-        "lang_sharefloder_owner": "Owner",
+        "lang_sharefloder_path": "Chemin du dossier",
+        "lang_sharefloder_owner": "Propriétaire",
         "lang_sharefloder_permission": "Permission",
         "lang_sharefloder_apply_btn": "Appliquer Change",
         "lang_sharefloder_account_table": "Current Account Table",
         "lang_folder_name": "Folder Nom",
-        "lang_folder_path": "Folder Path",
-        "lang_folder_owner": "Owner",
+        "lang_folder_path": "Chemin du dossier",
+        "lang_folder_owner": "Propriétaire",
         "lang_folder_permission": "Permission",
-        "lang_folder_method": "Method",
-        "lang_sharefloder_delete_btn": "Delete All"
+        "lang_folder_method": "Méthode",
+        "lang_sharefloder_delete_btn": "Tout supprimer"
     }
 }

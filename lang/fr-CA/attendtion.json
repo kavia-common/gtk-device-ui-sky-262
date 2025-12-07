@@ -3,6 +3,6 @@
         "lang_attendtion_tip1": "Attendtion! You are currently unable to use the Internet",
         "lang_attendtion_tip2": "Please turn Arrêt your router and other devices for 5 minutes, then turn Marche its again.",
         "lang_attendtion_tip3": "The network used is not a AIS network, the device is locked.",
-        "lang_attendtion_continue_btn": "Continue"
+        "lang_attendtion_continue_btn": "Continuer"
     }
 }

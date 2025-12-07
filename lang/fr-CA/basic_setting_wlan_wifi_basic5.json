@@ -5,10 +5,10 @@
         "lang_hide": "Hide SSID",
         "lang_ssid": "SSID",
         "lang_bssid": "BSSID",
-        "lang_auth_title": "Authentication",
-        "lang_encryption": "Encryption Mode",
-        "lang_pwd": "WPA Preshare key",
-        "lang_show_key": "Show Key",
-        "lang_hide_key": "Hide Key"
+        "lang_auth_title": "Authentification",
+        "lang_encryption": "Mode de chiffrement",
+        "lang_pwd": "Clé pré-partagée WPA",
+        "lang_show_key": "Afficher la clé",
+        "lang_hide_key": "Masquer la clé"
     }
 }

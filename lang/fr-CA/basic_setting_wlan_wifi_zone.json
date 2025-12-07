@@ -1,13 +1,13 @@
 {
     "basic_setting_wlan_wifi_zone": {
         "lang_guest_zone_title": "Guest Zone",
-        "lang_guest_enable": "Enabled",
+        "lang_guest_enable": "Activé",
         "lang_guest_captive_enable": "Captive Portal",
         "lang_guest_ssid": "SSID",
         "lang_employee_zone_title": "Employee Zone",
-        "lang_employee_enable": "Enabled",
+        "lang_employee_enable": "Activé",
         "lang_employee_captive_enable": "Captive Portal",
         "lang_employee_ssid": "SSID",
-        "lang_employee_wpa_key": "WPA Preshare key"
+        "lang_employee_wpa_key": "Clé pré-partagée WPA"
     }
 }

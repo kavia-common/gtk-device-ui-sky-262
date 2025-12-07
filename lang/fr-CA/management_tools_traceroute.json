@@ -5,7 +5,7 @@
         "lang_traceroute_proto_title": "Protocole Type",
         "lang_traceroute_ipurl_title": "Target Address",
         "lang_traceroute_ipurl_error": "Target Address Error!e.g. 192.168.1.100",
-        "lang_traceroute_start_title": "Start",
+        "lang_traceroute_start_title": "Démarrer",
         "lang_traceroute_result_title": "Trace Route Test Results",
         "lang_traceroute_ipurl6_error": "Target Address Error!e.g. 2001:1234:abcd::1"
     }

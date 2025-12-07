@@ -13,7 +13,7 @@
         "lang_infomanul_content1_title": "AIS Agent secret key version",
         "lang_infomanul_content2_title": "AIS Agent secret key",
         "lang_infomanul_send_title": "Send Now",
-        "lang_infomanul_server_disabled": "Disabled",
+        "lang_infomanul_server_disabled": "Désactivé",
         "lang_infomanul_timeout": "Idle Timeout"
     }
 }

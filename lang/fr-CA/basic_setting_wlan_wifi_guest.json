@@ -4,9 +4,9 @@
         "lang_guest_enabled": "Allow Guest Access",
         "lang_guest_ssid": "Guest Network Nom",
         "lang_guest_password": "Guest Mot de passe",
-        "lang_guest_change_password": "Change",
+        "lang_guest_change_password": "Changer",
         "lang_guest_max_allowed": "Total Guests Allowed",
-        "lang_guest_ssid_broadcast": "SSID Broadcast",
+        "lang_guest_ssid_broadcast": "Diffusion du SSID",
         "lang_guest_sub_desc": "Your guests should connect to your wireless network listed above by opening a Web browser and entering the guest Mot de passe."
     }
 }

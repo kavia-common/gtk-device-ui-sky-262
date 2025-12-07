@@ -1,7 +1,7 @@
 {
     "adv_setting_usp_agent": {
-        "lang_usp_enable_title": "Enabled",
-        "lang_usp_agent_table_title": "Connection List",
+        "lang_usp_enable_title": "Activé",
+        "lang_usp_agent_table_title": "Liste de connexion",
         "lang_agent_connection": "Connection Nom",
         "lang_agent_endpoint_id_title": "Agent Endpoint ID",
         "lang_controller_endpoint_id_title": "Controller Endpoint ID",

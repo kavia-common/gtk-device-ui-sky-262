@@ -7,7 +7,7 @@
         "lang_statistics_port_title": "Port",
         "lang_statistics_bytes_title": "Bytes",
         "lang_statistics_packets_title": "Packets",
-        "lang_statistics_error_title": "Error",
+        "lang_statistics_error_title": "Erreur",
         "lang_statistics_discard_title": "Discard"
     }
 }

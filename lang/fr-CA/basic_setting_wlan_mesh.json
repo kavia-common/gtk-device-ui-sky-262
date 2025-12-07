@@ -1,11 +1,11 @@
 {
     "basic_setting_wlan_mesh": {
-        "lang_auth": "Authentication",
-        "lang_encrypt": "Encryption Mode",
-        "lang_pwd": "WPA Preshare key",
+        "lang_auth": "Authentification",
+        "lang_encrypt": "Mode de chiffrement",
+        "lang_pwd": "Clé pré-partagée WPA",
         "lang_wireless": "Wireless Paramètres",
-        "lang_show_key": "Show Key",
-        "lang_hide_key": "Hide Key",
+        "lang_show_key": "Afficher la clé",
+        "lang_hide_key": "Masquer la clé",
         "lang_wlan_commin_ssid_title": "Common SSID Enabled",
         "lang_wlan_mlo_title": "MLO Enabled",
         "lang_mesh_enabled": "Mesh Enabled",

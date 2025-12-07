@@ -1,7 +1,7 @@
 {
     "basic_setting_wlan_wifi_chs2": {
         "lang_info_string": "Thailand Standard(Recommend:Ch.1-13)",
-        "lang_customize": "Customize",
-        "lang_channel": "Channel"
+        "lang_customize": "Personnaliser",
+        "lang_channel": "Canal"
     }
 }

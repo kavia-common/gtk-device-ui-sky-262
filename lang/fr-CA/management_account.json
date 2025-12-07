@@ -8,7 +8,7 @@
         "lang_account_newpassword_title": "New Mot de passe",
         "lang_account_confirmpassword_title": "Confirm Mot de passe",
         "lang_account_apply_title": "Appliquer",
-        "lang_account_refresh_title": "Refresh",
+        "lang_account_refresh_title": "Actualiser",
         "lang_account_password_empty_error": "The Mot de passe must not be empty!",
         "lang_account_password_confirm_error": "The two passwords are inconsistent, please modify!",
         "lang_account_oldpassword_change_error": "Entered Mot de passe is incorrect!"

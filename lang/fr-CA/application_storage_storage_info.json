@@ -2,9 +2,9 @@
     "application_storage_storage_info": {
         "lang_storage_partition": "Partition",
         "lang_storage_total": "Total",
-        "lang_storage_available": "Available",
-        "lang_storage_used": "Uesd",
-        "lang_storage_percentage": "Use%",
+        "lang_storage_available": "Disponible",
+        "lang_storage_used": "Utilisé",
+        "lang_storage_percentage": "Utilisation %",
         "lang_storage_type": "System Type"
     }
 }

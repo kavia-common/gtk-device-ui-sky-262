@@ -7,9 +7,9 @@
         "lang_storage_acct_cpw": "Confirmed Mot de passe",
         "lang_storage_acct_apply_btn": "Appliquer Change",
         "lang_storage_acct_current_table": "Current Account Table",
-        "lang_account_item_number": "Number",
+        "lang_account_item_number": "Numéro",
         "lang_account_item_username": "Nom d’utilisateur",
-        "lang_account_item_method": "Method",
-        "lang_storage_acct_delete_btn": "Delete All"
+        "lang_account_item_method": "Méthode",
+        "lang_storage_acct_delete_btn": "Tout supprimer"
     }
 }
