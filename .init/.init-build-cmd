@@ -1,0 +1,2 @@
+{ "working_directory": "/home/kavia/workspace/code-generation",
+ "command": "npm install && npx serve . --help >/dev/null 2>&1 || npx serve . --version" }
