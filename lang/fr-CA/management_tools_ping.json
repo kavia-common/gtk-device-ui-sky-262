@@ -2,9 +2,9 @@
     "management_tools_ping": {
         "lang_ping_title": "Ping",
         "lang_ping_interface_title": "Interface Selection",
-        "lang_ping_proto_title": "Protocol Type",
-        "lang_ping_times_title": "Repeat time",
-        "lang_ping_times_error": "Repeat time Error!must rang",
+        "lang_ping_proto_title": "Protocole Type",
+        "lang_ping_times_title": "Repeat Temps",
+        "lang_ping_times_error": "Repeat Temps Error!must rang",
         "lang_ping_ipurl_title": "Target Address",
         "lang_ping_ipurl_error": "Target Address Error!e.g. 192.168.1.100",
         "lang_ping_start_title": "Start",

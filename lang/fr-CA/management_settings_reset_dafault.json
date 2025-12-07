@@ -1,9 +1,9 @@
 {
     "management_settings_reset_dafault": {
-        "lang_restore_btn": "Restore Defaults Settings",
-        "lang_content1": "Restore Broadband Router Settings to the factory defaults.",
-        "lang_restore_confirm_msg": "Warning! If you click OK, the extender will be restored to factory settings and your settings will be erased.",
-        "lang_restore_fail_msg": "Factory reset failed",
-        "lang_r2d": "Factory Reset"
+        "lang_restore_btn": "Restauration Defaults Paramètres",
+        "lang_content1": "Restauration Broadband Router Paramètres to the factory defaults.",
+        "lang_restore_confirm_msg": "Warning! If you click OK, the extender will be restored to factory Paramètres and your Paramètres will be erased.",
+        "lang_restore_fail_msg": "Factory Réinitialiser failed",
+        "lang_r2d": "Factory Réinitialiser"
     }
 }

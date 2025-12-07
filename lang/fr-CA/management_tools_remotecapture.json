@@ -1,10 +1,10 @@
 {
     "management_tools_remotecapture": {
         "lang_remotecapture_title": "Remote Capture",
-        "lang_remotecapture_enable": "Remote Capture Enable",
+        "lang_remotecapture_enable": "Remote Capture Activer",
         "lang_remotecapture_batchFile": "Windows Batch File",
-        "lang_remotecapture_link": "Download",
-        "lang_remotecapture_apply": "Apply",
-        "lang_remotecapture_confirm": "It can only works on the windows system, confirm the downloading?"
+        "lang_remotecapture_link": "Téléchargement",
+        "lang_remotecapture_apply": "Appliquer",
+        "lang_remotecapture_confirm": "It can only works Marche the windows system, confirm the downloading?"
     }
 }

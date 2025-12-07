@@ -1,12 +1,12 @@
 {
     "basic_setting_nat_dmz": {
-        "lang_dmz_enable": "Enable DMZ",
+        "lang_dmz_enable": "Activer DMZ",
         "lang_dmz_interface": "Interface Selection",
         "lang_dmz_host": "DMZ Host",
-        "lang_dmz_ipaddr": "DMZ Host IP Address",
+        "lang_dmz_ipaddr": "DMZ Host Adresse IP",
         "lang_dmz_add_btn": "Add",
         "lang_dmz_list_title": "DMZ Host Lists",
-        "lang_dmz_item_ipaddr": "DMZ Host IP Address",
+        "lang_dmz_item_ipaddr": "DMZ Host Adresse IP",
         "lang_dmz_item_interface": "Interface",
         "lang_dmz_item_method": "Method"
     }

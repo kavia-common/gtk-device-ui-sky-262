@@ -1,21 +1,21 @@
 {
     "management_reboot": {
-        "lang_reboot_title": "Auto Reboot Configuration",
-        "lang_reboot_device_title": "Reboot The Device",
-        "lang_reboot_btn_title": "Reboot",
-        "lang_reboot_auto_reboot_title": "Auto Reboot",
+        "lang_reboot_title": "Auto Redémarrer Configuration",
+        "lang_reboot_device_title": "Redémarrer The Device",
+        "lang_reboot_btn_title": "Redémarrer",
+        "lang_reboot_auto_reboot_title": "Auto Redémarrer",
         "lang_reboot_date_title": "Date",
-        "lang_reboot_time_title": "Time",
-        "lang_reboot_input_date_title": "Input date time",
-        "lang_auto_reboot_enabled": "Enable Auto Reboot",
-        "lang_reboot_ntp_hour": "Hour",
+        "lang_reboot_time_title": "Temps",
+        "lang_reboot_input_date_title": "Input Date Temps",
+        "lang_auto_reboot_enabled": "Activer Auto Redémarrer",
+        "lang_reboot_ntp_hour": "Heure",
         "lang_reboot_ntp_min": "Min",
         "lang_reboot_bootup_day": "Days",
         "lang_reboot_bootup_hour": "Hours",
-        "lang_reboot_save_btn": "Save",
+        "lang_reboot_save_btn": "Enregistrer",
         "lang_autoreboot_type_bootup": "After Boot Up",
         "lang_autoreboot_type_ntp": "Everyday",
         "lang_autoreboot_bootup_ivalid_time_msg": "Can not seve the value as 0 days 0 hours.",
-        "lang_autoreboot_bootup_tip": "Auto Reboot will turn off after this auto reboot"
+        "lang_autoreboot_bootup_tip": "Auto Redémarrer will turn Arrêt after this Auto Redémarrer"
     }
 }

@@ -1,8 +1,8 @@
 {
     "application_dlna": {
-        "lang_dlna_enable": "Enable DLNA",
+        "lang_dlna_enable": "Activer DLNA",
         "lang_dlna_folder": "Share Folders",
-        "lang_dlna_apply_btn": "Apply",
+        "lang_dlna_apply_btn": "Appliquer",
         "lang_dlna_custom_shared_folders_path": "Custom Shared Folders Path"
     }
 }

@@ -3,13 +3,13 @@
         "lang_opmode_title": "Operation Mode",
         "lang_opmode_mode_title": "Change Mode",
         "lang_opmode_auto_mode_title": "Auto Mode",
-        "lang_opmode_main_router_tagged_mode_title": "Main Router Tagged mode",
-        "lang_opmode_main_router_untagged_mode_title": "Main Router Untagged mode",
-        "lang_opmode_main_ap_untagged_mode_title": "Main AP Untagged mode",
-        "lang_opmode_ap_mode_title": "AP mode",
+        "lang_opmode_main_router_tagged_mode_title": "Main Router Tagged Mode",
+        "lang_opmode_main_router_untagged_mode_title": "Main Router Untagged Mode",
+        "lang_opmode_main_ap_untagged_mode_title": "Main AP Untagged Mode",
+        "lang_opmode_ap_mode_title": "AP Mode",
         "lang_opmode_init_error_title": "Device initialization failed",
-        "lang_opmode_reset_confirm_title": "This devices will reset to default",
+        "lang_opmode_reset_confirm_title": "This devices will Réinitialiser to default",
         "lang_opmode_init_error_msg": "Please log in again! Error message:undefined",
-        "lang_opmode_mesh_info_msg": "If you want to change mode, you need to disabled EasyMesh function."
+        "lang_opmode_mesh_info_msg": "If you want to change Mode, you need to disabled EasyMesh function."
     }
 }
