@@ -1,8 +1,8 @@
 {
     "basic_setting_nat_alg": {
-        "lang_alg_pptp_pth": "PPTP Passthrough",
-        "lang_alg_l2tp_pth": "L2TP Passthrough",
-        "lang_alg_ipsec_pth": "IPSec Passthrough",
+        "lang_alg_pptp_pth": "Passthrough PPTP",
+        "lang_alg_l2tp_pth": "Passthrough L2TP",
+        "lang_alg_ipsec_pth": "Passthrough IPSec",
         "lang_alg_add_btn": "Ajouter"
     }
 }

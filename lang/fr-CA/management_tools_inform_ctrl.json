@@ -1,19 +1,19 @@
 {
     "management_tools_inform_ctrl": {
-        "lang_infomanul_title": "Inform manually report",
-        "lang_infomanul_dstaddr_title": "Destination Address",
-        "lang_infomanul_report_title": "Inform manually report",
-        "lang_infomanul_result_title": "Report the results",
-        "lang_infomanul_waiting_msg": "Results obtained in a later....",
-        "lang_infomanul_success_msg": "manually inform success",
+        "lang_infomanul_title": "Rapport manuel d'information",
+        "lang_infomanul_dstaddr_title": "Adresse de destination",
+        "lang_infomanul_report_title": "Rapport manuel d'information",
+        "lang_infomanul_result_title": "Résultats du rapport",
+        "lang_infomanul_waiting_msg": "Résultats obtenus plus tard...",
+        "lang_infomanul_success_msg": "Information manuelle réussie",
         "lang_infomanul_enable_title": "Activer",
-        "lang_infomanul_server1_title": "First Server:",
-        "lang_infomanul_time_title": "Interval Temps:",
-        "lang_infomanul_server2_title": "Seconde Server:",
-        "lang_infomanul_content1_title": "AIS Agent secret key version",
-        "lang_infomanul_content2_title": "AIS Agent secret key",
-        "lang_infomanul_send_title": "Send Now",
+        "lang_infomanul_server1_title": "Premier serveur :",
+        "lang_infomanul_time_title": "Intervalle de temps :",
+        "lang_infomanul_server2_title": "Deuxième serveur :",
+        "lang_infomanul_content1_title": "Version de la clé secrète de l'agent AIS",
+        "lang_infomanul_content2_title": "Clé secrète de l'agent AIS",
+        "lang_infomanul_send_title": "Envoyer maintenant",
         "lang_infomanul_server_disabled": "Désactivé",
-        "lang_infomanul_timeout": "Idle Timeout"
+        "lang_infomanul_timeout": "Délai d'inactivité"
     }
 }
