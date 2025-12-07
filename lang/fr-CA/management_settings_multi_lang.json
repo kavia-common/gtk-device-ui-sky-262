@@ -5,7 +5,7 @@
     },
     "supported_languages": [
         { "code": "en", "label": "English" },
-        { "code": "zh-TW", "label": "繁體中文（台灣）" },
-        { "code": "fr-CA", "label": "Français (Canada)" }
+        { "code": "zh-TW", "label": "\u7e41\u9ad4\u4e2d\u6587\uff08\u53f0\u7063\uff09" },
+        { "code": "fr-CA", "label": "Fran\u00e7ais (Canada)" }
     ]
 }

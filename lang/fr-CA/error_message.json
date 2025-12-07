@@ -41,12 +41,12 @@
         "lang_error28_msg": "Ce nom d'utilisateur a déjà été réservé. Il ne peut pas être ajouté deux fois.",
         "lang_error29_msg": "Le nom d'utilisateur ne doit pas être vide !",
         "lang_error30_msg": "Le format du nom d'utilisateur est incorrect.",
-        "lang_error31_msg": "Les deux mots de passe ne correspondent pas, veuillez modifier !",
+        "lang_error31_msg": "Les deux mots de passe ne correspondent pas.",
         "lang_error32_msg": "Le format du mot de passe est incorrect.",
         "lang_error33_msg": "Le propriétaire ne peut pas être défini plusieurs fois.",
         "lang_error34_msg": "La valeur est hors limites",
         "lang_error35_msg": "L'interface WAN ne peut pas être définie plusieurs fois.",
-        "lang_error36_msg": "La plage de nombres MTU est limitée entre 1300 et 8896.",
+        "lang_error36_msg": "La plage MTU est limitée entre 1300 et 8896.",
         "lang_error37_msg": "Le format de l'adresse IPv6 est incorrect.",
         "lang_error38_msg": "Le format de la passerelle IPv6 est incorrect.",
         "lang_error39_msg": "Le format PD IPv6 est incorrect.",
@@ -56,7 +56,7 @@
         "lang_error43_msg": "La fonctionnalité MLO est actuellement activée.",
         "lang_error44_msg": "Attention !! Le Mesh n'est pas prêt.",
         "lang_error45_msg": "Attention !! Si désactivé, MLO et Mesh seront désactivés.",
-        "lang_error46_msg": "Impossible de basculer. Cet appareil est toujours en amont de votre cible !",
-        "lang_route_name_error_msg": "Le format du nom de la route est incorrect : seuls les lettres, chiffres, ponctuation et espaces sont autorisés, et la longueur doit être inférieure à 30 caractères !"
+        "lang_error46_msg": "Impossible de basculer. Cet appareil est toujours en amont de la cible !",
+        "lang_route_name_error_msg": "Le format du nom de la route est incorrect : seuls les lettres, chiffres, ponctuation et espaces sont autorisés, et la longueur doit être inférieure à 30 caractères."
     }
 }
