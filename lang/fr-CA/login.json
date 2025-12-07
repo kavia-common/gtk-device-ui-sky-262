@@ -1,0 +1,11 @@
+{
+    "login": {
+        "lang_login_title": "CONNEXION",
+        "lang_login_username": "NOM D'UTILISATEUR",
+        "lang_login_passwd": "MOT DE PASSE",
+        "lang_login_error_auth_msg": "Le nom ou le mot de passe est incorrect !",
+        "lang_login_empty_msg": "Le nom ou le mot de passe ne peut pas être vide !",
+        "lang_login_btn": "SE CONNECTER",
+        "lang_login_permission_msg": "Erreur de connexion ! Vous n'avez pas la permission de vous connecter."
+    }
+}

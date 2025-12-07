@@ -1,0 +1,32 @@
+{
+    "common": {
+        "lang_logout": "Déconnexion",
+        "lang_faq": "FAQ",
+        "lang_faq_number": "Centre d'appels AIS 1175",
+        "lang_copyright": "© 2021 ADVANCED INFO SERVICE PLC. TOUS DROITS RÉSERVÉS. <br> Ce site est optimisé pour Internet Explorer 9, Chrome, Safari et versions ultérieures.",
+        "lang_plz_wait": "Veuillez patienter...",
+        "lang_warning_title": "Avertissement :",
+        "lang_reboot_title": "Redémarrage du système",
+        "lang_reboot_msg": "Redémarrage en cours. Veuillez patienter...",
+        "lang_loading_msg": "Chargement...",
+        "lang_confirm_btn_title": "Confirmer",
+        "lang_apply_btn_title": "Appliquer",
+        "lang_cancel_btn_title": "Annuler",
+        "lang_refresh_btn_title": "Actualiser",
+        "lang_success_msg": "Succès",
+        "lang_error_msg": "Erreur",
+        "lang_fail_msg": "Échec",
+        "lang_en_title": "English",
+        "lang_th_title": "ไทย",
+        "lang_rebooting": "Redémarrage de l'appareil.",
+        "lang_reconnect_msg": "Veuillez connecter le routeur après le redémarrage si le réseau est déconnecté.",
+        "lang_tw_title": "繁體中文",
+        "lang_cn_title": "简体中文",
+        "btnNext": "Suivant",
+        "btnBack": "Retour",
+        "btnClose": "Fermer",
+        "btnOk": "OK",
+        "btnSkip": "Passer",
+        "btnDone": "Terminé"
+    }
+}
