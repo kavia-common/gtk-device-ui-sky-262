@@ -1,0 +1,16 @@
+{
+    "basic_setting_wlan_mesh": {
+        "lang_auth": "Authentication",
+        "lang_encrypt": "Encryption Mode",
+        "lang_pwd": "WPA Preshare key",
+        "lang_wireless": "Wireless Settings",
+        "lang_show_key": "Show Key",
+        "lang_hide_key": "Hide Key",
+        "lang_wlan_commin_ssid_title": "Common SSID Enabled",
+        "lang_wlan_mlo_title": "MLO Enabled",
+        "lang_mesh_enabled": "Mesh Enabled",
+        "lang_ssid": "Backhaul SSID",
+        "lang_BSS_color_enabled": "BSS Color Enabled",
+        "lang_mlo_enable_confirm_msg": "Warning! If you click OK, all Wi-Fi modes will be changed to IEEE 802.11be."
+    }
+}

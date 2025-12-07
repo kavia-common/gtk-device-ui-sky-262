@@ -1,0 +1,10 @@
+{
+    "application_multicast_igmp": {
+        "lang_multicast_igmp_enable": "Enable IGMP Snooping",
+        "lang_multicast_mld_enable": "Enable MLD Snooping",
+        "lang_multicast_igmp_proxy": "Enable IGMP Proxy",
+        "lang_multicast_mld_proxy": "Enable MLD Proxy",
+        "lang_multicast_apply_btn": "Apply",
+        "lang_igmp_version": "IGMP Version"
+    }
+}

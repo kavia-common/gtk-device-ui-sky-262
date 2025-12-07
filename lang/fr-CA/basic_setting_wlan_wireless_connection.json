@@ -1,0 +1,25 @@
+{
+    "basic_setting_wlan_wireless_connection": {
+        "lang_wirelessconn_2g_title": "2.4G Wifi Neighbor",
+        "lang_wirelessconn_ssid_title": "SSID",
+        "lang_wirelessconn_bssid_title": "BSSID",
+        "lang_wirelessconn_channel_title": "Channel",
+        "lang_wirelessconn_signal_title": "Signal",
+        "lang_wirelessconn_security_title": "Security",
+        "lang_wirelessconn_wifimode_title": "Wireless Mode",
+        "lang_wirelessconn_no_data_title": "No Data",
+        "lang_wirelessconn_scan_title": "Scan",
+        "lang_wirelessconn_5g_title": "5G Wifi Neighbor",
+        "lang_wirelessconn_band_disabled_error": "search Wifi Neighbor faild! Error:WL is disenable!",
+        "lang_extender_connection_status": "Connection Status",
+        "lang_wirelessExtender_band_title": "Radio Band",
+        "lang_wirelessExtender_status_title": "Status",
+        "lang_wirelessExtender_site_select": "Select",
+        "lang_extender_connection_config": "Extender Configurations",
+        "lang_extender_enable": "Extender Enabled",
+        "lang_extender_mode_type": "Extender Type",
+        "lang_scan_result_list": "Neighbor Wifi AP",
+        "lang_scan_btn": "Search",
+        "lang_auth_title": "Security"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "basic_setting_seciruty_macfilter": {
+        "lang_macfilter_enable": "Enable MAC Filtering",
+        "lang_macfilter_mode": "Filter Mode",
+        "lang_macfilter_smac_addr": "Source MAC Address",
+        "lang_macfilter_comment": "Comment",
+        "lang_macfilter_add_btn": "Add",
+        "lang_macfilter_table": "Current Blacklist Filter Table",
+        "lang_macfilter_item_number": "Number",
+        "lang_macfilter_item_smac_addr": "Source MAC Address",
+        "lang_macfilter_item_comment": "Comment",
+        "lang_macfilter_item_active": "Active",
+        "lang_macfilter_mode_blacklist": "Current Blacklist Filter Table",
+        "lang_macfilter_mode_whitelist": "Current Whitelist Filter Table",
+        "lang_change_mode_title": "Change Mode",
+        "lang_whitelist_save_confirm_msg": "You will lost internet connection after changing to white list. Are you sure?"
+    }
+}

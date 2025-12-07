@@ -1,0 +1,25 @@
+{
+    "basic_setting_lan_lan4": {
+        "lang_ip": "IP Address",
+        "lang_mask": "Subnet Mask",
+        "lang_dns": "DNS Mode",
+        "lang_proxy": "Use DNS Proxy",
+        "lang_relay": "Use DNS Relay",
+        "lang_manual": "Set Manually",
+        "lang_primary_dns": "Primary DNS Server",
+        "lang_secondary_dns": "Secondary DNS Server",
+        "lang_dhcp": "DHCP",
+        "lang_start": "Start IP Address",
+        "lang_end": "End IP Address",
+        "lang_lease": "Lease Time (s)",
+        "lang_seconds": "Seconds",
+        "lang_edit_reserved_ip": "Edit Reserved IP Address",
+        "lang_apply": "Apply",
+        "lang_refresh": "Refresh",
+        "lang_mac": "MAC Address",
+        "lang_add_dhcp_reserved": "Add Reserved IP Address",
+        "lang_dhcp_reserved_enable": "DHCP Reserved",
+        "lang_add": "Add",
+        "lang_action": "Action"
+    }
+}

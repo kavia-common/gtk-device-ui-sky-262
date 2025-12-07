@@ -1,0 +1,14 @@
+{
+    "management_settings_backup": {
+        "lang_file_null_msg": "Please select a settings file for restore.",
+        "lang_file_error_msg": "That file didn't work. Please try a different file.",
+        "lang_restore_fail_msg": "We couldn't restore your settings.",
+        "lang_content1": "Save Settings To Local Hard Drive",
+        "lang_content2": "Load Settings From Local Hard Drive",
+        "lang_select": "Select File",
+        "lang_update": "Update",
+        "lang_save": "Save",
+        "lang_backup_config": "Backup Config",
+        "lang_restore_config": "Restore Config"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "basic_setting_wlan_wifi_wps": {
+        "lang_wps_title": "WPS Configuration",
+        "lang_wps_enable_title": "Enable WPS",
+        "lang_wps_pbc_title": "Press WPS Button",
+        "lang_wps_pin_title": "Input PIN Number",
+        "lang_wps_msg1": "Searching for your device.",
+        "lang_wps_msg2": "If you haven't clicked on the Wi-Fi Protected Setup button on your device, please do so now.",
+        "lang_wps_success_msg": "Your client is now securely connected to your network.",
+        "lang_wps_failed_msg": "Your client failed to connect to the network.",
+        "lang_wps_done_msg": "Refer back to your device for further instructions.",
+        "lang_wps_vap_info_title": "VAP Information",
+        "lang_wps_band_hd": "Band",
+        "lang_wps_status_hd": "WPS Status",
+        "lang_wps_ssid_hd": "SSID",
+        "lang_wps_auth_hd": "Authentication",
+        "lang_wps_encryption_hd": "Encryption",
+        "lang_wps_configured_title": "Configured",
+        "lang_wps_notconfigured_title": "Not configured",
+        "lang_wps_pin_error_msg": "Invalid WPS PIN code",
+        "lang_wps_title2": "Wi-Fi Protected Setup<sup>TM</sup>",
+        "lang_wps_success_title": "Congratulations!",
+        "lang_wps_failed_title": "Couldn't connect!",
+        "lang_wps_mesh_msg": "If you want to enable WPS, you need to disabled EasyMesh function."
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "status_statistics": {
+        "lang_statistics_lan_title": "Statistics - LAN",
+        "lang_statistics_wlan_title": "Statistics - WLAN",
+        "lang_statistics_received_title": "Received",
+        "lang_statistics_transmitted_title": "Transmitted",
+        "lang_statistics_port_title": "Port",
+        "lang_statistics_bytes_title": "Bytes",
+        "lang_statistics_packets_title": "Packets",
+        "lang_statistics_error_title": "Error",
+        "lang_statistics_discard_title": "Discard"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "status_lan": {
+        "lang_lan_host_title": "LAN Host",
+        "lang_ipv4_address": "IPv4 Address",
+        "lang_ipv4_netmask": "Subnet Mask",
+        "lang_ipv4_gateway": "Default Gataway",
+        "lang_ipv6_address": "IPv6 Address",
+        "lang_mac_address": "MAC Address",
+        "lang_lan_ethernet_title": "LAN Ethernet",
+        "lang_interface_title": "Interface",
+        "lang_status_title": "Status",
+        "lang_speed_title": "Speed",
+        "lang_duplex_title": "Duplex",
+        "lang_lan_title": "LAN",
+        "lang_status_down": "Down",
+        "lang_status_up": "Up",
+        "lang_duplex_half": "Half",
+        "lang_duplex_full": "Full"
+    }
+}

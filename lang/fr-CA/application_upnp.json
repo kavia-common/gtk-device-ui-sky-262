@@ -1,0 +1,7 @@
+{
+    "application_upnp": {
+        "lang_upnp_enable": "UPnP Enable",
+        "lang_upnp_iface": "Interface Selection",
+        "lang_upnp_apply": "Apply"
+    }
+}

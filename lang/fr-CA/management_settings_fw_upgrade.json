@@ -1,0 +1,25 @@
+{
+    "management_settings_fw_upgrade": {
+        "lang_file_empty_msg": "Please select a file to update.",
+        "lang_file_format_msg": "The file you chose doesn't work.",
+        "lang_file_upgrade_fail_msg": "Firmware update failed",
+        "lang_content1": "Step 1: Obtain an updated software image file from your ISP.",
+        "lang_content2": "Step 2: Enter the path to the image file location in the box below or click the 'Browse' button to locate the image file.",
+        "lang_content3": "Step 3: Click the 'Update Software' button once to upload the new image file.",
+        "lang_content4": "Note: The update process takes about 2 minutes to complete, and your Broadband Router will reboot.",
+        "lang_select": "Select File Name:",
+        "lang_browse": "Browse...",
+        "lang_clear": "Clear",
+        "lang_manual_update_title": "Manual update",
+        "lang_manual_update_btn": "Update Software",
+        "lang_online_update_title": "Online update",
+        "lang_current_version_title": "Current Version",
+        "lang_fw_newer_title": "New firmware available",
+        "lang_ota_checking_msg": "Looking for update...",
+        "lang_fw_msg_title": "Firmware is up to date",
+        "lang_upgrade_btn": "Upgrade now",
+        "lang_auto_upgrade_enable": "Enable Auto Upgrade",
+        "lang_upgrade_donot_reboot_tip": "Do not turn off  power or press reset button during update.",
+        "lang_upgrade_rebooting": "Rebooting the device."
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "basic_setting_wlan_wifi_basic2": {
+        "lang_title": "Enable WLAN 2.4GHz",
+        "lang_choose_title": "Choose SSID",
+        "lang_hide": "Hide SSID",
+        "lang_ssid": "SSID",
+        "lang_bssid": "BSSID",
+        "lang_auth_title": "Authentication",
+        "lang_encryption": "Encryption Mode",
+        "lang_pwd": "WPA Preshare key",
+        "lang_show_key": "Show Key",
+        "lang_hide_key": "Hide Key",
+        "lang_ssid_enabled": "Enabled",
+        "lang_ssid_action": "More"
+    }
+}

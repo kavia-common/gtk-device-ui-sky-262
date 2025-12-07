@@ -1,0 +1,32 @@
+{
+    "adv_setting_service_control": {
+        "lang_acl_title": "Access Control - IP Address Configuration",
+        "lang_acl_cancel_title": "Cancel",
+        "lang_acl_confirml_title": "Confirm",
+        "lang_acl_enabled_title": "ACL Enable",
+        "lang_acl_service_type_title": "Service Type",
+        "lang_acl_access_dir_title": "Access Direction",
+        "lang_acl_protocol_title": "Protocol",
+        "lang_acl_ip_range_title": "IP Range",
+        "lang_acl_status_title": "Status",
+        "lang_acl_method_title": "Method",
+        "lang_acl_add_title": "Add",
+        "lang_acl_access_ctrl_title": "Access Control",
+        "lang_acl_ip_proto_title": "IP Protocol Type",
+        "lang_acl_enable_title": "Enable",
+        "lang_acl_srcip_title": "Source IP",
+        "lang_acl_srcip_title_start": "Source IP (Start)",
+        "lang_acl_srcip_title_end": "Source IP (End)",
+        "lang_acl_ip_start_error": "Source start IP address error!",
+        "lang_acl_ip_end_error": "Source end IP address error!",
+        "lang_acl_add_success_msg": "Add success!",
+        "lang_acl_del_success_msg": "Delete succeeded!",
+        "lang_acl_ip_any_title": "Any",
+        "lang_acl_delete_title": "Delete",
+        "lang_acl_disable_title": "Disable",
+        "lang_acl_nodata_title": "No Data",
+        "lang_acl_rule_type": "Rule Type",
+        "lang_acl_accept_title": "Accept",
+        "lang_acl_block_title": "Block"
+    }
+}
