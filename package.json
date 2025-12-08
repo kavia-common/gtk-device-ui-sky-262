@@ -1,1 +1,17 @@
-{ "name":"ejspace-gtk-sky","version":"0.0.0","scripts":{"start":"serve ."} }
+{
+  "name": "ejspace-gtk-sky",
+  "version": "0.0.0",
+  "description": "Static frontend web interface that serves the CPE router management UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve .",
+    "i18n:sync:frca:dry": "node scripts/i18n_sync_fr_ca.js --dry-run",
+    "i18n:sync:frca": "node scripts/i18n_sync_fr_ca.js --backup"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
