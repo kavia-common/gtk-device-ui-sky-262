@@ -28,6 +28,12 @@ Filter to sheets containing a name:
 Custom report location:
   node scripts/i18n_sync_fr_ca.js --report ./fr_ca_sync_report.txt --dry-run
 
+Per-file JSONs in a directory, skip if missing:
+  node scripts/i18n_sync_fr_ca.js --jsonDir ./gtk-device-ui-sky-262/lang/fr-CA --fallbackGlobal false --backup
+
+Per-file JSONs placed next to Excels in i18n/:
+  node scripts/i18n_sync_fr_ca.js --targetDir gtk-device-ui-sky-262/i18n --fallbackGlobal false --backup
+
 Custom key and language header detection:
   node scripts/i18n_sync_fr_ca.js --keyHeaders key,id,name --langHeaders en,zh,zh-TW,fr,fr-CA --backup
 
@@ -42,7 +48,18 @@ Custom key and language header detection:
 - Exits with non-zero status when not in dry-run and no updates were applied to any file.
 
 ## JSON source resolution
-- If `--json` is provided, that file is used.
+Per-file source (preferred):
+- For each Excel `<base>.xlsx`, the script looks for `<base>.json`:
+  1) If `--json` points to a directory, uses `<--json>/<base>.json`
+  2) If `--json` is a file whose basename matches `<base>.json`, uses it
+  3) `--jsonDir/<base>.json` (default: `gtk-device-ui-sky-262/lang/fr-CA`)
+  4) Sibling of the Excel: `<targetDir>/<base>.json`
+- If none found:
+  - If `--fallbackGlobal` is true (default), falls back to the global source resolution below
+  - Else, skips the Excel with a clear log entry
+
+Global fallback:
+- If `--json` is provided and is a file (not matching per-file), it is used.
 - Else if `<targetDir>/fr-CA.json` exists, it is used.
 - Else aggregates `gtk-device-ui-sky-262/lang/fr-CA/*.json` by flattening each file to dot-keys and prefixing with the filename (e.g., `login.title`).
 

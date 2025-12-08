@@ -51,6 +51,9 @@ function parseArgs(argv) {
     keyHeaders: ['key', 'id', 'name'],
     langHeaders: ['en', 'zh', 'zh-tw', 'fr', 'fr-ca'],
     sheetFilter: null,
+    // New options for per-file JSON behavior
+    jsonDir: path.join(process.cwd(), 'gtk-device-ui-sky-262', 'lang', 'fr-CA'),
+    fallbackGlobal: true, // if true, fall back to global/common map when per-file is missing; else skip
   };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
@@ -65,6 +68,16 @@ function parseArgs(argv) {
       args.langHeaders = argv[++i].split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
     } else if (a === '--sheetFilter' && i + 1 < argv.length) {
       args.sheetFilter = argv[++i];
+    } else if (a === '--jsonDir' && i + 1 < argv.length) {
+      args.jsonDir = argv[++i];
+    } else if (a === '--fallbackGlobal') {
+      // presence enables fallback; support explicit true/false next token
+      const next = argv[i + 1];
+      if (next === 'true' || next === 'false') {
+        args.fallbackGlobal = (argv[++i] === 'true');
+      } else {
+        args.fallbackGlobal = true;
+      }
     } else {
       // ignore unknowns
     }
@@ -158,6 +171,65 @@ function loadFrCaMap(args) {
     throw new Error('No fr-CA JSON source found. Provide --json or ensure i18n/fr-CA.json or lang/fr-CA/*.json exists.');
   }
   return map;
+}
+
+/**
+ * Load a per-file fr-CA map based on an Excel filename (without path).
+ * Resolution order for <base> (where file is <base>.xlsx):
+ * 1) If args.json is a directory, use <args.json>/<base>.json
+ * 2) args.json if it's a file and its basename matches <base>.json
+ * 3) args.jsonDir/<base>.json
+ * 4) <targetDir>/<base>.json (sibling next to the xlsx)
+ * If none exists:
+ *  - If args.fallbackGlobal is true, return the global map from loadFrCaMap(args)
+ *  - Else, return null and let caller skip with a clear log
+ */
+function loadPerFileFrCaMap(args, baseName) {
+  const existFile = (p) => { try { return fs.existsSync(p) && fs.statSync(p).isFile(); } catch { return false; } };
+  const existDir = (p) => { try { return fs.existsSync(p) && fs.statSync(p).isDirectory(); } catch { return false; } };
+
+  // If --json provided and is a directory, prefer <jsonDir>/<base>.json
+  if (args.json) {
+    const jPath = path.isAbsolute(args.json) ? args.json : path.resolve(process.cwd(), args.json);
+    if (existDir(jPath)) {
+      const candidate = path.join(jPath, `${baseName}.json`);
+      if (existFile(candidate)) {
+        try { return JSON.parse(fs.readFileSync(candidate, 'utf8')); } catch (e) { console.warn(`Warn: Failed parsing ${candidate}: ${e.message}`); }
+      }
+    } else if (existFile(jPath)) {
+      // If provided JSON is a single file that matches the baseName, use it
+      if (path.basename(jPath).toLowerCase() === `${baseName.toLowerCase()}.json`) {
+        try { return JSON.parse(fs.readFileSync(jPath, 'utf8')); } catch (e) { console.warn(`Warn: Failed parsing ${jPath}: ${e.message}`); }
+      }
+    }
+  }
+
+  // Check configured jsonDir
+  if (args.jsonDir) {
+    const dir = path.isAbsolute(args.jsonDir) ? args.jsonDir : path.resolve(process.cwd(), args.jsonDir);
+    const candidate = path.join(dir, `${baseName}.json`);
+    if (existFile(candidate)) {
+      try { return JSON.parse(fs.readFileSync(candidate, 'utf8')); } catch (e) { console.warn(`Warn: Failed parsing ${candidate}: ${e.message}`); }
+    }
+  }
+
+  // Check sibling to xlsx in targetDir
+  const sibling = path.join(args.targetDir, `${baseName}.json`);
+  if (existFile(sibling)) {
+    try { return JSON.parse(fs.readFileSync(sibling, 'utf8')); } catch (e) { console.warn(`Warn: Failed parsing ${sibling}: ${e.message}`); }
+  }
+
+  // Fallback
+  if (args.fallbackGlobal) {
+    try {
+      // global map already flattened; wrap so updateWorksheet expects flat k/v
+      return loadFrCaMap(args);
+    } catch (e) {
+      console.warn(`Warn: Global fallback map failed to load: ${e.message}`);
+      return null;
+    }
+  }
+  return null;
 }
 
 /**
@@ -304,7 +376,7 @@ function updateWorksheet(ws, frCaMap, options) {
 /**
  * Process a workbook file and update all relevant worksheets.
  */
-async function processWorkbook(filePath, frCaMap, args, reportLines) {
+async function processWorkbook(filePath, _frCaMapGlobal, args, reportLines) {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(filePath);
 
@@ -313,6 +385,46 @@ async function processWorkbook(filePath, frCaMap, args, reportLines) {
   let fileUpdated = false;
   let fileStats = { updated: 0, inserted: 0, skipped: 0, addedFrCaColumn: 0 };
   const sheetReports = [];
+
+  // Determine per-file mapping
+  const base = path.basename(filePath, '.xlsx');
+  let frCaMapLocal = loadPerFileFrCaMap(args, base);
+  let sourceNote = '';
+  if (frCaMapLocal === null) {
+    sourceNote = 'json source: missing (skipped)';
+  } else if (typeof frCaMapLocal === 'object' && !Array.isArray(frCaMapLocal)) {
+    sourceNote = `json source: per-file (${base}.json${args.jsonDir ? ` from ${args.jsonDir}` : ''} or fallback)`;
+  } else {
+    sourceNote = 'json source: unknown type';
+  }
+
+  if (frCaMapLocal === null) {
+    // Skip whole workbook with clear log
+    reportLines.push(`File: ${path.basename(filePath)} | SKIPPED (no per-file JSON found and fallback disabled)`);
+    reportLines.push(`  - ${sourceNote}`);
+    return { fileUpdated: false, fileStats: { updated: 0, inserted: 0, skipped: 0, addedFrCaColumn: 0 } };
+  }
+
+  // If fallback produced a global aggregated map, we might need to flatten
+  const normalizeToFlat = (obj) => {
+    // If it's already a flat map of key->value (string/primitive), keep as-is. If nested, flatten.
+    const isFlat = Object.values(obj).every(v => (typeof v !== 'object' || v === null));
+    if (isFlat) return obj;
+    // reuse inline flattener
+    const flatten = (o, prefix = '') => {
+      const out = {};
+      if (o && typeof o === 'object' && !Array.isArray(o)) {
+        for (const [k, v] of Object.entries(o)) {
+          const p = prefix ? `${prefix}.${k}` : k;
+          if (v && typeof v === 'object' && !Array.isArray(v)) Object.assign(out, flatten(v, p));
+          else out[p] = v;
+        }
+      }
+      return out;
+    };
+    return flatten(obj);
+  };
+  const frCaMap = normalizeToFlat(frCaMapLocal);
 
   for (const ws of wb.worksheets) {
     const shouldProcess = !sheetFilterLower || (ws.name.toLowerCase().includes(sheetFilterLower));
@@ -343,7 +455,6 @@ async function processWorkbook(filePath, frCaMap, args, reportLines) {
     lines.push(`      updated: ${res.updated}, inserted: ${res.inserted}, skipped: ${res.skipped}`);
     if (res.excelKeysMissingInJson.length) {
       lines.push(`      excel keys missing in json: ${res.excelKeysMissingInJson.length}`);
-      // List a small sample to avoid huge logs
       lines.push(`        sample: ${res.excelKeysMissingInJson.slice(0, 10).join(', ')}${res.excelKeysMissingInJson.length > 10 ? ' ...' : ''}`);
     }
     if (res.jsonKeysMissingInExcel.length) {
@@ -370,6 +481,7 @@ async function processWorkbook(filePath, frCaMap, args, reportLines) {
   // Report for the file
   const header = `File: ${path.basename(filePath)} | updated: ${fileStats.updated}, inserted: ${fileStats.inserted}, skipped: ${fileStats.skipped}, fr-CA column added in ${fileStats.addedFrCaColumn} sheet(s)`;
   reportLines.push(header);
+  reportLines.push(`  - ${sourceNote}`);
   sheetReports.forEach(l => reportLines.push(l));
 
   return { fileUpdated, fileStats };
@@ -386,12 +498,13 @@ async function main() {
     process.exit(2);
   }
 
-  let frCaMap;
+  // Try to pre-load a global map for reporting context; it's optional now
+  let frCaMap = {};
   try {
     frCaMap = loadFrCaMap(args);
   } catch (e) {
-    console.error(`Failed to load fr-CA JSON: ${e.message}`);
-    process.exit(2);
+    // Do not exit; per-file JSONs may still exist
+    console.warn(`Warn: Global fr-CA JSON not loaded (${e.message}). Will attempt per-file JSONs.`);
   }
 
   const files = fs.readdirSync(args.targetDir).filter(f => f.toLowerCase().endsWith('.xlsx'));
@@ -408,7 +521,10 @@ async function main() {
   reportLines.push(`sheetFilter: ${args.sheetFilter || '(none)'}`);
   reportLines.push(`keyHeaders: ${args.keyHeaders.join(', ')}`);
   reportLines.push(`langHeaders: ${args.langHeaders.join(', ')}`);
-  reportLines.push(`jsonKeys: ${Object.keys(frCaMap).length}`);
+  reportLines.push(`jsonDir: ${args.jsonDir}`);
+  reportLines.push(`fallbackGlobal: ${args.fallbackGlobal}`);
+  reportLines.push(`globalJsonKeys(preload): ${Object.keys(frCaMap).length}`);
+  reportLines.push(`Mode: per-file JSON (basename match); will skip file if JSON missing and fallbackGlobal=false`);
   reportLines.push(`---------------------------------------------`);
 
   let anyUpdated = false;
