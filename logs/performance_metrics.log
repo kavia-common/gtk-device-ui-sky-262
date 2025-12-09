@@ -4492,3 +4492,1008 @@
 2025-12-08 14:34:57,796 - Knowledge - INFO - ⚡ Total Redis path: 0.98s (vs ~300s from disk)
 2025-12-08 14:34:58,030 - Knowledge - INFO - Saving knowledge to Redis...
 2025-12-08 14:34:58,310 - Knowledge - INFO - Knowledge saved to Redis successfully
+2025-12-09 03:42:11,990 - Knowledge - INFO - Created shared MongoDB connection pool
+2025-12-09 03:42:12,332 - Knowledge - INFO - Starting Knowledge Graph processing with 20 threads
+2025-12-09 03:42:12,518 - Knowledge - INFO - Initial configuration: chunk_size=65536, max_cache_size=500
+2025-12-09 03:42:12,742 - Knowledge - INFO - Knowledge Graph concurrency configuration: workers=20, max_batch_size=25, max_concurrent_llm_calls=50
+2025-12-09 03:42:13,885 - Knowledge - INFO - 🔍 _load_persisted_knowledge called - checking for Redis optimization
+2025-12-09 03:42:14,082 - Knowledge - WARNING - ❌ load_from_redis method not found - Redis support not attached
+2025-12-09 03:42:14,267 - Knowledge - INFO - load persisted knowledge: begin
+2025-12-09 03:42:16,889 - Knowledge - INFO - Persisted knowledge files in /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/.knowledge have been renamed to use .json
+2025-12-09 03:42:17,076 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:17,254 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:17,462 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-samba.jsx
+2025-12-09 03:42:17,670 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:17,848 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:18,032 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_usp_agent.json
+2025-12-09 03:42:18,240 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:18,414 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:18,625 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-throughput.html
+2025-12-09 03:42:18,837 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:19,046 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:19,238 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/env.js
+2025-12-09 03:42:19,473 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:19,639 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:19,837 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/ajaxfileupload.js
+2025-12-09 03:42:20,009 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:20,156 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:20,342 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/aes.js
+2025-12-09 03:42:20,542 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:20,762 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:20,958 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/piece/ssid_node_control.html
+2025-12-09 03:42:21,144 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:21,310 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:21,513 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_chs2.json
+2025-12-09 03:42:21,680 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:21,826 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:22,062 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/angular-sanitize.min.js
+2025-12-09 03:42:22,272 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:22,462 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:22,667 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-throughput.jsx
+2025-12-09 03:42:22,894 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:23,073 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:23,276 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/materialize/materialize.js
+2025-12-09 03:42:23,478 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:23,627 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:23,808 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_adv5.json
+2025-12-09 03:42:24,009 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:24,209 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:24,389 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/common.js
+2025-12-09 03:42:24,564 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:24,735 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:24,914 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_throughput.json
+2025-12-09 03:42:25,086 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:25,259 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:25,496 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-samba.html
+2025-12-09 03:42:25,718 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:25,892 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:26,074 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-samba.js
+2025-12-09 03:42:26,255 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:26,441 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:26,648 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/nat/basic_setting-nat-portforward.jsx
+2025-12-09 03:42:26,825 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:27,054 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:27,292 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wlan-wifi_mlo.jsx
+2025-12-09 03:42:27,465 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:27,644 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:27,817 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_ssh.json
+2025-12-09 03:42:28,015 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:28,211 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:28,453 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/angular-local-storage.min0.1.5.js
+2025-12-09 03:42:28,649 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:28,814 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:29,025 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep2/wlan-wifi_indep2-configuration2.jsx
+2025-12-09 03:42:29,221 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:29,402 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:29,617 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-att-devices.html
+2025-12-09 03:42:29,811 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:29,996 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:30,194 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/animate.css
+2025-12-09 03:42:30,354 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:30,562 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:30,729 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/ngDialog-theme-default.min.css
+2025-12-09 03:42:30,936 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:31,132 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:31,314 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/checklist-model.js
+2025-12-09 03:42:31,489 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:31,659 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:31,838 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/lottie.js
+2025-12-09 03:42:32,041 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:32,232 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:32,418 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/menu.json
+2025-12-09 03:42:32,606 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:32,844 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:33,056 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_guest.json
+2025-12-09 03:42:33,243 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:33,395 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:33,588 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_multicast_igmp.json
+2025-12-09 03:42:33,789 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:33,977 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:34,140 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/main.html
+2025-12-09 03:42:34,342 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:34,537 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:34,740 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep2/wlan-wifi_indep2-configuration2.html
+2025-12-09 03:42:34,932 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:35,122 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:35,277 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/elem-control.js
+2025-12-09 03:42:35,473 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:35,675 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:35,889 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-qos-add.html
+2025-12-09 03:42:36,118 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:36,281 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:36,448 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_storage_share_floder.json
+2025-12-09 03:42:36,687 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:36,847 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:37,048 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wlan-wifi_mlo.html
+2025-12-09 03:42:37,246 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:37,446 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:37,634 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-remote.html
+2025-12-09 03:42:37,853 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:38,063 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:38,256 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_storage_ftp.json
+2025-12-09 03:42:38,469 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:38,637 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:38,834 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pc-dev-forgot-pwd.html
+2025-12-09 03:42:39,061 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:39,258 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:39,474 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep6/wlan-wifi_indep6-configuration6.html
+2025-12-09 03:42:39,681 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:39,863 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:40,020 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-usp_agent.html
+2025-12-09 03:42:40,216 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:40,416 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:40,615 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-ssh.js
+2025-12-09 03:42:40,798 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:40,975 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:41,149 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-traceroute.html
+2025-12-09 03:42:41,339 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:41,562 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:41,718 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/basic_setting-routing.jsx
+2025-12-09 03:42:41,910 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:42,059 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:42,209 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_basic2.json
+2025-12-09 03:42:42,424 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:42,627 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:42,829 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/custom.css
+2025-12-09 03:42:43,025 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:43,215 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:43,386 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-backup.js
+2025-12-09 03:42:43,544 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:43,739 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:43,927 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast.js
+2025-12-09 03:42:44,177 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:44,378 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:44,542 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/jquery-ui.min.js
+2025-12-09 03:42:44,737 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:44,943 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:45,147 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/Bootstrap/bootstrap.min.js
+2025-12-09 03:42:45,364 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:45,562 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:45,736 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_wps.jsx
+2025-12-09 03:42:45,952 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:46,158 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:46,366 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-traceroute.jsx
+2025-12-09 03:42:46,559 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:46,736 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:46,958 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep6/wlan-wifi_indep6-configuration6.jsx
+2025-12-09 03:42:47,124 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:47,316 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:47,501 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-usp_agent.jsx
+2025-12-09 03:42:47,697 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:47,921 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:48,139 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_throughtput.json
+2025-12-09 03:42:48,361 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:48,541 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:48,705 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/json/meshmap.json
+2025-12-09 03:42:48,891 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:49,061 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:49,245 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-remote.jsx
+2025-12-09 03:42:49,423 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:49,581 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:49,737 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-wlan-changemode-confirm.html
+2025-12-09 03:42:49,908 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:50,130 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:50,294 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-ping.jsx
+2025-12-09 03:42:50,495 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:50,700 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:50,886 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/basic_setting-routing.html
+2025-12-09 03:42:51,111 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:51,302 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:51,517 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-storage_info.js
+2025-12-09 03:42:51,719 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:51,925 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:52,106 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/materialize/materialize.js
+2025-12-09 03:42:52,295 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:52,471 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:52,667 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-ssid5.js
+2025-12-09 03:42:52,844 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:53,065 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:53,256 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_zone.json
+2025-12-09 03:42:53,461 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:53,671 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:53,876 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-backup.html
+2025-12-09 03:42:54,068 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:54,276 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:54,451 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/login.html
+2025-12-09 03:42:54,647 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:54,823 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:55,031 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast.html
+2025-12-09 03:42:55,196 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:55,352 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:55,559 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-opmode.html
+2025-12-09 03:42:55,763 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:55,991 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:56,186 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_wan.json
+2025-12-09 03:42:56,364 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:56,588 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:56,801 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/common.json
+2025-12-09 03:42:57,019 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:57,218 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:57,407 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-ssh.html
+2025-12-09 03:42:57,632 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:57,815 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:58,021 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/package.json
+2025-12-09 03:42:58,200 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:58,357 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:58,570 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/lantiq_custom.css
+2025-12-09 03:42:58,758 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:58,933 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:59,110 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-ssid5.jsx
+2025-12-09 03:42:59,331 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:42:59,541 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:42:59,731 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/fonticons.css
+2025-12-09 03:42:59,903 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:00,099 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:00,246 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-strt.html
+2025-12-09 03:43:00,443 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:00,634 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:00,852 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wan.html
+2025-12-09 03:43:01,042 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:01,240 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:01,456 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/base64.js
+2025-12-09 03:43:01,626 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:01,808 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:02,034 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/basic_setting-routing.js
+2025-12-09 03:43:02,219 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:02,430 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:02,635 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-storage_info.jsx
+2025-12-09 03:43:02,815 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:03,010 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:03,211 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wan_wan.json
+2025-12-09 03:43:03,423 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:03,615 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:03,816 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_lan_lan6.json
+2025-12-09 03:43:04,012 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:04,200 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:04,396 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/menu.js
+2025-12-09 03:43:04,639 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:04,829 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:04,986 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-storage_info.html
+2025-12-09 03:43:05,186 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:05,401 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:05,547 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-opmode.jsx
+2025-12-09 03:43:05,720 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:05,927 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:06,074 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-remote.js
+2025-12-09 03:43:06,238 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:06,391 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:06,616 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast.jsx
+2025-12-09 03:43:06,813 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:07,063 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:07,261 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-backup.jsx
+2025-12-09 03:43:07,464 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:07,631 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:07,836 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_account.json
+2025-12-09 03:43:08,014 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:08,209 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:08,380 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-usp_agent.js
+2025-12-09 03:43:08,577 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:08,744 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:08,970 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-ssid5.html
+2025-12-09 03:43:09,173 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:09,324 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:09,523 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/materialize/materialize.css
+2025-12-09 03:43:09,731 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:09,909 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:10,126 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wan.jsx
+2025-12-09 03:43:10,351 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:10,532 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:10,733 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/login.json
+2025-12-09 03:43:10,911 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:11,113 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:11,312 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-ssh.jsx
+2025-12-09 03:43:11,499 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:11,695 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:11,857 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/sortable.js
+2025-12-09 03:43:12,013 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:12,240 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:12,456 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_settings_reset_dafault.json
+2025-12-09 03:43:12,645 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:12,844 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:13,042 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiMesh.jsx
+2025-12-09 03:43:13,211 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:13,421 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:13,609 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-share_floder.js
+2025-12-09 03:43:13,782 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:13,978 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:14,142 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/Bootstrap/bootstrap.js
+2025-12-09 03:43:14,382 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:14,537 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:14,781 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_thoughtput.json
+2025-12-09 03:43:14,972 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:15,213 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:15,417 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_wifiMesh.json
+2025-12-09 03:43:15,634 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:15,819 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:15,978 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-fw_upgrade.js
+2025-12-09 03:43:16,144 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:16,348 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:16,525 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/custom.js
+2025-12-09 03:43:16,729 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:16,936 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:17,164 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wan/basic_setting-wan-wan.js
+2025-12-09 03:43:17,335 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:17,521 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:17,745 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/view.js
+2025-12-09 03:43:17,946 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:18,177 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:18,367 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/basic_setting-wan.jsx
+2025-12-09 03:43:18,517 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:18,712 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:18,943 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-multi_lang.html
+2025-12-09 03:43:19,148 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:19,349 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:19,559 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-multi_lang.jsx
+2025-12-09 03:43:19,799 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:19,984 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:20,190 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/angular1.3.15.min.js
+2025-12-09 03:43:20,424 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:20,626 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:20,814 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiMesh.html
+2025-12-09 03:43:21,012 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:21,228 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:21,413 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/validation.js
+2025-12-09 03:43:21,591 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:21,793 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:21,989 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-telnet.js
+2025-12-09 03:43:22,190 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:22,381 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:22,567 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_guest.jsx
+2025-12-09 03:43:22,776 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:22,922 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:23,091 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/nat/basic_setting-nat-alg.jsx
+2025-12-09 03:43:23,305 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:23,521 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:23,749 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-opmode-error.html
+2025-12-09 03:43:23,935 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:24,115 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:24,307 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_chs2.jsx
+2025-12-09 03:43:24,510 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:24,697 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:24,912 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Bootstrap/bootstrap.css
+2025-12-09 03:43:25,094 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:25,283 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:25,502 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_storage_storage_info.json
+2025-12-09 03:43:25,660 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:25,815 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:26,021 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wan/basic_setting-wan-wan.html
+2025-12-09 03:43:26,252 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:26,409 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:26,589 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-telnet.jsx
+2025-12-09 03:43:26,783 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:26,996 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:27,171 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiMesh.js
+2025-12-09 03:43:27,378 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:27,535 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:27,738 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_tools_nslookup.json
+2025-12-09 03:43:27,937 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:28,140 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:28,350 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_wps.json
+2025-12-09 03:43:28,559 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:28,771 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:28,985 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_lan_lan4.json
+2025-12-09 03:43:29,193 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:29,399 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:29,597 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-share_floder.html
+2025-12-09 03:43:29,801 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:30,011 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:30,258 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/loading.json
+2025-12-09 03:43:30,439 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:30,645 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:30,857 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-meshmap.html
+2025-12-09 03:43:31,056 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:31,223 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:31,391 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_chs2.html
+2025-12-09 03:43:31,576 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:31,756 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:31,942 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/piece/mesh_node_control.html
+2025-12-09 03:43:32,109 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:32,303 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:32,520 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/translate-loader-staticfiles.js
+2025-12-09 03:43:32,733 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:32,930 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:33,125 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/nat/basic_setting-nat-alg.js
+2025-12-09 03:43:33,345 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:33,503 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:33,713 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-share_floder.jsx
+2025-12-09 03:43:33,891 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:34,073 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:34,230 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-telnet.html
+2025-12-09 03:43:34,391 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:34,585 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:34,789 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_adv5.jsx
+2025-12-09 03:43:34,969 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:35,134 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:35,331 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wan/basic_setting-wan-wan.jsx
+2025-12-09 03:43:35,522 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:35,727 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:35,922 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-multi_lang.js
+2025-12-09 03:43:36,126 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:36,282 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:36,452 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-fw_upgrade.jsx
+2025-12-09 03:43:36,638 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:36,862 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:37,025 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/lantiq_custom-1.css
+2025-12-09 03:43:37,240 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:37,420 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:37,616 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_reboot.json
+2025-12-09 03:43:37,832 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:38,033 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:38,222 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-ntp.jsx
+2025-12-09 03:43:38,396 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:38,543 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:38,717 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-ftp.html
+2025-12-09 03:43:38,902 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:39,104 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:39,294 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-remotecapture.html
+2025-12-09 03:43:39,510 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:39,698 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:39,891 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/gemtek.css
+2025-12-09 03:43:40,089 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:40,259 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:40,440 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/ngDialog.min.css
+2025-12-09 03:43:40,604 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:40,798 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:40,974 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_adv_allinone.jsx
+2025-12-09 03:43:41,155 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:41,340 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:41,499 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_telnet.json
+2025-12-09 03:43:41,695 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:41,861 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:42,067 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/d3_3.2.8.js
+2025-12-09 03:43:42,263 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:42,439 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:42,601 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/d3-meshmap.js
+2025-12-09 03:43:42,768 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:42,975 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:43,171 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast-igmpMultiVer.js
+2025-12-09 03:43:43,344 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:43,526 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:43,685 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/basic_setting-wan-single_wan.jsx
+2025-12-09 03:43:43,833 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:43,989 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:44,182 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_zone.jsx
+2025-12-09 03:43:44,352 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:44,538 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:44,722 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/jquery-1.11.1.min.js
+2025-12-09 03:43:44,918 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:45,145 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:45,364 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-remotecapture.jsx
+2025-12-09 03:43:45,555 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:45,732 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:45,885 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-ftp.jsx
+2025-12-09 03:43:46,064 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:46,261 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:46,474 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/angular-route.min1.3.15.js
+2025-12-09 03:43:46,671 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:46,862 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:47,019 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast-igmpMultiVer.jsx
+2025-12-09 03:43:47,226 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:47,462 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:47,645 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_tools_inform_ctrl.json
+2025-12-09 03:43:47,854 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:48,042 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:48,210 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_nat_dmz.json
+2025-12-09 03:43:48,392 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:48,576 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:48,744 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_basic2.jsx
+2025-12-09 03:43:48,935 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:49,146 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:49,346 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_storage_samba.json
+2025-12-09 03:43:49,584 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:49,754 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:49,918 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-meshlog.html
+2025-12-09 03:43:50,118 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:50,276 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:50,465 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-ftp.js
+2025-12-09 03:43:50,661 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:50,810 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:50,991 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-remotecapture.js
+2025-12-09 03:43:51,176 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:51,345 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:51,497 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pc-dev-password.html
+2025-12-09 03:43:51,716 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:51,918 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:52,077 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-wan-more-info.html
+2025-12-09 03:43:52,270 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:52,439 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:52,634 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-multicast-igmpMultiVer.html
+2025-12-09 03:43:52,822 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:53,025 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:53,255 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_lan.json
+2025-12-09 03:43:53,422 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:53,612 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:53,785 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-configuration5.jsx
+2025-12-09 03:43:53,970 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:54,117 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:54,317 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-nslookup.jsx
+2025-12-09 03:43:54,497 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:54,706 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:54,884 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-nslookup.html
+2025-12-09 03:43:55,084 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:55,281 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:55,463 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Bootstrap/bootstrap-tour.css
+2025-12-09 03:43:55,641 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:55,857 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:56,033 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/tabspage.js
+2025-12-09 03:43:56,208 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:56,387 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:56,573 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-configuration5.html
+2025-12-09 03:43:56,779 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:56,995 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:57,174 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-statistics.jsx
+2025-12-09 03:43:57,421 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:57,617 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:57,831 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-statistics.html
+2025-12-09 03:43:57,996 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:58,203 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:58,424 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_ntp.json
+2025-12-09 03:43:58,635 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:58,854 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:59,072 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/error_message.json
+2025-12-09 03:43:59,248 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:59,417 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:43:59,561 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_cwmp.json
+2025-12-09 03:43:59,747 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:43:59,962 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:00,168 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_parental_control.json
+2025-12-09 03:44:00,334 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:00,545 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:00,704 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-reset_dafault.js
+2025-12-09 03:44:00,920 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:01,112 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:01,305 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_statistics.json
+2025-12-09 03:44:01,490 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:01,720 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:01,904 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-qos.html
+2025-12-09 03:44:02,101 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:02,286 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:02,469 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-qos.jsx
+2025-12-09 03:44:02,669 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:02,851 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:03,053 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_basic5.jsx
+2025-12-09 03:44:03,274 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:03,475 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:03,686 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-ispLocking.js
+2025-12-09 03:44:03,879 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:04,086 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:04,260 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/quicksetup.json
+2025-12-09 03:44:04,466 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:04,646 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:04,815 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/singlepage.jsx
+2025-12-09 03:44:05,033 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:05,220 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:05,432 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-lan.jsx
+2025-12-09 03:44:05,599 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:05,793 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:05,976 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/singlepage.html
+2025-12-09 03:44:06,155 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:06,295 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:06,496 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-lan.html
+2025-12-09 03:44:06,711 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:06,896 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:07,116 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-upnp.js
+2025-12-09 03:44:07,284 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:07,503 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:07,738 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/tabspage.html
+2025-12-09 03:44:07,937 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:08,136 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:08,318 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/tabspage.jsx
+2025-12-09 03:44:08,504 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:08,681 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:08,901 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/awesome-bootstrap-checkbox.css
+2025-12-09 03:44:09,109 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:09,300 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:09,473 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mesh.jsx
+2025-12-09 03:44:09,662 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:09,835 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:10,046 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/Bootstrap/bootstrap-tour.js
+2025-12-09 03:44:10,307 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:10,534 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:10,696 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/singlepage.js
+2025-12-09 03:44:10,866 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:11,023 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:11,228 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-lan.js
+2025-12-09 03:44:11,413 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:11,597 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:11,773 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_routing.json
+2025-12-09 03:44:11,951 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:12,144 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:12,338 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-reset_dafault.jsx
+2025-12-09 03:44:12,531 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:12,702 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:12,851 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/settings/management-settings-reset_dafault.html
+2025-12-09 03:44:13,048 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:13,263 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:13,413 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/lang.js
+2025-12-09 03:44:13,614 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:13,796 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:13,989 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/adv_homepage.css
+2025-12-09 03:44:14,183 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:14,426 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:14,641 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/nat/basic_setting-nat-dmz.jsx
+2025-12-09 03:44:14,855 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:15,074 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:15,248 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_upnp.json
+2025-12-09 03:44:15,427 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:15,576 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:15,749 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-ispLocking.jsx
+2025-12-09 03:44:15,966 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:16,115 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:16,276 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-ispLocking.html
+2025-12-09 03:44:16,460 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:16,676 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:16,855 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wireless_connection.jsx
+2025-12-09 03:44:17,078 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:17,273 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:17,499 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-qos.js
+2025-12-09 03:44:17,686 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:17,875 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:18,062 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-meshtopology.html
+2025-12-09 03:44:18,281 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:18,464 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:18,643 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-statistics.js
+2025-12-09 03:44:18,852 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:19,005 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:19,197 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_ispLocking.json
+2025-12-09 03:44:19,395 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:19,591 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:19,798 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/build.css
+2025-12-09 03:44:19,964 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:20,109 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:20,309 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/wapi-min.js
+2025-12-09 03:44:20,510 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:20,725 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:20,888 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-upnp.html
+2025-12-09 03:44:21,106 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:21,312 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:21,542 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wan/basic_setting-wan-port.html
+2025-12-09 03:44:21,758 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:21,959 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:22,149 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wan/basic_setting-wan-port.jsx
+2025-12-09 03:44:22,366 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:22,548 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:22,722 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep5/wlan-wifi_indep5-configuration5.js
+2025-12-09 03:44:22,918 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:23,123 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:23,319 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-upnp.jsx
+2025-12-09 03:44:23,518 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:23,699 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:23,877 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-wlan-ext-manual-conn.html
+2025-12-09 03:44:24,109 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:24,295 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:24,509 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/wlan_wifi_adv_common.json
+2025-12-09 03:44:24,746 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:24,931 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:25,108 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_dlna.json
+2025-12-09 03:44:25,299 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:25,490 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:25,657 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-single_wan.js
+2025-12-09 03:44:25,870 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:26,077 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:26,330 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/tools/management-tools-inform_ctrl.jsx
+2025-12-09 03:44:26,540 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:26,696 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:26,889 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-acl-add.html
+2025-12-09 03:44:27,070 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:27,253 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:27,479 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-parental_control.html
+2025-12-09 03:44:27,668 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:27,872 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:28,095 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-cwmp.jsx
+2025-12-09 03:44:28,292 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:28,499 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:28,722 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-dlna.jsx
+2025-12-09 03:44:28,933 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:29,118 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:29,349 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-parental_control.jsx
+2025-12-09 03:44:29,540 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:29,745 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:29,924 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-cwmp.html
+2025-12-09 03:44:30,085 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:30,230 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:30,428 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-dlna.html
+2025-12-09 03:44:30,623 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:30,832 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:31,024 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-account.html
+2025-12-09 03:44:31,193 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:31,371 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:31,574 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-account.jsx
+2025-12-09 03:44:31,766 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:31,994 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:32,180 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mpt.js
+2025-12-09 03:44:32,376 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:32,530 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:32,743 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_settings_backup.json
+2025-12-09 03:44:32,933 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:33,131 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:33,313 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/storage/application-storage-storage_account.jsx
+2025-12-09 03:44:33,497 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:33,678 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:33,862 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-single_wan.jsx
+2025-12-09 03:44:34,061 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:34,295 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:34,478 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/attendtion.json
+2025-12-09 03:44:34,645 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:34,846 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:35,056 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/jquery-3.7.1.min.js
+2025-12-09 03:44:35,257 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:35,439 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:35,603 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_adv2.json
+2025-12-09 03:44:35,813 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:35,985 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:36,163 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/lan/basic_setting-lan-lan4.jsx
+2025-12-09 03:44:36,357 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:36,601 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:36,782 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-single_wan.html
+2025-12-09 03:44:37,009 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:37,173 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:37,375 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/parental_control_blocked.json
+2025-12-09 03:44:37,598 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:37,802 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:38,022 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_chs5.jsx
+2025-12-09 03:44:38,194 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:38,382 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:38,561 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_chs5.html
+2025-12-09 03:44:38,760 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:38,947 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:39,113 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_qos.json
+2025-12-09 03:44:39,320 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:39,523 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:39,721 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-parental_control.js
+2025-12-09 03:44:39,954 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:40,146 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:40,335 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_basic_allinone.jsx
+2025-12-09 03:44:40,525 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:40,717 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:40,926 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-dlna.js
+2025-12-09 03:44:41,090 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:41,295 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:41,466 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-cwmp.js
+2025-12-09 03:44:41,666 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:41,880 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:42,033 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_nat_portforward.json
+2025-12-09 03:44:42,238 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:42,420 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:42,631 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mpt.jsx
+2025-12-09 03:44:42,829 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:43,020 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:43,214 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-quicksetup.html
+2025-12-09 03:44:43,415 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:43,593 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:43,797 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_tools_ping.json
+2025-12-09 03:44:43,974 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:44,129 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:44,342 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pc-dev-auth.html
+2025-12-09 03:44:44,546 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:44,744 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:44,899 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mpt.html
+2025-12-09 03:44:45,104 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:45,274 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:45,508 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_tools_traceroute.json
+2025-12-09 03:44:45,664 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:45,811 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:45,965 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pc-dev-rename.html
+2025-12-09 03:44:46,149 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:46,352 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:46,571 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_wifiNeighbor.json
+2025-12-09 03:44:46,779 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:46,972 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:47,141 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_opmode.json
+2025-12-09 03:44:47,319 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:47,478 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:47,673 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiNeighbor.jsx
+2025-12-09 03:44:47,879 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:48,066 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:48,230 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-usp-agent.html
+2025-12-09 03:44:48,450 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:48,642 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:48,794 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/svgfonts.css
+2025-12-09 03:44:48,983 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:49,169 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:49,350 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_chs5.json
+2025-12-09 03:44:49,508 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:49,685 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:49,918 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/action-control.js
+2025-12-09 03:44:50,135 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:50,374 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:50,586 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/multicast/application-multicast-igmp.js
+2025-12-09 03:44:50,755 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:50,930 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:51,112 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiNeighbor.html
+2025-12-09 03:44:51,325 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:51,527 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:51,728 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/management/management-reboot.jsx
+2025-12-09 03:44:51,926 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:52,115 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:52,318 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep2/wlan-wifi_indep2-ssid2.jsx
+2025-12-09 03:44:52,525 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:52,695 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:52,903 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wlan-wifi_adv_common.jsx
+2025-12-09 03:44:53,095 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:53,311 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:53,523 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_settings_fw_upgrade.json
+2025-12-09 03:44:53,715 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:53,909 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:54,153 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_mpt.json
+2025-12-09 03:44:54,358 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:54,545 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:54,760 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wlan-wifi_adv_common.html
+2025-12-09 03:44:54,926 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:55,099 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:55,326 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep2/wlan-wifi_indep2-ssid2.html
+2025-12-09 03:44:55,515 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:55,702 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:55,935 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mesh2.js
+2025-12-09 03:44:56,142 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:56,336 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:56,554 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/digest-ajax.min.js
+2025-12-09 03:44:56,773 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:56,943 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:57,171 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/adv_setting_service_control.json
+2025-12-09 03:44:57,325 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:57,521 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:57,715 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/index.html
+2025-12-09 03:44:57,875 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:58,041 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:58,223 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/multicast/application-multicast-igmp.jsx
+2025-12-09 03:44:58,410 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:58,596 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:58,781 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/dashboard.json
+2025-12-09 03:44:59,019 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:59,215 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:44:59,487 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wlan-wifi_adv_common.js
+2025-12-09 03:44:59,660 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:44:59,851 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:00,037 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-dhcp-reserved.html
+2025-12-09 03:45:00,252 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:00,438 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:00,609 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/theme-2.css
+2025-12-09 03:45:00,818 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:01,043 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:01,203 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/multicast/application-multicast-igmp.html
+2025-12-09 03:45:01,420 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:01,644 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:01,844 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_settings_multi_lang.json
+2025-12-09 03:45:02,009 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:02,177 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:02,377 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-wifiNeighbor.js
+2025-12-09 03:45:02,590 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:02,811 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:02,973 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mesh2.jsx
+2025-12-09 03:45:03,182 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:03,358 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:03,540 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_storage_storage_account.json
+2025-12-09 03:45:03,692 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:03,885 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:04,057 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wan_port.json
+2025-12-09 03:45:04,240 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:04,414 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:04,637 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/xeditable.css
+2025-12-09 03:45:04,870 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:05,352 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:05,543 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-mesh2.html
+2025-12-09 03:45:05,720 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:05,920 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:06,128 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/wlan-param.js
+2025-12-09 03:45:06,326 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:06,502 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:06,676 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wifi_basic5.json
+2025-12-09 03:45:06,872 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:07,037 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:07,262 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pc-blocked.html
+2025-12-09 03:45:07,466 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:07,668 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:07,856 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/seciruty/basic_setting-seciruty-ipfilter.jsx
+2025-12-09 03:45:08,046 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:08,191 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:08,385 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_seciruty_ipfilter.json
+2025-12-09 03:45:08,627 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:08,905 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:09,077 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-speedtest.html
+2025-12-09 03:45:09,291 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:09,451 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:09,634 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_nat_alg.json
+2025-12-09 03:45:09,841 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:09,998 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:10,170 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pc-dev-list.html
+2025-12-09 03:45:10,400 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:10,615 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:10,810 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-pfr.html
+2025-12-09 03:45:11,017 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:11,232 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:11,407 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-speedtest.jsx
+2025-12-09 03:45:11,603 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:11,759 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:11,923 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-service_control.js
+2025-12-09 03:45:12,162 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:12,332 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:12,500 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/js/angular/angular-translate.min.js
+2025-12-09 03:45:12,688 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:12,846 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:13,057 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep6/wlan-wifi_indep6-ssid6.js
+2025-12-09 03:45:13,248 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:13,435 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:13,648 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/wlan/basic_setting-wlan-wifi_adv2.jsx
+2025-12-09 03:45:13,846 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:14,051 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:14,231 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-dualImage.js
+2025-12-09 03:45:14,419 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:14,625 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:14,812 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_mesh.json
+2025-12-09 03:45:14,998 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:15,185 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:15,327 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_wlan_wireless_connection.json
+2025-12-09 03:45:15,551 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:15,749 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:15,945 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/lan/basic_setting-lan-lan6.jsx
+2025-12-09 03:45:16,163 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:16,336 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:16,563 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/dialog/dialog-test.html
+2025-12-09 03:45:16,808 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:16,992 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:17,175 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/status_dualImage.json
+2025-12-09 03:45:17,371 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:17,561 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:17,764 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/application_ddns.json
+2025-12-09 03:45:17,950 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:18,108 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:18,325 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/seciruty/basic_setting-seciruty-macfilter.jsx
+2025-12-09 03:45:18,516 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:18,673 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:18,868 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-ddns.html
+2025-12-09 03:45:19,035 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:19,251 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:19,424 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/basic_setting/seciruty/basic_setting-seciruty-macfilter.html
+2025-12-09 03:45:19,602 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:19,805 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:19,991 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-ddns.jsx
+2025-12-09 03:45:20,197 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:20,384 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:20,590 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep6/wlan-wifi_indep6-ssid6.jsx
+2025-12-09 03:45:20,772 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:20,993 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:21,209 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/langPack/en/pack.ini
+2025-12-09 03:45:21,397 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:21,610 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:21,827 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-service_control.html
+2025-12-09 03:45:22,043 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:22,218 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:22,422 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/management_tools_remotecapture.json
+2025-12-09 03:45:22,630 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:22,788 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:22,989 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-dualImage.jsx
+2025-12-09 03:45:23,185 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:23,406 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:23,617 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/adv_setting/adv_setting-service_control.jsx
+2025-12-09 03:45:23,787 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:23,952 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:24,155 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/css/Custom/angular-ui-switch.min.css
+2025-12-09 03:45:24,328 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:24,535 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:24,723 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/status/status-dualImage.html
+2025-12-09 03:45:24,959 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:25,165 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:25,386 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/lang/en/basic_setting_seciruty_macfilter.json
+2025-12-09 03:45:25,557 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:25,761 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:25,940 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/application/application-speedtest.js
+2025-12-09 03:45:26,104 - Knowledge - INFO - Found code-base-name: https://github.com/kavia-common/gtk-device-ui-sky-262.git:kavia-main
+2025-12-09 03:45:26,286 - Knowledge - INFO - Found code_base: <app.utils.kg_build.knowledge.KnowledgeCodeBase object at 0x7f14c35a8590>
+2025-12-09 03:45:26,507 - Knowledge - INFO - process ingested knowledge for /app/data/gemtektechnologycoltd2546/262/b4057o3/gtk-device-ui-sky-262/pages/wlan/wifi_indep6/wlan-wifi_indep6-ssid6.html
+2025-12-09 03:45:26,657 - Knowledge - INFO - Loaded 327 files from persisted knowledge
+2025-12-09 03:45:26,836 - Knowledge - INFO - load persisted knowledge: end
+2025-12-09 03:45:27,062 - Knowledge - INFO - Redis support added with prefix knowledge:b4057o3:
+2025-12-09 03:45:27,525 - Knowledge - INFO - Starting knowledge initialization for ID: 0lOrm6-b4057o3
+2025-12-09 03:45:27,770 - Knowledge - INFO - 🔍 Checking Redis for build_id: b4057o3
+2025-12-09 03:45:27,942 - Knowledge - INFO - 🔍 Full session ID: 0lOrm6-b4057o3
+2025-12-09 03:45:28,167 - Knowledge - INFO - 🔍 Redis prefix will be: knowledge:b4057o3:
+2025-12-09 03:45:28,339 - Knowledge - INFO - 🔍 Using attached load_from_redis() method
+2025-12-09 03:45:28,520 - Knowledge - INFO - 🔍 Attempting to load knowledge from Redis...
+2025-12-09 03:45:28,671 - Knowledge - INFO - 🔍 Using derived instance_id for Redis lookup: b4057o3
+2025-12-09 03:45:28,871 - Knowledge - INFO - ✅ Redis cache found! Loading knowledge...
+2025-12-09 03:45:29,077 - Knowledge - INFO - ✅ Successfully loaded from Redis: 327 files
+2025-12-09 03:45:29,235 - Knowledge - INFO - ✅ Redis load complete: 327 files in 0.90s
+2025-12-09 03:45:29,437 - Knowledge - INFO - ⚡ Total Redis path: 0.90s (vs ~300s from disk)
+2025-12-09 03:45:29,704 - Knowledge - INFO - Saving knowledge to Redis...
+2025-12-09 03:45:29,972 - Knowledge - INFO - Knowledge saved to Redis successfully
